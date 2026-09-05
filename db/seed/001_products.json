@@ -1,0 +1,120 @@
+[
+  {
+    "id": "96132c95-b2f2-53cd-989c-59e27fb449b3",
+    "sku": "PET-001",
+    "name_ar": "زيت تشحيم أساسي G50",
+    "name_en": "Base Lubricant Oil G50",
+    "category": "lubricants",
+    "unit": "liter",
+    "base_price": 85.0,
+    "currency": "SAR",
+    "description_ar": "زيت تشحيم عالي الجودة مناسب للمحركات الصناعية والسيارات. متوافق مع المواصفات السعودية.",
+    "description_en": "High-quality lubricant suitable for industrial engines and vehicles. Compliant with SASO specifications.",
+    "specs": {
+      "viscosity_grade": "SAE 5W-30",
+      "base_oil": "Synthetic",
+      "flash_point_celsius": 230,
+      "pour_point_celsius": -36,
+      "density_kg_l": 0.875,
+      "packaging": [
+        "1L",
+        "4L",
+        "20L",
+        "200L"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "3dbb2197-5e42-553a-93a5-729379a8188e",
+    "sku": "PET-002",
+    "name_ar": "سوائل الحفر المرنة",
+    "name_en": "Flexible Drilling Fluid",
+    "category": "drilling",
+    "unit": "barrel",
+    "base_price": 1250.0,
+    "currency": "SAR",
+    "description_ar": "سوائل حفر مركبة مصممة للعمل في ظروف الضغط والحرارة العالية في آبار النفط.",
+    "description_en": "Engineered drilling fluids designed for high pressure and temperature conditions in oil wells.",
+    "specs": {
+      "type": "oil-based mud",
+      "density_range_ppg": "8.5-18.0",
+      "thermal_stability_celsius": 260,
+      "funnel_viscosity_sec": 55,
+      "ph_range": "9.0-10.5",
+      "barrel_package": true
+    },
+    "is_active": true
+  },
+  {
+    "id": "2024c1d6-76e3-53ce-bf84-5e1f54d0f066",
+    "sku": "PET-003",
+    "name_ar": "المعجون العازل للأنابيب",
+    "name_en": "Pipe Thread Sealant Compound",
+    "category": "pipe_supplies",
+    "unit": "kg",
+    "base_price": 120.0,
+    "currency": "SAR",
+    "description_ar": "معجون عازل عالي الأداء لختم لولب الأنابيب في تطوير الآبار والصيانة.",
+    "description_en": "High-performance sealant compound for pipe thread sealing in well completion and maintenance.",
+    "specs": {
+      "temperature_range_celsius": "-54 to 205",
+      "pressure_rating_psi": 10000,
+      "color": "brown",
+      "compound_type": "non-hardening",
+      "sizes_available": [
+        "50g",
+        "250g",
+        "500g"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "f994f2e3-9b6a-50ad-aa31-9e769629b2ce",
+    "sku": "PET-004",
+    "name_ar": "أسمنت إسمنت Caraflake",
+    "name_en": "Caraflake Cement Grade Oil",
+    "category": "cement_oil",
+    "unit": "ton",
+    "base_price": 2800.0,
+    "currency": "SAR",
+    "description_ar": "نوع خاص من زيت الإسمنت لتحسين خصائص الإسمنت في عمليات عزل الآبار.",
+    "description_en": "Special cement oil type to enhance cement properties in well cementing operations.",
+    "specs": {
+      "grade": "Class G HSR",
+      "density_kg_m3": 1900,
+      "thickening_time_min": 120,
+      "compressive_strength_mpa": 35,
+      "application": "primary cementing",
+      "bulk_package_tons": 1.5
+    },
+    "is_active": true
+  },
+  {
+    "id": "874c53f7-a938-56e5-b054-9e75a50ffa25",
+    "sku": "PET-005",
+    "name_ar": "مانع التآكل المتعدد الوظائف",
+    "name_en": "Multi-Function Corrosion Inhibitor",
+    "category": "chemicals",
+    "unit": "liter",
+    "base_price": 320.0,
+    "currency": "SAR",
+    "description_ar": "مانع تآكل متعدد الوظائف يوفر حماية شاملة للأنابيب والمعدات في بيئات الآبار الحمضية والقلوية.",
+    "description_en": "Multi-function corrosion inhibitor providing comprehensive protection for pipes and equipment in acidic and alkaline well environments.",
+    "specs": {
+      "type": "film-forming amine",
+      "solubility": "oil-soluble",
+      "dosage_ml_per_liter": "5-25",
+      "protection_efficiency_percent": 98,
+      "ph_range": "3-12",
+      "flash_point_celsius": 65,
+      "packaging": [
+        "1L",
+        "5L",
+        "20L"
+      ]
+    },
+    "is_active": true
+  }
+]

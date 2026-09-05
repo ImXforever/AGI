@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kia-Agent · Platform map</title>
+<style>
+:root {
+  --bg: #03040a; --ink: #eaf6ff; --dim: #7f9ec7; --cyan: #00f0ff;
+  --mag: #ff2bd6; --mint: #00ffa8; --gold: #ffb020; --line: #1c2a55;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 13px/1.45 ui-sans-serif, system-ui, sans-serif; }
+body {
+  background:
+    radial-gradient(900px 420px at 85% -5%, rgba(255,43,214,.12), transparent 50%),
+    radial-gradient(700px 380px at 0% 100%, rgba(0,240,255,.1), transparent 46%),
+    var(--bg);
+  padding: 28px 20px 48px;
+}
+.wrap { max-width: 1180px; margin: 0 auto; }
+h1 { font-size: 22px; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 6px; color: #7af6ff; }
+.sub { color: var(--dim); margin: 0 0 22px; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-bottom: 18px; color: var(--dim); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+svg { width: 100%; height: auto; display: block; }
+.note { margin-top: 18px; color: var(--dim); font-size: 12px; max-width: 820px; }
+code { color: var(--cyan); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Kia-Agent platform map</h1>
+  <p class="sub">Public index → channels → orchestrator → HITL → manager ops. English product path, 2026-09-05.</p>
+  <div class="legend">
+    <span><i style="background:#00f0ff"></i>Public / customer</span>
+    <span><i style="background:#00ffa8"></i>Auto under rules</span>
+    <span><i style="background:#ff2bd6"></i>HITL · manager only</span>
+    <span><i style="background:#ffb020"></i>Storage</span>
+    <span><i style="background:#6ea8ff"></i>LLM / RAG</span>
+  </div>
+
+  <svg viewBox="0 0 1180 980" role="img" aria-label="Platform architecture map">
+    <defs>
+      <filter id="g"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      <linearGradient id="gc" x1="0" x2="1"><stop offset="0" stop-color="#00f0ff"/><stop offset="1" stop-color="#6ea8ff"/></linearGradient>
+      <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+        <path d="M0 0 L10 5 L0 10 z" fill="#3d567a"/>
+      </marker>
+      <marker id="arrc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+        <path d="M0 0 L10 5 L0 10 z" fill="#00f0ff"/>
+      </marker>
+      <marker id="arrm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+        <path d="M0 0 L10 5 L0 10 z" fill="#ff2bd6"/>
+      </marker>
+    </defs>
+
+    <!-- ROW 0 public -->
+    <text x="24" y="28" fill="#00f0ff" font-size="11" letter-spacing="2">01  PUBLIC SURFACE</text>
+    <rect x="20" y="40" width="360" height="88" rx="14" fill="#070b18" stroke="#00f0ff" stroke-width="1.4" filter="url(#g)"/>
+    <text x="40" y="72" fill="#eaf6ff" font-size="16" font-weight="700">/  Landing · TWA index</text>
+    <text x="40" y="94" fill="#7f9ec7" font-size="12">English site. Chat, products, support, quote.</text>
+    <text x="40" y="112" fill="#7f9ec7" font-size="11">Login hidden unless Telegram admin id</text>
+
+    <rect x="400" y="40" width="240" height="88" rx="14" fill="#070b18" stroke="#1c2a55"/>
+    <text x="420" y="72" fill="#eaf6ff" font-size="14" font-weight="700">Telegram Mini App</text>
+    <text x="420" y="94" fill="#7f9ec7" font-size="12">initData → /admin/api/twa/probe</text>
+    <text x="420" y="112" fill="#7f9ec7" font-size="11">admin true → Login</text>
+
+    <rect x="660" y="40" width="240" height="88" rx="14" fill="#120814" stroke="#ff2bd6" stroke-width="1.4"/>
+    <text x="680" y="72" fill="#ffd0f3" font-size="14" font-weight="700">Login (admin only)</text>
+    <text x="680" y="94" fill="#7f9ec7" font-size="12">POST /admin/api/twa/login</text>
+    <text x="680" y="112" fill="#7f9ec7" font-size="11">cookie pa_session → ops</text>
+
+    <rect x="920" y="40" width="240" height="88" rx="14" fill="#070b18" stroke="#00f0ff" stroke-width="1.4"/>
+    <text x="940" y="72" fill="#7af6ff" font-size="14" font-weight="700">Ops · Ecosystem 3D</text>
+    <text x="940" y="94" fill="#7f9ec7" font-size="12">/admin/ops/ecosystem.html</text>
+    <text x="940" y="112" fill="#7f9ec7" font-size="11">first manager view</text>
+
+    <line x1="380" y1="84" x2="400" y2="84" stroke="#00f0ff" stroke-width="1.4" marker-end="url(#arrc)"/>
+    <line x1="640" y1="84" x2="660" y2="84" stroke="#ff2bd6" stroke-width="1.4" marker-end="url(#arrm)"/>
+    <line x1="900" y1="84" x2="920" y2="84" stroke="#00f0ff" stroke-width="1.4" marker-end="url(#arrc)"/>
+
+    <!-- ROW 1 channels -->
+    <text x="24" y="168" fill="#00f0ff" font-size="11" letter-spacing="2">02  CHANNELS  (customer never sees the brain)</text>
+    <g font-size="13" font-weight="650">
+      <rect x="20" y="180" width="180" height="54" rx="12" fill="#071828" stroke="#6ea8ff"/>
+      <text x="110" y="212" text-anchor="middle" fill="#eaf6ff">Telegram</text>
+      <rect x="214" y="180" width="180" height="54" rx="12" fill="#071828" stroke="#00ffa8"/>
+      <text x="304" y="212" text-anchor="middle" fill="#eaf6ff">WhatsApp</text>
+      <rect x="408" y="180" width="180" height="54" rx="12" fill="#071828" stroke="#7af6ff"/>
+      <text x="498" y="212" text-anchor="middle" fill="#eaf6ff">Email</text>
+      <rect x="602" y="180" width="180" height="54" rx="12" fill="#071828" stroke="#ff2bd6"/>
+      <text x="692" y="212" text-anchor="middle" fill="#eaf6ff">Instagram</text>
+      <rect x="796" y="180" width="170" height="54" rx="12" fill="#071828" stroke="#eaf6ff"/>
+      <text x="881" y="212" text-anchor="middle" fill="#eaf6ff">X / Twitter</text>
+      <rect x="980" y="180" width="180" height="54" rx="12" fill="#071828" stroke="#b6ff3b"/>
+      <text x="1070" y="212" text-anchor="middle" fill="#eaf6ff">Website form</text>
+    </g>
+
+    <line x1="590" y1="234" x2="590" y2="262" stroke="#3d567a" stroke-width="1.4" marker-end="url(#arr)"/>
+
+    <!-- ROW 2 pipeline -->
+    <text x="24" y="286" fill="#00f0ff" font-size="11" letter-spacing="2">03  INGEST PIPELINE  · Redis Streams</text>
+    <rect x="20" y="298" width="1140" height="70" rx="14" fill="#070b18" stroke="#1c2a55"/>
+    <text x="590" y="340" text-anchor="middle" fill="#eaf6ff" font-size="14">ingest → dedup → rate-limit → Postgres store → dispatch → orchestrator → respond</text>
+    <text x="590" y="358" text-anchor="middle" fill="#7f9ec7" font-size="11">Nothing is lost: persist before any LLM work. Guard on input and output.</text>
+
+    <line x1="590" y1="368" x2="590" y2="400" stroke="#00f0ff" stroke-width="1.4" marker-end="url(#arrc)"/>
+
+    <!-- ROW 3 brain -->
+    <text x="24" y="424" fill="#00f0ff" font-size="11" letter-spacing="2">04  BRAIN</text>
+    <rect x="340" y="436" width="500" height="96" rx="16" fill="#051018" stroke="#00f0ff" stroke-width="1.6" filter="url(#g)"/>
+    <text x="590" y="474" text-anchor="middle" fill="#00f0ff" font-size="18" font-weight="700">Orchestrator</text>
+    <text x="590" y="496" text-anchor="middle" fill="#7f9ec7" font-size="12">intent · skill routing · memory · fail-closed unknown tools</text>
+    <text x="590" y="514" text-anchor="middle" fill="#7f9ec7" font-size="11">Hermes / OpenRouter · prompt cache · QA score + rewrite</text>
+
+    <!-- agents -->
+    <g font-size="12">
+      <rect x="20" y="556" width="210" height="64" rx="12" fill="#0a1022" stroke="#ffb020"/>
+      <text x="125" y="582" text-anchor="middle" fill="#eaf6ff" font-weight="700">Sales</text>
+      <text x="125" y="600" text-anchor="middle" fill="#7f9ec7">lead · quote (HITL send)</text>
+      <rect x="250" y="556" width="210" height="64" rx="12" fill="#0a1022" stroke="#00ffa8"/>
+      <text x="355" y="582" text-anchor="middle" fill="#eaf6ff" font-weight="700">Support</text>
+      <text x="355" y="600" text-anchor="middle" fill="#7f9ec7">ticket · safety → human</text>
+      <rect x="480" y="556" width="220" height="64" rx="12" fill="#0a1022" stroke="#00f0ff"/>
+      <text x="590" y="582" text-anchor="middle" fill="#eaf6ff" font-weight="700">Knowledge</text>
+      <text x="590" y="600" text-anchor="middle" fill="#7f9ec7">approved docs only</text>
+      <rect x="720" y="556" width="210" height="64" rx="12" fill="#0a1022" stroke="#6ea8ff"/>
+      <text x="825" y="582" text-anchor="middle" fill="#eaf6ff" font-weight="700">Ops</text>
+      <text x="825" y="600" text-anchor="middle" fill="#7f9ec7">remind · digest · cron</text>
+      <rect x="950" y="556" width="210" height="64" rx="12" fill="#0a1022" stroke="#b6ff3b"/>
+      <text x="1055" y="582" text-anchor="middle" fill="#eaf6ff" font-weight="700">Customer / Analytics</text>
+      <text x="1055" y="600" text-anchor="middle" fill="#7f9ec7">persona · reports</text>
+    </g>
+    <line x1="590" y1="532" x2="590" y2="556" stroke="#00f0ff" marker-end="url(#arrc)"/>
+
+    <!-- HITL -->
+    <text x="24" y="656" fill="#ff2bd6" font-size="11" letter-spacing="2">05  HITL GATE  · never bypass</text>
+    <rect x="20" y="668" width="720" height="100" rx="16" fill="#120814" stroke="#ff2bd6" stroke-width="1.6" filter="url(#g)"/>
+    <text x="40" y="700" fill="#ffd0f3" font-size="15" font-weight="700">Policy → risk → RBAC → Redis lock → ledger → human</text>
+    <text x="40" y="722" fill="#7f9ec7" font-size="12">AUTO: classify · reply_common · publish_calendar · create_lead · create_ticket · create_task</text>
+    <text x="40" y="744" fill="#ffb0e4" font-size="12">ALWAYS HOLD: payment · contract · change_price · delete_data · change_access · send_email · quote send</text>
+
+    <rect x="760" y="668" width="400" height="100" rx="16" fill="#071828" stroke="#00ffa8"/>
+    <text x="780" y="700" fill="#00ffa8" font-size="14" font-weight="700">Auto path</text>
+    <text x="780" y="722" fill="#7f9ec7" font-size="12">Low-risk executes to ledger, then channel adapter.</text>
+    <text x="780" y="744" fill="#7f9ec7" font-size="12">Timeout fallback = silent (never auto money).</text>
+
+    <line x1="380" y1="620" x2="300" y2="668" stroke="#ff2bd6" marker-end="url(#arrm)"/>
+    <line x1="800" y1="620" x2="900" y2="668" stroke="#00ffa8" marker-end="url(#arr)"/>
+
+    <!-- storage + ops console -->
+    <text x="24" y="806" fill="#ffb020" font-size="11" letter-spacing="2">06  STORAGE</text>
+    <rect x="20" y="818" width="250" height="72" rx="12" fill="#0b1024" stroke="#4169e1"/>
+    <text x="145" y="848" text-anchor="middle" fill="#eaf6ff" font-weight="700">Postgres</text>
+    <text x="145" y="868" text-anchor="middle" fill="#7f9ec7" font-size="11">customers · messages · ledger</text>
+    <rect x="286" y="818" width="250" height="72" rx="12" fill="#0b1024" stroke="#ff3d7a"/>
+    <text x="411" y="848" text-anchor="middle" fill="#eaf6ff" font-weight="700">Redis</text>
+    <text x="411" y="868" text-anchor="middle" fill="#7f9ec7" font-size="11">streams · locks · cache</text>
+    <rect x="552" y="818" width="250" height="72" rx="12" fill="#0b1024" stroke="#b6ff3b"/>
+    <text x="677" y="848" text-anchor="middle" fill="#eaf6ff" font-weight="700">RAG / R2</text>
+    <text x="677" y="868" text-anchor="middle" fill="#7f9ec7" font-size="11">approved chunks only</text>
+
+    <text x="830" y="806" fill="#00f0ff" font-size="11" letter-spacing="2">07  MANAGER CONSOLE</text>
+    <rect x="822" y="818" width="338" height="72" rx="12" fill="#070b18" stroke="#00f0ff"/>
+    <text x="991" y="848" text-anchor="middle" fill="#7af6ff" font-weight="700">Kia Ops neon</text>
+    <text x="991" y="868" text-anchor="middle" fill="#7f9ec7" font-size="11">inbox → queue → flows → brain · gated</text>
+
+    <text x="24" y="930" fill="#7f9ec7" font-size="12">Customer talks on a channel. Manager opens / in Telegram, sees Login only if TELEGRAM_ADMIN_IDS, then the 3D ecosystem and the queue. Unauthenticated /admin redirects home.</text>
+    <text x="24" y="952" fill="#3d567a" font-size="11">Kia-Agent · charter v1 · English · HITL locked · 1 web worker covers ~10k members at normal inbound RPS</text>
+  </svg>
+
+  <p class="note">Live URLs: public <code>/</code> · status <code>/status</code> · health <code>/healthz</code> · ops <code>/admin/ops/ecosystem.html</code> (session). Mini App origin must be the site root.</p>
+</div>
+</body>
+</html>

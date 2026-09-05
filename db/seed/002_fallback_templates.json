@@ -1,0 +1,74 @@
+[
+  {
+    "id": "e5e8883e-ff3b-5dd9-8b47-3c43bdcfa9f5",
+    "key": "greeting_default",
+    "name_ar": "greeting_default",
+    "name_en": "greeting_default",
+    "channel": "",
+    "subject": "",
+    "body_ar": "أهلاً وسهلاً! يسعدني خدمتك. كيف يمكنني مساعدتك اليوم؟",
+    "body_en": "Hello and welcome! I'm happy to help you. How can I assist you today?",
+    "variables": "[]",
+    "is_active": true
+  },
+  {
+    "id": "6a0f9d6a-2ce7-5b40-86fd-66b1db422e9d",
+    "key": "clarification_default",
+    "name_ar": "clarification_default",
+    "name_en": "clarification_default",
+    "channel": "",
+    "subject": "",
+    "body_ar": "عذراً، لم أتمكن من فهم طلبك بشكل واضح. هل يمكنك إعادة صياغة سؤالك أو توضيح ما تحتاجه؟",
+    "body_en": "Sorry, I couldn't fully understand your request. Could you please rephrase or clarify what you need?",
+    "variables": "[]",
+    "is_active": true
+  },
+  {
+    "id": "bf4ce59e-9d02-557b-a9dc-0e7b64c55663",
+    "key": "processing_default",
+    "name_ar": "processing_default",
+    "name_en": "processing_default",
+    "channel": "",
+    "subject": "",
+    "body_ar": "جاري معالجة طلبك، يرجى الانتظار لحظات...",
+    "body_en": "Processing your request, please wait a moment...",
+    "variables": "[]",
+    "is_active": true
+  },
+  {
+    "id": "ac3c476d-54c3-5838-a7d8-6f6e27c7eae2",
+    "key": "safety_emergency",
+    "name_ar": "safety_emergency",
+    "name_en": "safety_emergency",
+    "channel": "",
+    "subject": "",
+    "body_ar": "تم رصد كلمة طوارئ في رسالتك. يرجى التواصل فوراً مع:\n📞 خط الطوارئ: 911\n📞 الدعم الفني: {support_contact}",
+    "body_en": "Emergency keyword detected in your message. Please contact immediately:\n📞 Emergency: 911\n📞 Support: {support_contact}",
+    "variables": "[]",
+    "is_active": true
+  },
+  {
+    "id": "81e11fec-aefb-539a-8df0-9870d40102e6",
+    "key": "hitl_timeout",
+    "name_ar": "hitl_timeout",
+    "name_en": "hitl_timeout",
+    "channel": "",
+    "subject": "",
+    "body_ar": "تم تجاوز مهلة الانتظار. تم تسجيل طلبك وسيتم الرد عليه من قبل فريق الدعم في أقرب وقت ممكن.",
+    "body_en": "The waiting time has exceeded the limit. Your request has been recorded and will be responded to by the support team as soon as possible.",
+    "variables": "[]",
+    "is_active": true
+  },
+  {
+    "id": "915b10e1-b90e-570a-b234-c3861e8c1c49",
+    "key": "off_hours",
+    "name_ar": "off_hours",
+    "name_en": "off_hours",
+    "channel": "",
+    "subject": "",
+    "body_ar": "شكراً لرسالتك. أنا متاح في أوقات العمل الرسمية (الأحد-الخميس 8ص-5م). سأرد على رسالتك فور عودتي.",
+    "body_en": "Thank you for your message. I'm available during business hours (Sun-Thu 8AM-5PM). I'll respond when I return.",
+    "variables": "[]",
+    "is_active": true
+  }
+]

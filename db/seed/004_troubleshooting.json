@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1e29036e-1494-5763-bf8f-f3990afe9c7f",
+    "title_ar": "تسرب في وصلة الأنابيب",
+    "title_en": "Pipe Connection Leak",
+    "description_ar": "ظهور تسرّب في وصلة الأنابيب أثناء التشغيل، مع زيادة تدريجية في معدل التسرب.",
+    "description_en": "Leak appearing at a pipe connection during operation, with a gradual increase in leak rate.",
+    "symptom_ar": "تسرب، zburg، leak، وصلة، connection، تيار مائي، بخار",
+    "symptom_en": "leak, zburg, leak, connection, water flow, steam",
+    "solution_ar": "1. أوقف تشغيل الأنبوب فوراً\n2. افحص الوصلة بعناية باستخدام كاشف التسرب\n3. استبدل الحشية أو الحزام إذا كان التلف واضحاً\n4. أعد التشغيل ببطء مع مراقبة الضغط\n5. إذا استمر التسرب، تواصل مع فريق الهندسة",
+    "solution_en": "1. Stop pipe operation immediately\n2. Inspect the connection carefully using leak detector\n3. Replace gaskets or clamps if damage is visible\n4. Restart slowly while monitoring pressure\n5. If leak persists, contact engineering team",
+    "category": "operations",
+    "severity": "high",
+    "tags": "[\"تسرب\", \"zburg\", \"leak\", \"وصلة\", \"connection\", \"تيار مائي\", \"بخار\"]",
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "9cfbcd83-4cc4-590a-98b0-1262ebb56cbd",
+    "title_ar": "ارتفاع درجة حرارة المعدات",
+    "title_en": "Equipment Overheating",
+    "description_ar": "ارتفاع غير طبيعي في درجة حرارة المعدات أو المحرّكات أثناء التشغيل.",
+    "description_en": "Abnormal temperature increase in equipment or motors during operation.",
+    "symptom_ar": "حرارة، temperature، تسخين، overheat، محرّك، engine، ciente",
+    "symptom_en": "heat, temperature, overheat, engine",
+    "solution_ar": "1. قلل الحمل على المعدات فوراً\n2. تحقق من نظام التبريد والتهوية\n3. افحص مستوى زيت التشحيم\n4. تنظيف غبار من المبرّدات والمراوح\n5. إذا وصلت الحرارة لدرجة الخطر، أوقف المعدات فوراً\n6. سجّل الحادثة في نظام إدارة الصيانة",
+    "solution_en": "1. Reduce equipment load immediately\n2. Check cooling and ventilation system\n3. Inspect lubricant oil level\n4. Clean dust from coolers and fans\n5. If temperature reaches danger level, stop equipment immediately\n6. Log the incident in maintenance management system",
+    "category": "maintenance",
+    "severity": "critical",
+    "tags": "[\"حرارة\", \"temperature\", \"تسخين\", \"overheat\", \"محرّك\", \"engine\", \"ciente\"]",
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "8c2fb416-698a-5909-aa75-518e4439ddb2",
+    "title_ar": "خطأ في نظام التحكم الآلي",
+    "title_en": "Automation System Error",
+    "description_ar": "ظهور أخطاء متكررة في لوحة التحكم الآلي أو نظام SCADA مع توقف مؤقت للمعدات.",
+    "description_en": "Repeated errors on the automation control panel or SCADA system with temporary equipment shutdown.",
+    "symptom_ar": "خطأ، error، SCADA، تحكم، control، system، أوتوماتيك، automated، PLC",
+    "symptom_en": "error, SCADA, control, system, automated, PLC",
+    "solution_ar": "1. تحقق من سجل الأخطاء في النظام\n2. أعد تشغيل الـ PLC والوحدات الإلكترونية\n3. تحقق من اتصال الكابلات والم扩散器\n4. تأكد من عدم وجود تداخل كهرومغناطيسي\n5. إذا استمر الخطأ، استبدل الوحدة المعيبة\n6. تواصل مع مورد النظام للدعم الفني",
+    "solution_en": "1. Check the system error log\n2. Restart the PLC and electronic units\n3. Verify cable connections and transmitters\n4. Ensure no electromagnetic interference\n5. If error persists, replace the faulty unit\n6. Contact the system vendor for technical support",
+    "category": "technical",
+    "severity": "medium",
+    "tags": "[\"خطأ\", \"error\", \"SCADA\", \"تحكم\", \"control\", \"system\", \"أوتوماتيك\", \"automated\", \"PLC\"]",
+    "is_active": true,
+    "hit_count": 0
+  }
+]

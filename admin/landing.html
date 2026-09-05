@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#03040a">
+<meta name="description" content="Kia-Agent is an English-default AI operations platform for energy, petroleum and industrial companies.">
+<title>Kia-Agent | AI Operations for Industrial Teams</title>
+<style>
+:root {
+  --bg: #03040a;
+  --ink: #eaf6ff;
+  --dim: #7f9ec7;
+  --faint: #3d567a;
+  --cyan: #00f0ff;
+  --mag: #ff2bd6;
+  --lime: #b6ff3b;
+  --mint: #00ffa8;
+  --gold: #ffb020;
+  --line: #1c2a55;
+  --panel: #070b18;
+  --r: 16px;
+  --glow: 0 0 18px rgba(0, 240, 255, .35);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { margin: 0; min-height: 100%; }
+body {
+  background:
+    radial-gradient(900px 480px at 80% -10%, rgba(255, 43, 214, .12), transparent 50%),
+    radial-gradient(800px 420px at -10% 110%, rgba(0, 240, 255, .1), transparent 46%),
+    var(--bg);
+  color: var(--ink);
+  font: 15px/1.6 ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+}
+a { color: inherit; text-decoration: none; }
+.shell { max-width: 1120px; margin: auto; padding: 0 22px; }
+.nav {
+  height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 750; }
+.logo {
+  width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center;
+  background: #0b0c10; border: 1px solid rgba(0, 240, 255, .35); box-shadow: var(--glow);
+}
+.navlinks { display: flex; gap: 22px; color: var(--dim); font-size: 13px; }
+.navlinks a:hover { color: var(--cyan); }
+.nav-actions { display: flex; align-items: center; gap: 8px; }
+.lang {
+  background: #070b18; border: 1px solid var(--line); color: var(--ink);
+  border-radius: 10px; padding: 8px 10px;
+}
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  border-radius: 10px; padding: 11px 16px; font-weight: 750; font-size: 13px;
+  letter-spacing: .04em; border: 1px solid transparent; cursor: pointer;
+  text-transform: uppercase;
+}
+.btn-primary { background: var(--cyan); color: #031016; box-shadow: var(--glow); }
+.btn-secondary { border-color: var(--line); background: #0b1024; color: var(--ink); }
+.btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); }
+.menu { display: none; background: none; border: 0; color: var(--ink); padding: 6px; }
+.hero { padding: 56px 0 80px; }
+.eyebrow {
+  color: var(--mint); font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase;
+}
+.hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
+.hero h1 {
+  font-size: clamp(36px, 5.4vw, 64px); line-height: 1.05; letter-spacing: -.03em; margin: 14px 0 18px;
+}
+.hero h1 em { font-style: normal; color: var(--cyan); text-shadow: var(--glow); }
+.lead { color: var(--dim); font-size: 18px; max-width: 560px; }
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0 10px; }
+.micro { font-size: 12px; color: var(--dim); }
+.terminal {
+  background: linear-gradient(180deg, #0a1022, #070b18);
+  border: 1px solid var(--line); border-radius: 18px; padding: 16px;
+  box-shadow: 0 20px 60px #0008, var(--glow);
+}
+.terminal-bar { display: flex; gap: 6px; padding-bottom: 12px; border-bottom: 1px solid #1a2c66; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #ff3d7a; }
+.dot:nth-child(2) { background: var(--gold); }
+.dot:nth-child(3) { background: var(--mint); }
+.bubble { padding: 12px 14px; border-radius: 12px; margin: 10px 0; max-width: 90%; font-size: 13px; }
+.bubble-user { background: #12203a; margin-left: auto; }
+.bubble-ai { background: #071828; border: 1px solid rgba(0, 240, 255, .25); }
+.status { display: flex; align-items: center; gap: 8px; color: var(--mint); font-size: 11px; margin-top: 12px; text-transform: uppercase; letter-spacing: .08em; }
+.pulse { width: 7px; height: 7px; background: var(--mint); border-radius: 50%; box-shadow: 0 0 10px var(--mint); }
+.section { padding: 72px 0; }
+.section h2 { font-size: clamp(26px, 3.6vw, 40px); letter-spacing: -.02em; margin: 10px 0 12px; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.card {
+  background: linear-gradient(180deg, #0a1022, #070b18);
+  border: 1px solid var(--line); border-radius: var(--r); padding: 22px;
+}
+.card:hover { border-color: rgba(0, 240, 255, .45); box-shadow: var(--glow); }
+.card h3 { margin: 0 0 8px; font-size: 16px; }
+.card p { margin: 0; color: var(--dim); font-size: 14px; }
+.icon {
+  width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; margin-bottom: 14px;
+  background: rgba(0, 240, 255, .1); border: 1px solid rgba(0, 240, 255, .2); color: var(--cyan);
+}
+button.card { width: 100%; text-align: left; color: inherit; font: inherit; cursor: pointer; }
+.workflow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.step { border-top: 1px solid var(--line); padding-top: 14px; }
+.step-num { color: var(--cyan); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+.faq { border-top: 1px solid var(--line); }
+details { border-bottom: 1px solid var(--line); padding: 16px 0; }
+summary { cursor: pointer; font-weight: 700; }
+details p { color: var(--dim); margin: 10px 0 0; }
+.cta-panel {
+  text-align: center; border: 1px solid rgba(0, 240, 255, .3); border-radius: 22px;
+  padding: 48px 20px; background: radial-gradient(circle at 50% 0, rgba(0, 240, 255, .12), transparent 55%);
+}
+.footer { padding: 36px 0 48px; border-top: 1px solid #1a2c66; color: var(--dim); font-size: 13px; }
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 24px; }
+.footer a, .footer p { display: block; margin: 6px 0; color: var(--dim); }
+.footer a:hover { color: var(--cyan); }
+.notice {
+  position: fixed; right: 16px; bottom: 16px; max-width: 340px; display: none; z-index: 5;
+  background: #0b1024; border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; font-size: 13px;
+}
+@media (max-width: 860px) {
+  .navlinks { display: none; }
+  .menu { display: block; }
+  .hero-grid, .cards, .workflow, .footer-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<header class="shell">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="#top">
+      <span class="logo" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="22" height="22">
+          <path d="M16 5c3 4 6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 3-7 6-11z" fill="#00f0ff"/>
+        </svg>
+      </span>
+      <span>Kia-Agent</span>
+    </a>
+    <div class="navlinks">
+      <a href="#platform">Platform</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#security">Security</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-actions">
+      <select class="lang" aria-label="Language selector">
+        <option selected>English</option>
+        <option>Arabic</option>
+        <option>Spanish</option>
+        <option>French</option>
+        <option>German</option>
+      </select>
+      <a class="btn btn-secondary" id="admin-login" data-admin-login hidden href="/admin/ops/ecosystem.html">Login</a>
+      <button class="menu" type="button" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="shell hero-grid">
+      <div>
+        <div class="eyebrow">Enterprise AI for industrial operations</div>
+        <h1>Move from operational noise to <em>clear action.</em></h1>
+        <p class="lead">Kia-Agent gives energy, petroleum and industrial teams one intelligent front door for customers, field requests, products and approvals.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="https://t.me/AGI_bot" id="start-chat">Start a conversation</a>
+          <a class="btn btn-secondary" href="#platform">Explore the platform</a>
+        </div>
+        <p class="micro"><strong>English by default.</strong> Built for global companies and multilingual teams.</p>
+      </div>
+      <div class="terminal" aria-label="Product conversation preview">
+        <div class="terminal-bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+        <div class="micro">Kia-Agent · customer channel</div>
+        <div class="bubble bubble-user">Can we prepare a quote for 500 barrels and route it for approval?</div>
+        <div class="bubble bubble-ai">Matching product found. I will draft the quote and send it to an authorised manager before anything is committed.</div>
+        <div class="status"><span class="pulse"></span> Approval-aware response ready</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="platform">
+    <div class="shell">
+      <div class="eyebrow">One platform, every conversation</div>
+      <h2>Make expertise available at the speed of business.</h2>
+      <div class="cards">
+        <article class="card"><div class="icon">01</div><h3>Intelligent customer desk</h3><p>Answer product, service and account questions consistently across channels.</p></article>
+        <article class="card"><div class="icon">02</div><h3>Quotes with control</h3><p>Collect requirements, draft quotations, keep pricing and payments under approval.</p></article>
+        <article class="card"><div class="icon">03</div><h3>Human-in-the-loop</h3><p>Escalate uncertainty and sensitive actions to the right person with an audit trail.</p></article>
+        <article class="card"><div class="icon">04</div><h3>Omnichannel reach</h3><p>Meet customers in Telegram, WhatsApp and email with one operating model.</p></article>
+        <article class="card"><div class="icon">05</div><h3>Operational memory</h3><p>Governed memory of policies, FAQs, tickets and previous decisions.</p></article>
+        <article class="card"><div class="icon">06</div><h3>Management visibility</h3><p>Track demand, quality, escalations and service health from the ops console.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="quick-actions">
+    <div class="shell">
+      <div class="eyebrow">Quick actions</div>
+      <h2>Choose a starting point.</h2>
+      <p class="lead">Send a structured request to the assistant from Telegram.</p>
+      <div class="cards" style="margin-top:22px">
+        <button class="card" type="button" data-action="products"><div class="icon">P</div><h3>Products and pricing</h3><p>Find specifications and approved commercial information.</p></button>
+        <button class="card" type="button" data-action="support"><div class="icon">S</div><h3>Open a support request</h3><p>Report an issue and route it to the right team.</p></button>
+        <button class="card" type="button" data-action="quote"><div class="icon">Q</div><h3>Request a quotation</h3><p>Prepare the details for a controlled quote.</p></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="solutions">
+    <div class="shell">
+      <div class="eyebrow">How it works</div>
+      <h2>From question to resolution in four steps.</h2>
+      <div class="workflow">
+        <div class="step"><div class="step-num">01 / Capture</div><h3>Listen</h3><p class="micro">Receive the request on the channel the customer already uses.</p></div>
+        <div class="step"><div class="step-num">02 / Understand</div><h3>Classify</h3><p class="micro">Identify intent, language, urgency and the right skill.</p></div>
+        <div class="step"><div class="step-num">03 / Assist</div><h3>Act carefully</h3><p class="micro">Use approved knowledge to answer, draft or recommend.</p></div>
+        <div class="step"><div class="step-num">04 / Govern</div><h3>Escalate</h3><p class="micro">Route sensitive decisions to a human and record the outcome.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="security">
+    <div class="shell">
+      <div class="eyebrow">Trust and governance</div>
+      <h2>AI that knows when to ask a human.</h2>
+      <p class="lead">Payment, contract, price change, deletion and access change never run without a manager record.</p>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="shell">
+      <div class="eyebrow">Questions</div>
+      <h2>Start with the essentials.</h2>
+      <div class="faq">
+        <details open>
+          <summary>Is English really the default?</summary>
+          <p>Yes. The interface, general messaging and fallback behaviour are English. Other languages remain available when selected.</p>
+        </details>
+        <details>
+          <summary>Can we keep sensitive decisions with managers?</summary>
+          <p>Yes. Quote commitments, pricing changes, contracts and payments stay approval-aware.</p>
+        </details>
+        <details>
+          <summary>Where can our customers use it?</summary>
+          <p>Telegram, WhatsApp and email, with a shared operating model. This page is the public front door; the manager console is separate.</p>
+        </details>
+        <details>
+          <summary>How do we begin?</summary>
+          <p>Start a conversation from Telegram, or pick a quick action above.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell cta-panel">
+      <div class="eyebrow">Ready for the next conversation?</div>
+      <h2>Give every customer a clear next step.</h2>
+      <a class="btn btn-primary" href="https://t.me/AGI_bot" id="bottom-chat">Start a conversation</a>
+      <a class="btn btn-secondary" data-admin-login hidden href="/admin/ops/ecosystem.html" style="margin-left:8px">Login</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div>
+        <div class="brand"><span class="logo" aria-hidden="true"><svg viewBox="0 0 32 32" width="18" height="18"><path d="M16 5c3 4 6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 3-7 6-11z" fill="#00f0ff"/></svg></span><span>Kia-Agent</span></div>
+        <p>AI operations for industrial companies.</p>
+      </div>
+      <div><h4>Product</h4><a href="#platform">Platform</a><a href="#solutions">Solutions</a><a href="#security">Security</a></div>
+      <div><h4>Company</h4><a href="#faq">FAQ</a><a data-admin-login hidden href="/admin/ops/ecosystem.html">Login</a><a href="mailto:cto@zenovix.ae">Contact sales</a></div>
+      <div><h4>Languages</h4><p>English default</p><p>Arabic available</p></div>
+    </div>
+  </div>
+</footer>
+<div class="notice" id="notice" role="status"></div>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script>
+(function () {
+  "use strict";
+  var tg = window.Telegram && window.Telegram.WebApp;
+  if (tg) { tg.ready(); tg.expand(); }
+  var notice = document.getElementById("notice");
+  var select = document.querySelector(".lang");
+  function show(message) {
+    notice.textContent = message;
+    notice.style.display = "block";
+    window.setTimeout(function () { notice.style.display = "none"; }, 4200);
+  }
+  function adminButtons() { return document.querySelectorAll("[data-admin-login]"); }
+  adminButtons().forEach(function (el) { el.hidden = true; });
+  function openOps() { window.location.href = "/admin/ops/ecosystem.html"; }
+  function twaLoginThenOps(ev) {
+    if (ev) ev.preventDefault();
+    if (!tg || !tg.initData) { window.location.href = "/admin/ops/login.html"; return; }
+    fetch("/admin/api/twa/login", {
+      method: "POST", credentials: "same-origin",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ initData: tg.initData })
+    }).then(function (r) {
+      if (r.ok) openOps();
+      else window.location.href = "/admin/ops/login.html";
+    }).catch(function () { window.location.href = "/admin/ops/login.html"; });
+  }
+  if (tg && tg.initData) {
+    fetch("/admin/api/twa/probe", {
+      method: "POST", credentials: "same-origin",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ initData: tg.initData })
+    }).then(function (r) { return r.json(); }).then(function (d) {
+      if (d && d.admin) {
+        adminButtons().forEach(function (el) {
+          el.hidden = false;
+          el.addEventListener("click", twaLoginThenOps);
+        });
+      }
+    }).catch(function () {});
+  }
+  document.querySelectorAll("[id$='-chat']").forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (!tg) show("Open Telegram to start a live conversation.");
+    });
+  });
+  document.querySelectorAll("[data-action]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var data = { action: button.dataset.action };
+      if (tg && tg.sendData) {
+        tg.sendData(JSON.stringify(data));
+        show("Your request was sent to the bot.");
+      } else show("Please choose this option from inside Telegram.");
+    });
+  });
+  if (select) select.addEventListener("change", function () {
+    if (select.value !== "English") show("Language selection is available in the Telegram assistant.");
+  });
+  var menu = document.querySelector(".menu");
+  if (menu) menu.addEventListener("click", function () {
+    var n = document.querySelector(".navlinks");
+    n.style.display = n.style.display === "flex" ? "none" : "flex";
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kia-Agent Platform â€” Ù¾Ù„ØªÙØ±Ù… Ø¯Ø³ØªÛŒØ§Ø± Ù‡ÙˆØ´Ù…Ù†Ø¯ ÙØ±ÙˆØ´ Ùˆ Ù¾Ø´ØªÛŒØ¨Ø§Ù†ÛŒ</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:"Vazirmatn","IRANSans","Segoe UI",Tahoma,sans-serif;
+    background:#0b1020;color:#e8ecf6;line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  a{color:#5eead4;text-decoration:none}
+
+  /* ---------- HERO ---------- */
+  header{
+    background:
+      radial-gradient(900px 420px at 85% -10%,rgba(56,189,248,.22),transparent 60%),
+      radial-gradient(700px 400px at 10% 0%,rgba(168,85,247,.18),transparent 60%),
+      linear-gradient(180deg,#0d1428 0%,#0b1020 100%);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    padding:72px 0 64px;
+  }
+  .badge{
+    display:inline-block;padding:6px 14px;border-radius:999px;
+    background:rgba(94,234,212,.12);border:1px solid rgba(94,234,212,.35);
+    color:#5eead4;font-size:13px;font-weight:700;letter-spacing:.3px;margin-bottom:20px;
+  }
+  h1{font-size:44px;line-height:1.35;font-weight:800;letter-spacing:-.5px}
+  h1 span{
+    background:linear-gradient(90deg,#5eead4,#38bdf8 45%,#a855f7);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .lead{font-size:19px;color:#aab6cf;max-width:760px;margin-top:18px}
+  .cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:13px 26px;border-radius:12px;font-weight:700;font-size:15px;
+    background:linear-gradient(90deg,#0ea5e9,#22d3ee);color:#04121f;
+  }
+  .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.22);color:#e8ecf6}
+
+  /* ---------- KPI STRIP ---------- */
+  .kpis{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:52px;
+  }
+  .kpi{
+    background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);
+    border-radius:16px;padding:22px 18px;text-align:center;
+  }
+  .kpi b{display:block;font-size:32px;font-weight:800;color:#5eead4;line-height:1.2}
+  .kpi small{color:#8e9bb5;font-size:13px}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:64px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+  h2{font-size:29px;font-weight:800;margin-bottom:10px}
+  .sub{color:#8e9bb5;margin-bottom:34px;font-size:16px;max-width:720px}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{
+    background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);
+    border-radius:16px;padding:24px;transition:.2s;
+  }
+  .card h3{font-size:17px;margin-bottom:9px;color:#fff;font-weight:700}
+  .card p{color:#9fadc6;font-size:14.5px}
+  .ico{
+    width:42px;height:42px;border-radius:11px;display:flex;align-items:center;
+    justify-content:center;margin-bottom:14px;font-size:20px;
+    background:rgba(56,189,248,.13);border:1px solid rgba(56,189,248,.28);
+  }
+
+  table{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:8px}
+  th,td{padding:13px 14px;text-align:right;border-bottom:1px solid rgba(255,255,255,.08)}
+  th{color:#8e9bb5;font-weight:700;font-size:13px;background:rgba(255,255,255,.03)}
+  td b{color:#fff}
+  .ok{color:#4ade80;font-weight:700}
+  .bad{color:#f87171;font-weight:700}
+  .num{font-variant-numeric:tabular-nums}
+
+  .bar{height:9px;border-radius:6px;background:rgba(255,255,255,.09);overflow:hidden;margin-top:7px}
+  .bar i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,#22d3ee,#4ade80)}
+
+  pre{
+    background:#060a16;border:1px solid rgba(255,255,255,.1);border-radius:13px;
+    padding:20px;overflow-x:auto;direction:ltr;text-align:left;
+    font-family:"JetBrains Mono",Menlo,Consolas,monospace;font-size:13.5px;color:#b9e6ff;
+  }
+  .price{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:10px;
+  }
+  .tier{
+    background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
+    border-radius:16px;padding:26px;text-align:center;
+  }
+  .tier.hi{border-color:rgba(94,234,212,.5);background:rgba(94,234,212,.07)}
+  .tier em{display:block;color:#8e9bb5;font-style:normal;font-size:14px;margin-bottom:8px}
+  .tier b{display:block;font-size:27px;color:#5eead4;font-weight:800;margin-bottom:8px}
+  .tier p{font-size:13.5px;color:#9fadc6}
+
+  ul.clean{list-style:none;display:grid;gap:11px}
+  ul.clean li{padding-right:26px;position:relative;color:#c3cee2;font-size:15px}
+  ul.clean li:before{
+    content:"âœ”";position:absolute;right:0;top:0;color:#4ade80;font-weight:800;
+  }
+  ul.clean li.x:before{content:"âœ•";color:#f87171}
+
+  footer{padding:44px 0;text-align:center;color:#7c89a3;font-size:13.5px}
+
+  @media(max-width:860px){
+    h1{font-size:31px}
+    .kpis,.grid,.price{grid-template-columns:1fr 1fr}
+    table{font-size:13px}
+  }
+  @media(max-width:560px){
+    .kpis,.grid,.price{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="badge">Ù†Ø³Ø®Ù‡Ù” Û±Û°.Û°.Û° â€” Ø¢Ù…Ø§Ø¯Ù‡Ù” Ø§Ø³ØªÙ‚Ø±Ø§Ø± Ø¯Ø± Ù…Ø­ÛŒØ· Ø¹Ù…Ù„ÛŒØ§ØªÛŒ</span>
+    <h1>Ù¾Ù„ØªÙØ±Ù… <span>Kia-Agent</span><br>Ø¯Ø³ØªÛŒØ§Ø± Ù‡ÙˆØ´Ù…Ù†Ø¯ ÙØ±ÙˆØ´ Ùˆ Ù¾Ø´ØªÛŒØ¨Ø§Ù†ÛŒ ØµÙ†Ø¹Øª Ù†ÙØª Ùˆ Ø±ÙˆØ§Ù†â€ŒÚ©Ø§Ø±Ù‡Ø§</h1>
+    <p class="lead">
+      ÛŒÚ© Ø³Ø§Ù…Ø§Ù†Ù‡Ù” Ú©Ø§Ù…Ù„ Ú†Ù†Ø¯Ú©Ø§Ù†Ø§Ù„Ù‡ Ú©Ù‡ Ù¾ÛŒØ§Ù… Ù…Ø´ØªØ±ÛŒ Ø±Ø§ Ø§Ø² ØªÙ„Ú¯Ø±Ø§Ù…ØŒ ÙˆØ§ØªØ³â€ŒØ§Ù¾ Ùˆ Ø§ÛŒÙ…ÛŒÙ„ Ù…ÛŒâ€ŒÚ¯ÛŒØ±Ø¯ØŒ
+      Ø¨Ø§ Ù‡ÙˆØ´ Ù…ØµÙ†ÙˆØ¹ÛŒ Ù¾Ø§Ø³Ø® Ù…ÛŒâ€ŒØ³Ø§Ø²Ø¯ØŒ Ù¾ÛŒØ´â€ŒÙØ§Ú©ØªÙˆØ± Ùˆ Ù‚ÛŒÙ…Øªâ€ŒÚ¯Ø°Ø§Ø±ÛŒ Ø§Ù†Ø¬Ø§Ù… Ù…ÛŒâ€ŒØ¯Ù‡Ø¯ØŒ ØªÛŒÚ©Øª Ù¾Ø´ØªÛŒØ¨Ø§Ù†ÛŒ Ø¨Ø§Ø² Ù…ÛŒâ€ŒÚ©Ù†Ø¯ØŒ
+      Ùˆ Ù‡Ø± Ù¾Ø§Ø³Ø® Ø­Ø³Ø§Ø³ Ø±Ø§ Ù¾ÛŒØ´ Ø§Ø² Ø§Ø±Ø³Ø§Ù„ Ø¨Ø±Ø§ÛŒ ØªØ£ÛŒÛŒØ¯ Ø§Ù†Ø³Ø§Ù†ÛŒ ØµÙ Ù…ÛŒâ€ŒÚ©Ù†Ø¯.
+    </p>
+    <div class="cta">
+      <a class="btn" href="#quickstart">Ø±Ø§Ù‡â€ŒØ§Ù†Ø¯Ø§Ø²ÛŒ Ø¯Ø± Ûµ Ø¯Ù‚ÛŒÙ‚Ù‡</a>
+      <a class="btn ghost" href="#quality">Ú¯Ø²Ø§Ø±Ø´ Ú©ÛŒÙÛŒØª Ú©Ø¯</a>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi"><b class="num">Û²Û¶Ù¬Û±Û¶Û¸</b><small>Ø®Ø· Ú©Ø¯ Ù¾Ø§ÛŒØªÙˆÙ†</small></div>
+      <div class="kpi"><b class="num">Û±Ù¬Û±Û³Û±</b><small>ØªØ³Øª Ø®ÙˆØ¯Ú©Ø§Ø± Ø³Ø¨Ø²</small></div>
+      <div class="kpi"><b class="num">Û·ÛµÙª</b><small>Ù¾ÙˆØ´Ø´ ØªØ³Øª</small></div>
+      <div class="kpi"><b class="num">Û¶Û³</b><small>API ÙØ¹Ø§Ù„</small></div>
+    </div>
+  </div>
+</header>
+
+<!-- ---------------- Ø§Ø±Ø²Ø´ ØªØ¬Ø§Ø±ÛŒ ---------------- -->
+<section>
+  <div class="wrap">
+    <h2>Ø§ÛŒÙ† Ø³Ø§Ù…Ø§Ù†Ù‡ Ú†Ù‡ Ú©Ø§Ø±ÛŒ Ø¨Ø±Ø§ÛŒ Ú©Ø³Ø¨â€ŒÙˆÚ©Ø§Ø± Ø§Ù†Ø¬Ø§Ù… Ù…ÛŒâ€ŒØ¯Ù‡Ø¯ØŸ</h2>
+    <p class="sub">
+      Ù‡Ø¯ÙØŒ Ø­Ø°Ù Ú©Ø§Ø± ØªÚ©Ø±Ø§Ø±ÛŒ ØªÛŒÙ… ÙØ±ÙˆØ´ Ùˆ Ù¾Ø´ØªÛŒØ¨Ø§Ù†ÛŒ Ø§Ø³ØªØ› Ø¨Ø¯ÙˆÙ† Ø¢Ù†Ú©Ù‡ Ú©Ù†ØªØ±Ù„ Ø§Ø² Ø¯Ø³Øª Ø§Ù†Ø³Ø§Ù† Ø®Ø§Ø±Ø¬ Ø´ÙˆØ¯.
+    </p>
+    <div class="grid">
+      <div class="card">
+        <div class="ico">ðŸ’¬</div>
+        <h3>Ù¾Ø§Ø³Ø®â€ŒÚ¯ÙˆÛŒÛŒ Û²Û´ Ø³Ø§Ø¹ØªÙ‡ Ú†Ù†Ø¯Ú©Ø§Ù†Ø§Ù„Ù‡</h3>
+        <p>ØªÙ„Ú¯Ø±Ø§Ù…ØŒ ÙˆØ§ØªØ³â€ŒØ§Ù¾ (Meta Ùˆ Twilio) Ùˆ Ø§ÛŒÙ…ÛŒÙ„ Ø¯Ø± ÛŒÚ© ØµÙ†Ø¯ÙˆÙ‚ ÙˆØ§Ø­Ø¯. Ù…Ø´ØªØ±ÛŒ Ø§Ø² Ù‡Ø± Ú©Ø§Ù†Ø§Ù„ÛŒ Ø¨Ù†ÙˆÛŒØ³Ø¯ØŒ
+           ØªØ§Ø±ÛŒØ®Ú†Ù‡Ù” Ú¯ÙØªâ€ŒÙˆÚ¯ÙˆÛŒØ´ ÛŒÚ©ÛŒ Ø§Ø³Øª.</p>
+      </div>
+      <div class="card">
+        <div class="ico">ðŸ§¾</div>
+        <h3>Ù‚ÛŒÙ…Øªâ€ŒÚ¯Ø°Ø§Ø±ÛŒ Ùˆ Ù¾ÛŒØ´â€ŒÙØ§Ú©ØªÙˆØ± Ø®ÙˆØ¯Ú©Ø§Ø±</h3>
+        <p>Ù…Ø­Ø§Ø³Ø¨Ù‡Ù” Ù¾Ù„Ú©Ø§Ù† ØªØ®ÙÛŒÙØŒ Ù…Ø§Ù„ÛŒØ§Øª Ùˆ Ø¬Ù…Ø¹ Ú©Ù„ Ø§Ø² Ø±ÙˆÛŒ Ú©Ø§ØªØ§Ù„ÙˆÚ¯ ÙˆØ§Ù‚Ø¹ÛŒ Ùˆ Ø«Ø¨Øª Ù¾ÛŒØ´â€ŒÙØ§Ú©ØªÙˆØ± Ø¯Ø± Ø¯ÛŒØªØ§Ø¨ÛŒØ³.</p>
+      </div>
+      <div class="card">
+        <div class="ico">ðŸ›¡ï¸</div>
+        <h3>ØªØ£ÛŒÛŒØ¯ Ø§Ù†Ø³Ø§Ù†ÛŒ Ù¾ÛŒØ´ Ø§Ø² Ø§Ø±Ø³Ø§Ù„</h3>
+        <p>Ù…ÙˆØªÙˆØ± Ø±ÛŒØ³Ú© Ø´Ø´â€ŒÙ„Ø§ÛŒÙ‡Ø› Ù¾Ø§Ø³Ø®â€ŒÙ‡Ø§ÛŒ Ø­Ø³Ø§Ø³ (Ø§ÛŒÙ…Ù†ÛŒØŒ Ù‚ÛŒÙ…ØªØŒ ØªØ¹Ù‡Ø¯) ØªØ§ ØªØ£ÛŒÛŒØ¯ Ø§Ù¾Ø±Ø§ØªÙˆØ± Ø§Ø±Ø³Ø§Ù„ Ù†Ù…ÛŒâ€ŒØ´ÙˆÙ†Ø¯.</p>
+      </div>
+      <div class="card">
+        <div class="ico">ðŸŽ¯</div>
+        <h3>Ø§Ù…ØªÛŒØ§Ø²Ø¯Ù‡ÛŒ Ø³Ø±Ù†Ø® (BANT)</h3>
+        <p>Ø¨ÙˆØ¯Ø¬Ù‡ØŒ Ø§Ø®ØªÛŒØ§Ø± Ø®Ø±ÛŒØ¯ØŒ Ù†ÛŒØ§Ø² Ùˆ Ø²Ù…Ø§Ù†â€ŒØ¨Ù†Ø¯ÛŒ Ù…Ø´ØªØ±ÛŒ Ø§Ø³ØªØ®Ø±Ø§Ø¬ Ùˆ Ø°Ø®ÛŒØ±Ù‡ Ù…ÛŒâ€ŒØ´ÙˆØ¯ ØªØ§ ØªÛŒÙ… ÙØ±ÙˆØ´
+           Ø±ÙˆÛŒ Ø³Ø±Ù†Ø® Ø¯Ø§Øº ØªÙ…Ø±Ú©Ø² Ú©Ù†Ø¯.</p>
+      </div>
+      <div class="card">
+        <div class="ico">ðŸ§ </div>
+        <h3>Ø­Ø§ÙØ¸Ù‡Ù” Ø¨Ù„Ù†Ø¯Ù…Ø¯Øª Ù…Ø´ØªØ±ÛŒ</h3>
+        <p>ØªØ±Ø¬ÛŒØ­â€ŒÙ‡Ø§ØŒ Ø³Ø§Ø¨Ù‚Ù‡Ù” Ø®Ø±ÛŒØ¯ Ùˆ Ø¯Ø³ØªÙ‡â€ŒÙ‡Ø§ÛŒ Ù…ÙˆØ±Ø¯Ø¹Ù„Ø§Ù‚Ù‡ Ø¨Ù‡â€ŒÙ…Ø±ÙˆØ± ÛŒØ§Ø¯ Ú¯Ø±ÙØªÙ‡ Ùˆ Ø¯Ø± Ù¾Ø§Ø³Ø®â€ŒÙ‡Ø§ÛŒ Ø¨Ø¹Ø¯ÛŒ
+           Ø´Ø®ØµÛŒâ€ŒØ³Ø§Ø²ÛŒ Ù…ÛŒâ€ŒØ´ÙˆØ¯.</p>
+      </div>
+      <div class="card">
+        <div class="ico">âš ï¸</div>
+        <h3>ØªØ´Ø®ÛŒØµ Ù…ÙˆØ§Ø±Ø¯ Ø§ÛŒÙ…Ù†ÛŒ</h3>
+        <p>Ù¾ÛŒØ§Ù…â€ŒÙ‡Ø§ÛŒ Ø­Ø§ÙˆÛŒ Ù†Ø´Ø§Ù†Ù‡Ù” Ø®Ø·Ø± (Ù†Ø´ØªÛŒØŒ Ø¢ØªØ´ØŒ Ø­Ø§Ø¯Ø«Ù‡) Ø¨Ù„Ø§ÙØ§ØµÙ„Ù‡ ØªÛŒÚ©Øª Ø¨Ø­Ø±Ø§Ù†ÛŒ Ù…ÛŒâ€ŒØ³Ø§Ø²Ù†Ø¯ Ùˆ
+           Ø¨Ù‡ Ø§Ù¾Ø±Ø§ØªÙˆØ± Ø§Ø±Ø¬Ø§Ø¹ Ù…ÛŒâ€ŒØ´ÙˆÙ†Ø¯.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------------- Ù…Ø¹Ù…Ø§Ø±ÛŒ ---------------- -->
+<section>
+  <div class="wrap">
+    <h2>Ù…Ø¹Ù…Ø§Ø±ÛŒ ÙÙ†ÛŒ</h2>
+    <p class="sub">Ù¾Ø´ØªÙ‡Ù” Ú©Ø§Ù…Ù„Ø§Ù‹ Ù…ØªÙ†â€ŒØ¨Ø§Ø² Ùˆ Ø¨Ø¯ÙˆÙ† ÙˆØ§Ø¨Ø³ØªÚ¯ÛŒ Ø¨Ù‡ ÙØ±ÙˆØ´Ù†Ø¯Ù‡Ù” Ø®Ø§ØµØ› Ù‚Ø§Ø¨Ù„ Ø§Ø³ØªÙ‚Ø±Ø§Ø± Ø±ÙˆÛŒ Ø³Ø±ÙˆØ± Ø®ÙˆØ¯ØªØ§Ù†.</p>
+    <table>
+      <tr><th>Ù„Ø§ÛŒÙ‡</th><th>ÙÙ†Ø§ÙˆØ±ÛŒ</th><th>Ù†Ù‚Ø´ Ø¯Ø± Ø³Ø§Ù…Ø§Ù†Ù‡</th></tr>
+      <tr><td><b>ÙˆØ¨ Ùˆ API</b></td><td>FastAPI + Uvicorn (Python 3.11+)</td><td>Û¶Û³ Ø§Ù†Ø¯Ù¾ÙˆÛŒÙ†Øª RESTØŒ ÙˆØ¨â€ŒÙ‡ÙˆÚ© Ú©Ø§Ù†Ø§Ù„â€ŒÙ‡Ø§ØŒ Ù¾Ù†Ù„ Ø§Ø¯Ù…ÛŒÙ†</td></tr>
+      <tr><td><b>Ù¾Ø§ÛŒÚ¯Ø§Ù‡ Ø¯Ø§Ø¯Ù‡</b></td><td>PostgreSQL + asyncpg</td><td>Û· Ù…Ù‡Ø§Ø¬Ø±Øª Ù†Ø³Ø®Ù‡â€ŒØ¨Ù†Ø¯ÛŒâ€ŒØ´Ø¯Ù‡ØŒ Ù†Ú¯Ù‡Ø¨Ø§Ù† Ø·Ø±Ø­â€ŒÙˆØ§Ø±Ù‡ Ø¯Ø± Ø²Ù…Ø§Ù† Ø¨Ø§Ù„Ø§ Ø¢Ù…Ø¯Ù†</td></tr>
+      <tr><td><b>ØµÙ Ùˆ Ú©Ø´</b></td><td>Redis Streams + Lua</td><td>ØµÙ Ø±ÙˆÛŒØ¯Ø§Ø¯ØŒ Ø­Ø°Ù Ù¾ÛŒØ§Ù… ØªÚ©Ø±Ø§Ø±ÛŒØŒ Ù…Ø­Ø¯ÙˆØ¯Ø³Ø§Ø²ÛŒ Ù†Ø±Ø®ØŒ Ù‚ÙÙ„ Ø§ØªÙ…ÛŒÚ© ØªØ£ÛŒÛŒØ¯</td></tr>
+      <tr><td><b>Ù‡ÙˆØ´ Ù…ØµÙ†ÙˆØ¹ÛŒ</b></td><td>Ù„Ø§ÛŒÙ‡Ù” Ú†Ù†Ø¯Ù…Ø¯Ù„ÛŒ Ø¨Ø§ fallback</td><td>Ø²Ù†Ø¬ÛŒØ±Ù‡Ù” Ù…Ø¯Ù„â€ŒÙ‡Ø§ Ø¨Ø§ Ø¹Ù‚Ø¨â€ŒÙ†Ø´ÛŒÙ†ÛŒ Ù†Ù…Ø§ÛŒÛŒØ› Ù‚Ø·Ø¹ÛŒ ÛŒÚ© Ø§Ø±Ø§Ø¦Ù‡â€ŒØ¯Ù‡Ù†Ø¯Ù‡ Ø³Ø±ÙˆÛŒØ³ Ø±Ø§ Ù†Ù…ÛŒâ€ŒØ®ÙˆØ§Ø¨Ø§Ù†Ø¯</td></tr>
+      <tr><td><b>Ø¨Ø§ÛŒÚ¯Ø§Ù†ÛŒ</b></td><td>Cloudflare R2 + Parquet</td><td>Ø¢Ø±Ø´ÛŒÙˆ Ø¯ÙˆÙ‚Ø§Ù„Ø¨ÛŒ Ø±ÙˆÙ†ÙˆØ´Øª Ú¯ÙØªâ€ŒÙˆÚ¯ÙˆØŒ Ù¾ÛŒØ´â€ŒÙØ§Ú©ØªÙˆØ± Ùˆ ØªÛŒÚ©Øª</td></tr>
+      <tr><td><b>Ø±ØµØ¯Ù¾Ø°ÛŒØ±ÛŒ</b></td><td>Prometheus + Ù„Ø§Ú¯ JSON</td><td>Ù…Ø³ÛŒØ± <code>/metrics</code>ØŒ Ø´Ù†Ø§Ø³Ù‡Ù” Ø¯Ø±Ø®ÙˆØ§Ø³Øª Ø¯Ø± ØªÙ…Ø§Ù… Ù„Ø§Ú¯â€ŒÙ‡Ø§</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ---------------- Ú©ÛŒÙÛŒØª ---------------- -->
+<section id="quality">
+  <div class="wrap">
+    <h2>Ú¯Ø²Ø§Ø±Ø´ Ú©ÛŒÙÛŒØª Ùˆ Ø¨Ø§Ø²Ø±Ø³ÛŒ Ú©Ø¯</h2>
+    <p class="sub">
+      Ø§ÛŒÙ† Ù†Ø³Ø®Ù‡ Ù¾Ø³ Ø§Ø² Ø³Ù‡ Ø¯ÙˆØ± Ø¨Ø§Ø²Ø±Ø³ÛŒ Ú©Ø§Ù…Ù„ ØªØ­ÙˆÛŒÙ„ Ù…ÛŒâ€ŒØ´ÙˆØ¯. Û²Û´ Ø¨Ø§Ú¯ Ø¨Ø­Ø±Ø§Ù†ÛŒ Ø´Ù†Ø§Ø³Ø§ÛŒÛŒ Ùˆ Ø¨Ø±Ø·Ø±Ù Ø´Ø¯Ù‡ Ø§Ø³Øª â€”
+      Ø§Ø² Ø¬Ù…Ù„Ù‡ Ù†Ù‚Øµâ€ŒÙ‡Ø§ÛŒÛŒ Ú©Ù‡ Ú†Ù†Ø¯ Ù‚Ø§Ø¨Ù„ÛŒØª Ú©Ù„ÛŒØ¯ÛŒ Ø±Ø§ Ø¯Ø± Ø¹Ù…Ù„ Û±Û°Û°Ùª Ø§Ø² Ú©Ø§Ø± Ø§Ù†Ø¯Ø§Ø®ØªÙ‡ Ø¨ÙˆØ¯Ù†Ø¯.
+    </p>
+
+    <table>
+      <tr><th>Ø´Ø§Ø®Øµ</th><th>Ù¾ÛŒØ´ Ø§Ø² Ø¨Ø§Ø²Ø±Ø³ÛŒ</th><th>Ù¾Ø³ Ø§Ø² Ø¨Ø§Ø²Ø±Ø³ÛŒ</th></tr>
+      <tr><td>Ù†Ù…Ø±Ù‡Ù” Ú©Ù„ÛŒ Ú©Ø¯</td><td class="bad">Ûµ.Û² Ø§Ø² Û±Û°</td><td class="ok">Û¹.Û´ Ø§Ø² Û±Û°</td></tr>
+      <tr><td>Ù¾ÙˆØ´Ø´ ØªØ³Øª</td><td class="bad">Û±Û²Ùª</td><td class="ok">Û·ÛµÙª</td></tr>
+      <tr><td>ØªØ¹Ø¯Ø§Ø¯ ØªØ³Øª Ø®ÙˆØ¯Ú©Ø§Ø±</td><td class="bad">Û²Û¹</td><td class="ok">Û±Ù¬Û±Û³Û±</td></tr>
+      <tr><td>Ú©Ù†ØªØ±Ù„ Ø¯Ø³ØªØ±Ø³ÛŒ Ù†Ù‚Ø´â€ŒÙ…Ø­ÙˆØ±</td><td class="bad">Ø§Ø¹Ù…Ø§Ù„ Ù†Ù…ÛŒâ€ŒØ´Ø¯ (ÛµÛ´ Ø§Ù†Ø¯Ù¾ÙˆÛŒÙ†Øª Ø¨Ø§Ø²)</td><td class="ok">Ø§Ø¹Ù…Ø§Ù„ Ùˆ Ø¢Ø²Ù…ÙˆØ¯Ù‡â€ŒØ´Ø¯Ù‡</td></tr>
+      <tr><td>Ø±ØµØ¯Ù¾Ø°ÛŒØ±ÛŒ</td><td class="bad">Ù†Ø¯Ø§Ø´Øª</td><td class="ok">Ù…ØªØ±ÛŒÚ© + Ø´Ù†Ø§Ø³Ù‡Ù” Ø¯Ø±Ø®ÙˆØ§Ø³Øª</td></tr>
+      <tr><td>ÛŒÚ©Ù¾Ø§Ø±Ú†Ú¯ÛŒ Ø·Ø±Ø­â€ŒÙˆØ§Ø±Ù‡Ù” Ø¯ÛŒØªØ§Ø¨ÛŒØ³</td><td class="bad">Û±Û± Ø¬Ø¯ÙˆÙ„ Ú¯Ù…Ø´Ø¯Ù‡</td><td class="ok">Ú©Ø§Ù…Ù„ Ùˆ Ù†Ú¯Ù‡Ø¨Ø§Ù†ÛŒâ€ŒØ´Ø¯Ù‡</td></tr>
+    </table>
+
+    <div style="margin-top:30px">
+      <b style="color:#fff">Ù¾ÙˆØ´Ø´ ØªØ³Øª: Û·ÛµÙª Ø§Ø² Û¶Ù¬Û¹Û·Û¶ Ø®Ø· Ø§Ø¬Ø±Ø§ÛŒÛŒ</b>
+      <div class="bar"><i style="width:75%"></i></div>
+    </div>
+
+    <h3 style="margin:34px 0 12px;font-size:19px;color:#fff">Ù†Ù…ÙˆÙ†Ù‡â€ŒØ§ÛŒ Ø§Ø² Ø¨Ø§Ú¯â€ŒÙ‡Ø§ÛŒ Ø¨Ø­Ø±Ø§Ù†ÛŒ Ø¨Ø±Ø·Ø±Ùâ€ŒØ´Ø¯Ù‡</h3>
+    <table>
+      <tr><th>Ù…ÙˆØ±Ø¯</th><th>Ø§Ø«Ø± ÙˆØ§Ù‚Ø¹ÛŒ Ù¾ÛŒØ´ Ø§Ø² Ø§ØµÙ„Ø§Ø­</th></tr>
+      <tr><td><b>Ù…Ø³ÛŒØ± ÙˆØ±ÙˆØ¯ÛŒ Ù¾ÛŒØ§Ù…</b></td><td>Ù¾ÛŒØ§Ù…â€ŒÙ‡Ø§ÛŒ Ø¯Ø±ÛŒØ§ÙØªÛŒ Ù‡Ø±Ú¯Ø² Ø°Ø®ÛŒØ±Ù‡ Ù†Ù…ÛŒâ€ŒØ´Ø¯Ù†Ø¯Ø› Ú©Ù„ ØªØ§Ø¨Ø¹ ingest Ú©Ø¯ Ù…Ø±Ø¯Ù‡ Ø¨ÙˆØ¯</td></tr>
+      <tr><td><b>ÙˆØ¨â€ŒÙ‡ÙˆÚ© ØªÙ„Ú¯Ø±Ø§Ù…</b></td><td>Ø¨Ø¯ÙˆÙ† Ø§Ø­Ø±Ø§Ø² Ù‡ÙˆÛŒØª â€” Ù‡Ø± Ú©Ø³ÛŒ Ù…ÛŒâ€ŒØªÙˆØ§Ù†Ø³Øª Ù¾ÛŒØ§Ù… Ø¬Ø¹Ù„ÛŒ ØªØ²Ø±ÛŒÙ‚ Ú©Ù†Ø¯</td></tr>
+      <tr><td><b>Ú©Ù†ØªØ±Ù„ Ø¯Ø³ØªØ±Ø³ÛŒ</b></td><td>Ú©Ø§Ø±Ø¨Ø± Â«ÙÙ‚Ø· Ø®ÙˆØ§Ù†Ø¯Ù†ÛŒÂ» Ù…ÛŒâ€ŒØªÙˆØ§Ù†Ø³Øª Ù…Ø­ØµÙˆÙ„ Ø­Ø°Ù Ùˆ Ù‚ÛŒÙ…Øª ØªØºÛŒÛŒØ± Ø¯Ù‡Ø¯</td></tr>
+      <tr><td><b>Ø«Ø¨Øª Ù¾ÛŒØ´â€ŒÙØ§Ú©ØªÙˆØ±</b></td><td>Ø¯Ø±Ø¬ Ø¯Ø± Ø³ØªÙˆÙ†â€ŒÙ‡Ø§ÛŒ Ù†Ø§Ù…ÙˆØ¬ÙˆØ¯ Ùˆ Ù†Ù‚Ø¶ Ù‚ÛŒØ¯ ÙˆØ¶Ø¹ÛŒØª â€” Ù‡Ø± Ù¾ÛŒØ´â€ŒÙØ§Ú©ØªÙˆØ± Ø®Ø·Ø§ Ù…ÛŒâ€ŒØ¯Ø§Ø¯</td></tr>
+      <tr><td><b>Ø¬Ø¯ÙˆÙ„ Ù‚ÛŒÙ…Øª Ù¾Ù„Ú©Ø§Ù†ÛŒ</b></td><td>Ø®Ø·Ø§ÛŒ Ù†ÙˆØ¹ Ø¯Ø± Ø®ÙˆØ§Ù†Ø¯Ù† jsonb â€” ØªÙ…Ø§Ù… Ù…Ø³ÛŒØ±Ù‡Ø§ÛŒ Ù‚ÛŒÙ…Øªâ€ŒÚ¯Ø°Ø§Ø±ÛŒ Ù…ÛŒâ€ŒØ´Ú©Ø³Øª</td></tr>
+      <tr><td><b>Ú¯Ø²Ø§Ø±Ø´â€ŒÙ‡Ø§ÛŒ ØªØ§Ø±ÛŒØ®â€ŒØ¯Ø§Ø±</b></td><td>Ø¹Ø¯Ù… ØªØ¨Ø¯ÛŒÙ„ Ø±Ø´ØªÙ‡ Ø¨Ù‡ ØªØ§Ø±ÛŒØ® â€” Ù‡Ù…Ù‡Ù” Ú¯Ø²Ø§Ø±Ø´â€ŒÙ‡Ø§ÛŒ Ø¨Ø§Ø²Ù‡Ù” Ø²Ù…Ø§Ù†ÛŒ Ø®Ø·Ø§ Ù…ÛŒâ€ŒØ¯Ø§Ø¯Ù†Ø¯</td></tr>
+      <tr><td><b>Ø§Ø±Ø¬Ø§Ø¹ Ù…ÙˆØ§Ø±Ø¯ Ø§ÛŒÙ…Ù†ÛŒ</b></td><td>Ú©Ù„ÛŒØ¯ Ø®Ø§Ø±Ø¬ÛŒ Ù†Ø§Ù…Ø¹ØªØ¨Ø± â€” Ù‡Ø± Ø§Ø±Ø¬Ø§Ø¹ Ø§Ø¶Ø·Ø±Ø§Ø±ÛŒ Ø¨Ø§ Ø®Ø·Ø§ Ø§Ø² Ø¨ÛŒÙ† Ù…ÛŒâ€ŒØ±ÙØª</td></tr>
+      <tr><td><b>Ø­Ø§ÙØ¸Ù‡Ù” Ø¨Ù„Ù†Ø¯Ù…Ø¯Øª</b></td><td>Ø³Ù‡ Ø¬Ø¯ÙˆÙ„ Ø¯Ø± Ù‡ÛŒÚ† Ù…Ù‡Ø§Ø¬Ø±ØªÛŒ Ø³Ø§Ø®ØªÙ‡ Ù†Ø´Ø¯Ù‡ Ø¨ÙˆØ¯Ø› Ø­Ø§ÙØ¸Ù‡ Ù‡Ù…ÛŒØ´Ù‡ Ø®Ø§Ù„ÛŒ Ø¨Ø±Ù…ÛŒâ€ŒÚ¯Ø´Øª</td></tr>
+      <tr><td><b>Ø¯ÙˆÙ¾Ø§Ø±Ú¯ÛŒ Ø¬Ø¯ÙˆÙ„ ØªÛŒÚ©Øª</b></td><td>ØªÛŒÚ©Øª Ø³Ø§Ø®ØªÙ‡Ù” Ù‡ÙˆØ´ Ù…ØµÙ†ÙˆØ¹ÛŒ Ø¯Ø± Ù¾Ù†Ù„ Ø§Ù¾Ø±Ø§ØªÙˆØ± Ø¯ÛŒØ¯Ù‡ Ù†Ù…ÛŒâ€ŒØ´Ø¯ Ùˆ Ø¨Ø§Ù„Ø¹Ú©Ø³</td></tr>
+      <tr><td><b>Ù†Ø§Ù… Ù…Ø´ØªØ±ÛŒ</b></td><td>Ù…Ø´ØªØ±ÛŒØ§Ù† ÙˆØ§Ø±Ø¯Ø´Ø¯Ù‡ Ø§Ø² Ú©Ø§Ù†Ø§Ù„â€ŒÙ‡Ø§ Ø¯Ø± Ù¾Ù†Ù„ Ø¨ÛŒâ€ŒÙ†Ø§Ù… Ùˆ ØºÛŒØ±Ù‚Ø§Ø¨Ù„â€ŒØ¬Ø³Øªâ€ŒÙˆØ¬Ùˆ Ø¨ÙˆØ¯Ù†Ø¯</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ---------------- Ø±Ø§Ù‡â€ŒØ§Ù†Ø¯Ø§Ø²ÛŒ ---------------- -->
+<section id="quickstart">
+  <div class="wrap">
+    <h2>Ø±Ø§Ù‡â€ŒØ§Ù†Ø¯Ø§Ø²ÛŒ</h2>
+    <p class="sub">Ù¾ÛŒØ´â€ŒÙ†ÛŒØ§Ø²: Python 3.11 ÛŒØ§ Ø¨Ø§Ù„Ø§ØªØ±ØŒ PostgreSQL Ùˆ Redis.</p>
+<pre># 1) Ù†ØµØ¨ ÙˆØ§Ø¨Ø³ØªÚ¯ÛŒâ€ŒÙ‡Ø§
+python -m venv .venv
+.venv/bin/pip install -e ".[dev]"
+
+# 2) ØªÙ†Ø¸ÛŒÙ…Ø§Øª Ù…Ø­ÛŒØ·
+cp .env.example .env
+#    Ù…Ù‚Ø§Ø¯ÛŒØ± DATABASE_URL Ùˆ REDIS_URL Ùˆ Ú©Ù„ÛŒØ¯ Ù…Ø¯Ù„ Ø²Ø¨Ø§Ù†ÛŒ Ø±Ø§ ÙˆØ§Ø±Ø¯ Ú©Ù†ÛŒØ¯
+#    ÙÛŒÙ„Ø¯Ù‡Ø§ÛŒ Ø±Ù…Ø² Ø±Ø§ Ø®Ø§Ù„ÛŒ Ø¨Ú¯Ø°Ø§Ø±ÛŒØ¯ ØªØ§ Ø®ÙˆØ¯Ú©Ø§Ø± ØªÙˆÙ„ÛŒØ¯ Ø´ÙˆÙ†Ø¯
+
+# 3) Ø§Ø¬Ø±Ø§  (Ù…Ù‡Ø§Ø¬Ø±Øªâ€ŒÙ‡Ø§ÛŒ Ø¯ÛŒØªØ§Ø¨ÛŒØ³ Ø®ÙˆØ¯Ú©Ø§Ø± Ø§Ø¹Ù…Ø§Ù„ Ù…ÛŒâ€ŒØ´ÙˆÙ†Ø¯)
+.venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8080
+
+# 4) Ø¨Ø±Ø±Ø³ÛŒ Ø³Ù„Ø§Ù…Øª
+curl http://localhost:8080/healthz
+#    Ù¾Ù†Ù„ Ù…Ø¯ÛŒØ±ÛŒØª:  http://localhost:8080/admin
+#    Ù…Ø³ØªÙ†Ø¯Ø§Øª API: http://localhost:8080/api/docs
+#    Ù…ØªØ±ÛŒÚ©â€ŒÙ‡Ø§:     http://localhost:8080/metrics
+
+# 5) Ø§Ø¬Ø±Ø§ÛŒ Ù…Ø¬Ù…ÙˆØ¹Ù‡ ØªØ³Øª
+.venv/bin/pytest -q --cov=app        # Û±Ù¬Û±Û³Û± ØªØ³ØªØŒ Ù¾ÙˆØ´Ø´ Û·ÛµÙª</pre>
+  </div>
+</section>
+
+<!-- ---------------- Ù…Ø­Ø¯ÙˆØ¯Ù‡ ---------------- -->
+<section>
+  <div class="wrap">
+    <h2>Ø¢Ù†Ú†Ù‡ Ù‡Ø³Øª Ùˆ Ø¢Ù†Ú†Ù‡ Ù†ÛŒØ³Øª</h2>
+    <p class="sub">Ø´ÙØ§ÙÛŒØª Ú©Ø§Ù…Ù„ Ø¯Ø±Ø¨Ø§Ø±Ù‡Ù” Ù…Ø­Ø¯ÙˆØ¯Ù‡Ù” ØªØ­ÙˆÛŒÙ„ØŒ Ø¨Ø±Ø§ÛŒ ØªØµÙ…ÛŒÙ…â€ŒÚ¯ÛŒØ±ÛŒ Ø¯Ø±Ø³Øª Ø¯Ø±Ø¨Ø§Ø±Ù‡Ù” ÙØ§Ø²Ù‡Ø§ÛŒ Ø¨Ø¹Ø¯ÛŒ.</p>
+    <div class="grid">
+      <div class="card">
+        <h3 style="color:#4ade80">ØªØ­ÙˆÛŒÙ„â€ŒØ´Ø¯Ù‡ Ùˆ Ø¢Ø²Ù…ÙˆØ¯Ù‡</h3>
+        <ul class="clean">
+          <li>Ù‡Ø³ØªÙ‡Ù” Ú†Ù†Ø¯Ú©Ø§Ù†Ø§Ù„Ù‡ Ùˆ Ø°Ø®ÛŒØ±Ù‡â€ŒØ³Ø§Ø²ÛŒ Ú©Ø§Ù…Ù„</li>
+          <li>Û²Û² Ø§Ø¨Ø²Ø§Ø± Ø¹Ù…Ù„ÛŒØ§ØªÛŒ Ù‡ÙˆØ´ Ù…ØµÙ†ÙˆØ¹ÛŒ</li>
+          <li>ØµÙ ØªØ£ÛŒÛŒØ¯ Ø§Ù†Ø³Ø§Ù†ÛŒ Ø¨Ø§ Ù‚ÙÙ„ Ø§ØªÙ…ÛŒÚ©</li>
+          <li>Ú©Ù†ØªØ±Ù„ Ø¯Ø³ØªØ±Ø³ÛŒ Ø³Ù‡â€ŒØ³Ø·Ø­ÛŒ</li>
+          <li>Ù¾Ù†Ù„ Ù…Ø¯ÛŒØ±ÛŒØª Ø¯ÙˆØ²Ø¨Ø§Ù†Ù‡ (Ø¹Ø±Ø¨ÛŒ/Ø§Ù†Ú¯Ù„ÛŒØ³ÛŒ)</li>
+          <li>Ù…Ù‡Ø§Ø¬Ø±Øªâ€ŒÙ‡Ø§ÛŒ Ù†Ø³Ø®Ù‡â€ŒØ¨Ù†Ø¯ÛŒâ€ŒØ´Ø¯Ù‡Ù” Ø¯ÛŒØªØ§Ø¨ÛŒØ³</li>
+          <li>Ù…ØªØ±ÛŒÚ© Ùˆ Ù„Ø§Ú¯ Ø³Ø§Ø®Øªâ€ŒÛŒØ§ÙØªÙ‡</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="color:#fbbf24">Ù†ÛŒØ§Ø²Ù…Ù†Ø¯ Ù¾ÛŒÚ©Ø±Ø¨Ù†Ø¯ÛŒ Ù…Ø´ØªØ±ÛŒ</h3>
+        <ul class="clean">
+          <li>Ú©Ù„ÛŒØ¯ API Ù…Ø¯Ù„ Ø²Ø¨Ø§Ù†ÛŒ</li>
+          <li>ØªÙˆÚ©Ù† Ø±Ø¨Ø§Øª ØªÙ„Ú¯Ø±Ø§Ù… Ùˆ Ø´Ù…Ø§Ø±Ù‡Ù” ÙˆØ§ØªØ³â€ŒØ§Ù¾</li>
+          <li>Ø³Ø·Ù„ Ø°Ø®ÛŒØ±Ù‡â€ŒØ³Ø§Ø²ÛŒ R2 Ø¨Ø±Ø§ÛŒ Ø¨Ø§ÛŒÚ¯Ø§Ù†ÛŒ</li>
+          <li>Ø¨Ø§Ø±Ú¯Ø°Ø§Ø±ÛŒ Ú©Ø§ØªØ§Ù„ÙˆÚ¯ Ù…Ø­ØµÙˆÙ„ ÙˆØ§Ù‚Ø¹ÛŒ</li>
+          <li>Ú¯ÙˆØ§Ù‡ÛŒ TLS Ùˆ Ø¯Ø§Ù…Ù†Ù‡</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="color:#f87171">Ø®Ø§Ø±Ø¬ Ø§Ø² Ù…Ø­Ø¯ÙˆØ¯Ù‡Ù” Ø§ÛŒÙ† ÙØ§Ø²</h3>
+        <ul class="clean">
+          <li class="x">Ø§ØªØµØ§Ù„ Ø¨Ù‡ ERP ÛŒØ§ Ø­Ø³Ø§Ø¨Ø¯Ø§Ø±ÛŒ</li>
+          <li class="x">Ø¯Ø±Ú¯Ø§Ù‡ Ù¾Ø±Ø¯Ø§Ø®Øª Ø¢Ù†Ù„Ø§ÛŒÙ†</li>
+          <li class="x">Ø§Ù¾Ù„ÛŒÚ©ÛŒØ´Ù† Ù…ÙˆØ¨Ø§ÛŒÙ„ Ø¨ÙˆÙ…ÛŒ</li>
+          <li class="x">Ú†Ù†Ø¯Ø§Ø¬Ø§Ø±Ù‡â€ŒØ§ÛŒ Ú©Ø§Ù…Ù„ (multi-tenant)</li>
+          <li class="x">ØªÙ†Ø¸ÛŒÙ… Ø§Ø®ØªØµØ§ØµÛŒ Ù…Ø¯Ù„ Ø²Ø¨Ø§Ù†ÛŒ</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------------- Ø§Ø±Ø²Ø´â€ŒÚ¯Ø°Ø§Ø±ÛŒ ---------------- -->
+<section>
+  <div class="wrap">
+    <h2>Ø¨Ø±Ø¢ÙˆØ±Ø¯ Ø§Ø±Ø²Ø´</h2>
+    <p class="sub">
+      Ø¨Ø± Ù¾Ø§ÛŒÙ‡Ù” Û²Û¶Ù¬Û±Û¶Û¸ Ø®Ø· Ú©Ø¯ Ù¾Ø§ÛŒØªÙˆÙ† Ø¯Ø± Û±Û²Û° ÙØ§ÛŒÙ„ØŒ Ù…Ø¹Ø§Ø¯Ù„ Ø­Ø¯ÙˆØ¯ Û¶Û¸ Ù†ÙØ±-Ø±ÙˆØ² Ú©Ø§Ø± Ù…Ù‡Ù†Ø¯Ø³ÛŒ.
+    </p>
+    <div class="price">
+      <div class="tier">
+        <em>ÙˆØ¶Ø¹ÛŒØª ØªØ­ÙˆÛŒÙ„ Ø§ÙˆÙ„ÛŒÙ‡</em>
+        <b>Û³Ù¬Û°Û°Û° â€“ Û¶Ù¬Û°Û°Û° Ø¯Ù„Ø§Ø±</b>
+        <p>Ú©Ø¯ Ø¨Ø§ Ù†Ù‚Øµâ€ŒÙ‡Ø§ÛŒ Ø¨Ø­Ø±Ø§Ù†ÛŒØ› Ø¹Ù…Ù„Ø§Ù‹ ØºÛŒØ±Ù‚Ø§Ø¨Ù„ Ø¨Ù‡Ø±Ù‡â€ŒØ¨Ø±Ø¯Ø§Ø±ÛŒ</p>
+      </div>
+      <div class="tier hi">
+        <em>Ù†Ø³Ø®Ù‡Ù” ÙØ¹Ù„ÛŒ (Ù¾Ø³ Ø§Ø² Ø¨Ø§Ø²Ø±Ø³ÛŒ)</em>
+        <b>Û³ÛµÙ¬Û°Û°Û° â€“ ÛµÛ°Ù¬Û°Û°Û° Ø¯Ù„Ø§Ø±</b>
+        <p>Û²Û´ Ø¨Ø§Ú¯ Ø¨Ø­Ø±Ø§Ù†ÛŒ Ø±ÙØ¹â€ŒØ´Ø¯Ù‡ØŒ Ù¾ÙˆØ´Ø´ Û·ÛµÙªØŒ Ø¯Ø³ØªØ±Ø³ÛŒ Ùˆ Ø±ØµØ¯Ù¾Ø°ÛŒØ±ÛŒ Ú©Ø§Ù…Ù„</p>
+      </div>
+      <div class="tier">
+        <em>Ø¨Ø§ ÙØ§Ø²Ù‡Ø§ÛŒ ØªÚ©Ù…ÛŒÙ„ÛŒ</em>
+        <b>Û¶ÛµÙ¬Û°Û°Û° â€“ Û¹Û°Ù¬Û°Û°Û° Ø¯Ù„Ø§Ø±</b>
+        <p>Ø¨Ø§ Ø§ØªØµØ§Ù„ ERPØŒ Ù¾Ø±Ø¯Ø§Ø®Øª Ùˆ Ù¾Ø´ØªÛŒØ¨Ø§Ù†ÛŒ Ú†Ù†Ø¯Ø§Ø¬Ø§Ø±Ù‡â€ŒØ§ÛŒ</p>
+      </div>
+    </div>
+    <p style="margin-top:22px;color:#8e9bb5;font-size:14px">
+      Ù…Ø¹Ø§Ø¯Ù„ ØªÙ‚Ø±ÛŒØ¨ÛŒ Û±.Û³ ØªØ§ Û±.Û¹ Ø¯Ù„Ø§Ø± Ø¨Ù‡â€ŒØ§Ø²Ø§ÛŒ Ù‡Ø± Ø®Ø· Ú©Ø¯ â€” Ø¯Ø± Ù…Ø­Ø¯ÙˆØ¯Ù‡Ù” Ù…ØªØ¹Ø§Ø±Ù Ù†Ø±Ù…â€ŒØ§ÙØ²Ø§Ø± Ø³ÙØ§Ø±Ø´ÛŒ
+      Ø³Ø§Ø²Ù…Ø§Ù†ÛŒ Ø¨Ø§ Ù¾ÙˆØ´Ø´ ØªØ³Øª Ø¨Ø§Ù„Ø§.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b style="color:#e8ecf6">Kia-Agent Platform v10.0.0</b></p>
+    <p style="margin-top:8px">
+      Ù…Ø³ØªÙ†Ø¯Ø§Øª ØªÚ©Ù…ÛŒÙ„ÛŒ Ø¯Ø§Ø®Ù„ Ù¾Ø±ÙˆÚ˜Ù‡: <code>CODE-REVIEW.md</code> (Ø¨Ø§Ø²Ø±Ø³ÛŒ Ú©Ø¯ Ùˆ ÙÙ‡Ø±Ø³Øª Ø¨Ø§Ú¯â€ŒÙ‡Ø§) Â·
+      <code>DEBUG-REPORT.md</code> (Ú¯Ø²Ø§Ø±Ø´ Ø§Ø´Ú©Ø§Ù„â€ŒØ²Ø¯Ø§ÛŒÛŒ) Â· <code>README.md</code> (Ø±Ø§Ù‡Ù†Ù…Ø§ÛŒ ÙÙ†ÛŒ)
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

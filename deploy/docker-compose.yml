@@ -1,0 +1,130 @@
+# =============================================================================
+# Kia-Agent Platform â€” Docker Compose (6 services)
+# =============================================================================
+
+version: "3.9"
+
+services:
+  # --- PostgreSQL ---
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: Kia-Agent
+      POSTGRES_USER: Kia-Agent
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-Kia-Agent_dev}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U Kia-Agent"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # --- Redis ---
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # --- Kia-Agent App ---
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql://Kia-Agent:${POSTGRES_PASSWORD:-Kia-Agent_dev}@postgres:5432/Kia-Agent
+      REDIS_URL: redis://redis:6379/0
+    ports:
+      - "${WEB_PORT:-8080}:8080"
+    volumes:
+      - app_data:/app/data
+      - app_logs:/app/logs
+    healthcheck:
+      test: ["CMD", "python", "-c", "import httpx; r = httpx.get('http://localhost:8080/healthz'); assert r.status_code == 200"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+  # --- Hermes Bridge ---
+  hermes:
+    build:
+      context: .
+      dockerfile: Dockerfile.hermes
+    restart: unless-stopped
+    depends_on:
+      app:
+        condition: service_healthy
+    environment:
+      HERMES_PORT: 3000
+      HERMES_UPSTREAM_URL: http://app:8080
+      HERMES_SERVICE_TOKEN: ${HERMES_SERVICE_TOKEN:-}
+    ports:
+      - "3000:3000"
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/health', r => { process.exit(r.statusCode === 200 ? 0 : 1) })"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  # --- Admin UI (static Nginx) ---
+  admin-ui:
+    image: nginx:alpine
+    restart: unless-stopped
+    depends_on:
+      app:
+        condition: service_healthy
+    ports:
+      - "8081:80"
+    volumes:
+      - ./admin:/usr/share/nginx/html:ro
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  # --- Cron / Backup sidecar ---
+  cron:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    entrypoint: ["python", "-m", "app.storage.archive", "--cron"]
+    environment:
+      DATABASE_URL: postgresql://Kia-Agent:${POSTGRES_PASSWORD:-Kia-Agent_dev}@postgres:5432/Kia-Agent
+      R2_ENDPOINT: ${R2_ENDPOINT:-}
+      R2_ACCESS_KEY_ID: ${R2_ACCESS_KEY_ID:-}
+      R2_SECRET_ACCESS_KEY: ${R2_SECRET_ACCESS_KEY:-}
+      R2_BUCKET: ${R2_BUCKET:-Kia-Agent-backups}
+    volumes:
+      - app_data:/app/data
+
+volumes:
+  pg_data:
+  redis_data:
+  app_data:
+  app_logs:

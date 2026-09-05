@@ -1,0 +1,35 @@
+[
+  {
+    "id": "48b762a1-7aab-5cb6-b556-9ecf79d942e7",
+    "question_ar": "ما هي ساعات العمل الرسمية؟",
+    "question_en": "What are the official working hours?",
+    "answer_ar": "ساعات العمل الرسمية من الأحد إلى الخميس، من الساعة 8:00 صباحاً حتى 5:00 مساءً. نحن غير متاحين في أيام الجمعة والسبت وال假日 الرسمية.",
+    "answer_en": "Official working hours are Sunday through Thursday, from 8:00 AM to 5:00 PM. We are not available on Fridays, Saturdays, and official holidays.",
+    "category": "general",
+    "tags": "[\"ساعات\", \"مواعيد\", \"أيام العمل\", \"hours\", \"schedule\"]",
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "d1890195-aaf0-5b17-9e1c-4c063def56d7",
+    "question_ar": "كيف يمكنني طلب عرض سعر لمنتج بترولي؟",
+    "question_en": "How can I request a quote for a petroleum product?",
+    "answer_ar": "يمكنك طلب عرض سعر من خلال:\n1. إرسال رسالة مباشرة مع ذكر نوع المنتج والكمية المطلوبة\n2. الاتصال بفريق المبيعات على البريد: sales@petroagent.com\n3. استخدام بوابة العميل على الإنترنت\nسيقوم فريقنا بإعداد عرض السعر خلال 24 ساعة عمل.",
+    "answer_en": "You can request a quote through:\n1. Send a direct message mentioning the product type and required quantity\n2. Contact the sales team at: sales@petroagent.com\n3. Use the online customer portal\nOur team will prepare the quote within 24 business hours.",
+    "category": "sales",
+    "tags": "[\"عرض سعر\", \"مبيعات\", \"quote\", \"pricing\", \"sales\"]",
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "3777be34-eb43-55a4-9024-d914a2a07c70",
+    "question_ar": "ما هي سياسة الإرجاع والاستبدال؟",
+    "question_en": "What is the return and exchange policy?",
+    "answer_ar": "سياسة الإرجاع والاستبدال:\n- يمكن إرجاع المنتجات خلال 14 يوماً من تاريخ الاستلام\n- يجب أن تكون المنتجات في حالتها الأصلية وغير مفتوحة\n- المنتجات الكيميائية المفتوحة لا يمكن إرجاعها لأسباب أمنية\n- يتم استرداد المبلغ خلال 5-7 أيام عمل\n- يمكن استبدال المنتجات بديلاً عن الإرجاع",
+    "answer_en": "Return and exchange policy:\n- Products can be returned within 14 days of receipt\n- Products must be in original condition and unopened\n- Opened chemical products cannot be returned for safety reasons\n- Refund is processed within 5-7 business days\n- Products can be exchanged instead of returned",
+    "category": "policy",
+    "tags": "[\"إرجاع\", \"استبدال\", \"سياسة\", \"return\", \"exchange\", \"policy\"]",
+    "is_active": true,
+    "hit_count": 0
+  }
+]

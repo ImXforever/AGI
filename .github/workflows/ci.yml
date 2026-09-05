@@ -1,0 +1,155 @@
+# =============================================================================
+# Kia-Agent Platform â€” GitHub Actions CI
+# =============================================================================
+
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+env:
+  PYTHON_VERSION: "3.12"
+  NODE_VERSION: "20"
+
+jobs:
+  # --- Lint & Format ---
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - name: Install dependencies
+        run: pip install ruff bandit
+      - name: Ruff lint
+        run: ruff check app/ tests/ tools/ provision/
+      - name: Ruff format check
+        run: ruff format --check app/ tests/ tools/ provision/
+      - name: Bandit security
+        run: bandit -r app/ -c pyproject.toml
+
+  # --- Type Check ---
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - name: Install dependencies
+        run: pip install -e ".[dev]"
+      - name: mypy
+        run: mypy app/ --ignore-missing-imports --disable-error-code=import-untyped --disable-error-code=no-any-return --disable-error-code=attr-defined --disable-error-code=type-arg --disable-error-code=misc --disable-error-code=no-untyped-def --disable-error-code=assignment --disable-error-code=arg-type --disable-error-code=return-value --disable-error-code=call-arg --disable-error-code=union-attr --disable-error-code=override
+
+  # --- Unit Tests ---
+  test-unit:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: Kia-Agent_test
+          POSTGRES_USER: Kia-Agent
+          POSTGRES_PASSWORD: testpass
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U Kia-Agent"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      APP_ENV: test
+      DATABASE_URL: postgresql://Kia-Agent:testpass@localhost:5432/Kia-Agent_test
+      REDIS_URL: redis://localhost:6379/0
+      TENANT_ID: test
+      TENANT_NAME_AR: Ø§Ø®ØªØ¨Ø§Ø±
+      SUPPORT_CONTACT: test@test.com
+      TELEGRAM_BOT_TOKEN: 123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11
+      TELEGRAM_ADMIN_IDS: 123456
+      R2_ENDPOINT: http://localhost:9000
+      R2_ACCESS_KEY_ID: test
+      R2_SECRET_ACCESS_KEY: test
+      R2_BUCKET: test
+      ADMIN_USERNAME: admin
+      ADMIN_BOOTSTRAP_PASSWORD: testpassword123
+      CURRENCY: SAR
+      LLM_MODE: mock
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - name: Install dependencies
+        run: pip install -e ".[dev]"
+      - name: Run unit tests
+        run: pytest tests/unit/ -v --tb=short --cov=app --cov-report=xml
+      - name: Upload coverage
+        uses: codecov/codecov-action@v4
+        with:
+          file: coverage.xml
+          fail_ci_if_error: false
+
+  # --- Config Lint ---
+  config-lint:
+    runs-on: ubuntu-latest
+    env:
+      TENANT_ID: test
+      TENANT_NAME_AR: Ø§Ø®ØªØ¨Ø§Ø±
+      SUPPORT_CONTACT: test@test.com
+      TELEGRAM_BOT_TOKEN: 123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11
+      TELEGRAM_ADMIN_IDS: 123456
+      DATABASE_URL: postgresql://Kia-Agent:testpass@localhost:5432/Kia-Agent_test
+      REDIS_URL: redis://localhost:6379/0
+      R2_ENDPOINT: http://localhost:9000
+      R2_ACCESS_KEY_ID: test-access-key-id-long
+      R2_SECRET_ACCESS_KEY: test-secret-access-key-long
+      R2_BUCKET: test
+      ADMIN_USERNAME: admin
+      ADMIN_BOOTSTRAP_PASSWORD: testpassword1234567890
+      CURRENCY: SAR
+      LLM_MODE: mock
+      APP_ENV: test
+      TELEGRAM_WEBHOOK_SECRET: ci-webhook-secret-012345
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - name: Config lint
+        run: python tools/config_lint.py
+
+  # --- Secret Scan ---
+  secret-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - name: Secret scan
+        run: python tools/secret_scan.py
+
+  # --- Docker Build ---
+  docker-build:
+    runs-on: ubuntu-latest
+    needs: [lint, typecheck, test-unit]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Docker image
+        run: docker build -t Kia-Agent:ci-${{ github.sha }} .
+      - name: Build Hermes image
+        run: docker build -f Dockerfile.hermes -t Kia-Agent-hermes:ci-${{ github.sha }} .

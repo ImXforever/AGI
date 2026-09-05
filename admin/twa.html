@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kia-Agent — TWA</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b1220'/%3E%3Cpath d='M16 5c3 4 6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 3-7 6-11z' fill='%23e0a33e'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  body { padding: .6rem; }
+  .twa-wrap { display: grid; gap: .7rem; }
+  .twa-head {
+    display: flex; align-items: center; justify-content: space-between; gap: .5rem;
+    position: sticky; top: 0; background: var(--bg); padding: .4rem 0; z-index: 5;
+  }
+  .item .actions button { flex: 1; padding: .8rem .5rem; }
+  .twa-error { color: var(--bad); }
+  .twa-loading {
+    display: flex; align-items: center; justify-content: center; padding: 3rem;
+  }
+  .twa-spinner {
+    width: 1.2rem; height: 1.2rem;
+    border: 2px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+<div class="twa-wrap">
+  <header class="twa-head">
+    <strong>Kia-Agent</strong>
+    <span id="twa-conn" class="pill pill-idle">…</span>
+  </header>
+  <p id="twa-error" class="twa-error"></p>
+  <div id="twa-loading" class="twa-loading">
+    <div class="twa-spinner"></div>
+  </div>
+  <section id="twa-queue" class="queue"></section>
+</div>
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script>
+"use strict";
+const API = "/admin/api";
+const queueNode = document.getElementById("twa-queue");
+const errorNode = document.getElementById("twa-error");
+const connNode = document.getElementById("twa-conn");
+const loadingNode = document.getElementById("twa-loading");
+const tg = window.Telegram && window.Telegram.WebApp;
+
+function say(msg) { errorNode.textContent = msg || ""; }
+
+async function api(path, opts = {}) {
+  const r = await fetch(API + path, {
+    credentials: "same-origin",
+    headers: opts.body ? { "content-type": "application/json" } : {},
+    ...opts,
+    body: opts.body ? JSON.stringify(opts.body) : undefined,
+  });
+  const t = await r.text();
+  const d = t ? JSON.parse(t) : {};
+  if (!r.ok) { const e = new Error(d.error || d.detail || r.statusText); e.status = r.status; throw e; }
+  return d;
+}
+
+async function login() {
+  if (!tg || !tg.initData) { say("Please open from Telegram"); return false; }
+  tg.ready(); tg.expand();
+  const r = await fetch(`${API}/twa/login`, {
+    method: "POST", credentials: "same-origin",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ initData: tg.initData }),
+  });
+  if (!r.ok) { say("Authentication failed"); return false; }
+  return true;
+}
+
+function card(item) {
+  const n = document.createElement("article"); n.className = "item";
+  const h = document.createElement("div"); h.className = "item-head";
+  h.append(
+    Object.assign(document.createElement("span"), { className: "tag", textContent: `#${item.approval_id}` }),
+    Object.assign(document.createElement("span"), { className: "tag", textContent: item.skill || "—" }),
+    Object.assign(document.createElement("span"), { className: "tag", textContent: item.channel || "—" }),
+  );
+  const d = document.createElement("div"); d.className = "draft"; d.textContent = item.draft_text || "";
+  const a = document.createElement("div"); a.className = "actions";
+  const decide = async (decision) => {
+    try {
+      await api(`/approvals/${item.approval_id}/decision`, { method: "POST", body: { decision } });
+      if (tg && tg.HapticFeedback) tg.HapticFeedback.notificationOccurred("success");
+      say(""); await load();
+    } catch (e) { say(e.status === 409 ? "Decision already taken" : e.message); await load(); }
+  };
+  const ap = document.createElement("button"); ap.className = "ok"; ap.textContent = "Approve";
+  ap.addEventListener("click", () => decide("approve"));
+  const rj = document.createElement("button"); rj.className = "bad"; rj.textContent = "Reject";
+  rj.addEventListener("click", () => decide("reject"));
+  const op = document.createElement("button"); op.className = "ghost"; op.textContent = "Complete Login";
+  op.addEventListener("click", () => { window.location.href = "/admin/ops/ecosystem.html"; });
+  a.append(ap, rj, op); n.append(h, d, a); return n;
+}
+
+async function load() {
+  const d = await api("/approvals?limit=50");
+  const items = d.items || [];
+  connNode.textContent = `${items.length} pending approvals`;
+  connNode.className = `pill ${items.length ? "pill-warn" : "pill-ok"}`;
+  queueNode.replaceChildren(...items.map(card));
+  if (!items.length) {
+    const p = document.createElement("p"); p.className = "empty";
+    p.textContent = "No pending approvals found."; queueNode.append(p);
+  }
+}
+
+(async function boot() {
+  var ld = document.getElementById("twa-loading");
+  try { if (await login()) await load(); } catch (e) { say(e.message); }
+  if (ld) ld.style.display = "none";
+})();
+</script>
+</body>
+</html>

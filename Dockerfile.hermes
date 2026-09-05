@@ -1,0 +1,29 @@
+# =============================================================================
+# Hermes Bridge — Dockerfile
+# Node.js sidecar that bridges PetroAgent app to Hermes runtime
+# =============================================================================
+
+FROM node:20-slim AS base
+
+ENV NODE_ENV=production \
+    NPM_CONFIG_LOGLEVEL=warn
+
+WORKDIR /app
+
+COPY deploy/hermes_bridge/package.json ./
+RUN npm install --omit=dev
+
+COPY deploy/hermes_bridge/ ./
+
+RUN addgroup --system hermes && \
+    adduser --system --ingroup hermes hermes && \
+    chown -R hermes:hermes /app
+
+USER hermes
+
+EXPOSE 3000
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
+    CMD node -e "require('http').get('http://localhost:3000/health', r => { process.exit(r.statusCode === 200 ? 0 : 1) })"
+
+CMD ["node", "server.js"]

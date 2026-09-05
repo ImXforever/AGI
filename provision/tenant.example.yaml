@@ -1,0 +1,28 @@
+# =============================================================================
+# Kia-Agent Platform â€” Tenant Provisioning Example
+# =============================================================================
+
+tenant_id: acme-petro
+name_ar: "Ø´Ø±ÙƒØ© Ø£ÙƒÙ…Ù‰ Ù„Ù„Ø¨ØªØ±ÙˆÙ„"
+name_en: "ACME Petro Company"
+contact: "support@acme-petro.com"
+color: "#0b6e4f"
+currency: SAR
+
+# Telegram (required)
+telegram_token: "123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11"
+admin_ids: "123456789,987654321"
+
+# LLM
+llm_mode: router
+
+# Storage (leave empty to use defaults)
+database_url: ""
+redis_url: ""
+r2_endpoint: ""
+r2_access_key: ""
+r2_secret: ""
+r2_bucket: Kia-Agent-assets
+
+# Admin
+admin_username: admin
