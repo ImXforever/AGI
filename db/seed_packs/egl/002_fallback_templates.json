@@ -1,0 +1,76 @@
+[
+  {
+    "id": "b4b528db-de01-5aec-a5d2-e0ea3de89c22",
+    "key": "greeting_default",
+    "name_ar": "greeting_default",
+    "name_en": "greeting_default",
+    "channel": "",
+    "subject": "",
+    "body_ar": "مرحبًا بك في إليان جلوبال لوجستيك. يمكنني مساعدتك في تخزين الفجيرة والتموين وتأجير السفن ودعم التجارة والتحقق من TSA/TSR وأسئلة الامتثال. كيف يمكنني مساعدتك اليوم؟",
+    "body_en": "Welcome to Elian Global Logistics. I can help with Fujairah storage, bunkering, chartering, trade support, TSA/TSR verification and compliance questions. How can I assist you today?",
+    "variables": [],
+    "is_active": true
+  },
+  {
+    "id": "1110f3a1-dda5-5fe4-8f32-0892d1dd6200",
+    "key": "clarification_default",
+    "name_ar": "clarification_default",
+    "name_en": "clarification_default",
+    "channel": "",
+    "subject": "",
+    "body_ar": "عذرًا، لم أتمكن من فهم طلبك بالكامل. هل يتعلق بالتخزين أم التموين أم تأجير السفن أم صفقة تجارية أم التحقق من الوثائق أم أمر آخر؟",
+    "body_en": "Sorry, I couldn't fully understand your request. Could you tell me whether it concerns storage, bunkering, chartering, a trade, document verification or something else?",
+    "variables": [],
+    "is_active": true
+  },
+  {
+    "id": "b999d7b4-4ad8-51e1-9b34-689c40d87bd3",
+    "key": "processing_default",
+    "name_ar": "processing_default",
+    "name_en": "processing_default",
+    "channel": "",
+    "subject": "",
+    "body_ar": "شكرًا لك — أتحقق من ذلك مع الفريق. يرجى الانتظار لحظة.",
+    "body_en": "Thank you — I'm checking this with the team. Please hold on a moment.",
+    "variables": [],
+    "is_active": true
+  },
+  {
+    "id": "c10a7a33-b578-5856-92a1-c7d2a02735f6",
+    "key": "safety_emergency",
+    "name_ar": "safety_emergency",
+    "name_en": "safety_emergency",
+    "channel": "",
+    "subject": "",
+    "body_ar": "تم رصد كلمة طوارئ. في حالة انسكاب أو تسرب أو حريق، اتبع إجراءات الطوارئ في الموقع واتصل بخدمات الطوارئ المحلية أولًا. ثم تواصل مع مكتبنا العامل على مدار الساعة: {support_contact} · +971 54 456 9977",
+    "body_en": "Emergency keyword detected. For a spill, leak or fire, follow site emergency procedure and call local emergency services first. Then contact our 24/7 desk: {support_contact} · +971 54 456 9977",
+    "variables": [
+      "support_contact"
+    ],
+    "is_active": true
+  },
+  {
+    "id": "26e7483a-bb61-5f16-b1bb-d7304abbee4f",
+    "key": "hitl_timeout",
+    "name_ar": "hitl_timeout",
+    "name_en": "hitl_timeout",
+    "channel": "",
+    "subject": "",
+    "body_ar": "شكرًا لصبرك. تم تسجيل طلبك وسيعود إليك أحد أعضاء فريقنا مباشرة — عادةً خلال نفس يوم العمل.",
+    "body_en": "Thank you for your patience. Your request has been recorded and a member of our team will come back to you directly — typically the same business day.",
+    "variables": [],
+    "is_active": true
+  },
+  {
+    "id": "def7d92b-b57e-50bb-a171-91532c859452",
+    "key": "off_hours",
+    "name_ar": "off_hours",
+    "name_en": "off_hours",
+    "channel": "",
+    "subject": "",
+    "body_ar": "شكرًا لرسالتك. ساعات المكتب من الأحد إلى الخميس، 9:00–18:00 بتوقيت الخليج؛ ويعمل مكتب التداول على مدار الساعة للأمور التشغيلية العاجلة (+971 54 456 9977). سنرد في أقرب وقت ممكن.",
+    "body_en": "Thank you for your message. Our office hours are Sun–Thu, 9:00–18:00 GST; the trading desk operates 24/7 for urgent operational matters (+971 54 456 9977). We'll respond as soon as possible.",
+    "variables": [],
+    "is_active": true
+  }
+]

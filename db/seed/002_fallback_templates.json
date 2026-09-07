@@ -1,0 +1,74 @@
+[
+  {
+    "id": "29cf2846-09b2-5687-9871-a38f1688aa8e",
+    "key": "greeting_default",
+    "name_ar": "greeting_default",
+    "name_en": "greeting_default",
+    "channel": "",
+    "subject": "",
+    "body_ar": "مرحبًا بك في زينوفكس، استوديو من دبي للذكاء الاصطناعي والتقنية الرقمية. يمكنني مساعدتك في الذكاء الاصطناعي، الحوسبة وتقنية المعلومات، الويب والتطبيقات، الأتمتة الذكية، البيانات والتحليلات، والرسوم ثلاثية الأبعاد. كيف يمكنني مساعدتك اليوم؟",
+    "body_en": "Welcome to Zenovix, a Dubai studio for AI and digital technology. I can help with artificial intelligence, cloud and ICT, web and mobile, intelligent automation, data and analytics, and animation and 3D. How can I help you today?",
+    "variables": [],
+    "is_active": true
+  },
+  {
+    "id": "12da80d5-a057-54b0-8c89-026db2ab773a",
+    "key": "clarification_default",
+    "name_ar": "clarification_default",
+    "name_en": "clarification_default",
+    "channel": "",
+    "subject": "",
+    "body_ar": "عذرًا، لم أفهم طلبك بالكامل. هل يتعلق بحلّ ذكاء اصطناعي، أو الحوسبة وتقنية المعلومات، أو موقع أو تطبيق، أو الأتمتة، أو البيانات ولوحات المعلومات، أو الرسوم ثلاثية الأبعاد — وما الذي تودّ تحقيقه؟",
+    "body_en": "Sorry, I couldn't fully understand your request. Could you tell me whether it concerns an AI solution, cloud or ICT, a website or app, automation, data and dashboards, or animation and 3D — and what you would like to achieve?",
+    "variables": [],
+    "is_active": true
+  },
+  {
+    "id": "917a908c-3751-57c8-aa44-30da0845cdc3",
+    "key": "processing_default",
+    "name_ar": "processing_default",
+    "name_en": "processing_default",
+    "channel": "",
+    "subject": "",
+    "body_ar": "شكرًا لك — أراجع الأمر مع الفريق. يرجى الانتظار لحظة.",
+    "body_en": "Thank you — I'm checking this with the team. Please hold on a moment.",
+    "variables": [],
+    "is_active": true
+  },
+  {
+    "id": "4ec65a1b-eca7-54f0-bd23-11177033b78b",
+    "key": "safety_emergency",
+    "name_ar": "safety_emergency",
+    "name_en": "safety_emergency",
+    "channel": "",
+    "subject": "",
+    "body_ar": "تم رصد كلمة الطوارئ. إذا كان نظام أو موقع مباشر متوقفًا، يرجى مشاركة الرابط أو اسم النظام، وما الذي تغيّر، ومنذ متى. سيتم تنبيه أحد أعضاء الفريق فورًا؛ يمكنك أيضًا الاتصال على +971 4570 1100 أو واتساب https://wa.me/97145701100.",
+    "body_en": "Emergency keyword detected. If a live system or website is down, please share the URL or system name, what changed, and since when. A team member will be alerted immediately; you can also call +971 4570 1100 or WhatsApp https://wa.me/97145701100.",
+    "variables": [],
+    "is_active": true
+  },
+  {
+    "id": "f4c4e4fb-2a67-5162-8ad7-453ddc1180f3",
+    "key": "hitl_timeout",
+    "name_ar": "hitl_timeout",
+    "name_en": "hitl_timeout",
+    "channel": "",
+    "subject": "",
+    "body_ar": "شكرًا لصبرك. تم تسجيل طلبك وسيتواصل معك أحد أعضاء فريقنا مباشرة — عادةً خلال يوم العمل نفسه.",
+    "body_en": "Thank you for your patience. Your request has been recorded and a member of our team will come back to you directly — typically the same business day.",
+    "variables": [],
+    "is_active": true
+  },
+  {
+    "id": "ed5c766c-499c-5314-b6dc-01ffe0c5d02f",
+    "key": "off_hours",
+    "name_ar": "off_hours",
+    "name_en": "off_hours",
+    "channel": "",
+    "subject": "",
+    "body_ar": "شكرًا لرسالتك. ساعات عمل الاستوديو من الاثنين إلى الجمعة 9:00–18:00 بتوقيت الخليج. تم تسجيل رسالتك وسنردّ في يوم العمل التالي. للأمور العاجلة اتصل على +971 4570 1100 أو راسلنا على studio@zenovix.com.",
+    "body_en": "Thank you for your message. Our studio hours are Mon–Fri 9:00–18:00 GST (UTC+4). Your message has been recorded and we will reply on the next business day. For urgent matters call +971 4570 1100 or e-mail studio@zenovix.com.",
+    "variables": [],
+    "is_active": true
+  }
+]

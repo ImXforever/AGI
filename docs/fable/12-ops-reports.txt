@@ -1,0 +1,5 @@
+MODULE 12 — Ops agent + reporting (phase 5)
+Charter: extract/track internal tasks; reminders; team coordination; daily/weekly manager reports; connect information across domains.
+Exists: skills/ops, reminder.py, calendar_client.py, team_coordination.py, reporting.py, batch_runner.py, cron_scheduler.py.
+Design task extraction from email/chat, reminder commands, report sections a manager actually reads, cross-domain links (lead ↔ ticket ↔ quote).
+Future agents (accounting/HR/studio/project) stay declared-inactive. Output format from the brief.

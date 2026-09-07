@@ -1,0 +1,9 @@
+MODULE 01 — Message path
+Files that exist: channels/base.py, message_contract.py, pipeline.py, gateway/webhooks.py, gateway/verify.py
+Contract today:
+- Envelope: channel, sender_id, sender_name, text, external_ref (required), conversation_id, metadata, attachments.
+- ingest_incoming: Redis dedup → rate limit → security_stack.inspect_inbound → customer/conversation upsert → optional R2 attachments → store_message → publish Redis stream.
+- Empty telegram_webhook_secret must reject (never skip verify). WhatsApp disabled → 404.
+Design this module only. Assume orchestrator is a black box that consumes IncomingMessage.
+Focus: lost attachments, poison metadata, duplicate vs retry, 10k senders/minute, what happens when security denies (user-visible vs silent), idempotent ingest.
+Stay inside the brief. Output format from the brief.

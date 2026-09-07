@@ -1,0 +1,4 @@
+MODULE 15 — Gateway + storage
+Exists: gateway/webhooks.py, verify.py, router_proxy.py (admin cookie pa_session); storage pg.py redis.py r2.py; 16+ tables (customers, conversations, messages, approvals, ledger, quotes, tickets, audit_log, …).
+Design webhook authenticity, body-read-once, Redis vs PG source of truth for HITL, backup, 10k members (indexes, rate limits, workers=1 implication).
+No invented TELEGRAM_WEBHOOK_SECRET. Empty secret = reject. Output format from the brief.

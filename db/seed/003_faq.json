@@ -1,0 +1,476 @@
+[
+  {
+    "id": "77f730ea-1842-578c-ab49-6cbab70eaf50",
+    "question_ar": "من هي زينوفكس؟",
+    "question_en": "Who is Zenovix?",
+    "answer_ar": "زينوفكس استوديو للذكاء الاصطناعي والتقنية الرقمية مقرّه دبي: فريق من المهندسين والمصممين وخبراء الذكاء الاصطناعي يبنون الأنظمة التي تعتمد عليها الأعمال الحديثة. نعمل كشريك لا كمورّد — قريبين من أهدافك ومهووسين بالتفاصيل. من المنصّات ثنائية اللغة للخليج إلى منتجات الذكاء الاصطناعي للأسواق العالمية، نحوّل الطموح إلى تقنية منجزة وقابلة للقياس.",
+    "answer_en": "Zenovix is a Dubai-based AI and digital technology studio: a team of engineers, designers and AI specialists building the systems modern businesses run on. We work like a partner, not a vendor — close to your goals and obsessive about the details. From bilingual platforms for the Gulf to AI products for global markets, we turn ambition into shipped, measurable technology.",
+    "category": "company",
+    "language": "en",
+    "tags": [
+      "about",
+      "company",
+      "who",
+      "zenovix",
+      "studio",
+      "من نحن",
+      "شركة"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "19d53350-c03b-500f-a459-92939f7a328f",
+    "question_ar": "أين يقع مقرّكم؟",
+    "question_en": "Where are you located?",
+    "answer_ar": "يقع الاستوديو في مكتب 2703، برج أسبكت، الخليج التجاري، دبي، الإمارات العربية المتحدة. نعمل من دبي ونصل إلى العالم. الخريطة: https://www.google.com/maps?cid=9389408557797241110",
+    "answer_en": "Our studio is at Office 2703, Aspect Tower, Business Bay, Dubai, UAE. We are engineered in Dubai and deliver worldwide. Map: https://www.google.com/maps?cid=9389408557797241110",
+    "category": "company",
+    "language": "en",
+    "tags": [
+      "location",
+      "address",
+      "office",
+      "dubai",
+      "business bay",
+      "aspect tower",
+      "العنوان",
+      "مكتب"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "ab897f91-d152-5ed1-9ec9-946b6344f377",
+    "question_ar": "ما هي ساعات العمل؟",
+    "question_en": "What are your working hours?",
+    "answer_ar": "ساعات عمل الاستوديو من الاثنين إلى الجمعة 9:00–18:00 بتوقيت الخليج (UTC+4). الرسائل خارج هذه الساعات تُسجَّل ويُردّ عليها في يوم العمل التالي. هذا المساعد متاح على مدار الساعة للأسئلة وتسجيل طلبك.",
+    "answer_en": "Studio hours are Mon–Fri 9:00–18:00 GST (UTC+4). Messages sent outside these hours are recorded and answered on the next business day. This assistant is available 24/7 for questions and to capture your request.",
+    "category": "company",
+    "language": "en",
+    "tags": [
+      "hours",
+      "working hours",
+      "open",
+      "time",
+      "ساعات",
+      "الدوام"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "b8d424c2-8a87-5f46-a2b7-753699010963",
+    "question_ar": "كيف يمكنني التواصل معكم؟",
+    "question_en": "How can I contact you?",
+    "answer_ar": "البريد الإلكتروني studio@zenovix.com، الهاتف +971 4570 1100، أو واتساب https://wa.me/97145701100. يمكنك أيضًا إرسال نموذج التواصل على https://zenovix.ae أو وصف مشروعك هنا وسيتابع معك أحد أعضاء الفريق.",
+    "answer_en": "E-mail studio@zenovix.com, call +971 4570 1100, or chat on WhatsApp at https://wa.me/97145701100. You can also send the contact form on https://zenovix.ae or simply describe your project here and a team member will follow up.",
+    "category": "company",
+    "language": "en",
+    "tags": [
+      "contact",
+      "email",
+      "phone",
+      "whatsapp",
+      "تواصل",
+      "هاتف",
+      "بريد"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "ab53070d-fc7b-5120-a693-09fd2eaa8899",
+    "question_ar": "ما سرعة الرد على الاستفسارات؟",
+    "question_en": "How quickly do you respond to enquiries?",
+    "answer_ar": "نردّ عادةً خلال يوم العمل نفسه. طلبات المشاريع المعقّدة تسبقها مكالمة استكشاف قصيرة قبل إرسال العرض.",
+    "answer_en": "We normally reply the same business day. Complex project requests get a short discovery call before we send a proposal.",
+    "category": "company",
+    "language": "en",
+    "tags": [
+      "response",
+      "reply",
+      "how long",
+      "fast",
+      "الرد",
+      "سرعة"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "eae1819c-5640-5b35-975d-bb0b517e1b14",
+    "question_ar": "ما اللغات التي تدعمونها؟",
+    "question_en": "Which languages do you support?",
+    "answer_ar": "الإنجليزية والعربية أساس كل ما نبنيه — المنصّات ثنائية اللغة مع دعم كامل للكتابة من اليمين إلى اليسار من تخصصاتنا. يجيب هذا المساعد أيضًا بالفارسية والتركية والروسية والألمانية والفرنسية والإسبانية.",
+    "answer_en": "English and Arabic are native to everything we build — bilingual EN/AR platforms with full RTL support are a speciality. This assistant also answers in Persian, Turkish, Russian, German, French and Spanish.",
+    "category": "company",
+    "language": "en",
+    "tags": [
+      "language",
+      "arabic",
+      "english",
+      "bilingual",
+      "rtl",
+      "لغة",
+      "عربي"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "dbb61bc7-1196-587e-94c2-437f55b31f9f",
+    "question_ar": "ما الخدمات التي تقدّمونها؟",
+    "question_en": "What services do you offer?",
+    "answer_ar": "ست خدمات: 01 الذكاء الاصطناعي، 02 الحوسبة وتقنية المعلومات، 03 الويب والتطبيقات، 04 الأتمتة الذكية، 05 البيانات والتحليلات، 06 الرسوم ثلاثية الأبعاد. شريك واحد للاستراتيجية والتصميم والهندسة والذكاء الاصطناعي الذي يجمعها معًا.",
+    "answer_en": "Six service lines: 01 Artificial Intelligence, 02 Cloud & ICT, 03 Web & Mobile, 04 Intelligent Automation, 05 Data & Analytics, 06 Animation & 3D. One partner for strategy, design, engineering and the AI that ties it together.",
+    "category": "services",
+    "language": "en",
+    "tags": [
+      "services",
+      "offer",
+      "what do you do",
+      "الخدمات",
+      "ماذا تقدمون"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "d0327ebc-fa21-5bec-90ce-b5122ab53021",
+    "question_ar": "ماذا يمكنكم بناؤه بالذكاء الاصطناعي؟",
+    "question_en": "What can you build with artificial intelligence?",
+    "answer_ar": "نماذج مخصّصة ورؤية حاسوبية وذكاء اصطناعي حواري مدرّب على بياناتك وجاهز للإنتاج: مساعدون وروبوتات محادثة تعتمد على معرفتك، فهم المستندات، تحليل الصور والفيديو، التنبؤ، والتكامل مع أنظمتك الحالية.",
+    "answer_en": "Custom models, computer vision and conversational AI trained on your data and shipped production-ready: assistants and chatbots on your own knowledge, document understanding, image and video analysis, forecasting, and integration into the systems you already use.",
+    "category": "services",
+    "language": "en",
+    "tags": [
+      "ai",
+      "artificial intelligence",
+      "chatbot",
+      "model",
+      "computer vision",
+      "ذكاء اصطناعي",
+      "روبوت"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "52bcce21-d466-5be6-9d97-e45c280cd6d3",
+    "question_ar": "هل تبنون روبوتات ووكلاء ذكاء اصطناعي لواتساب أو تيليغرام؟",
+    "question_en": "Do you build AI chatbots and agents for WhatsApp or Telegram?",
+    "answer_ar": "نعم. تشمل الأتمتة الذكية وكلاء ذكاء اصطناعي على واتساب وتيليغرام والبريد والويب، مدرّبين على معرفتك، مع موافقات بشرية للأمور الحسّاسة (العروض، المدفوعات، العقود) وسجل تدقيق كامل — وهو النمط نفسه الذي يعمل به هذا المساعد.",
+    "answer_en": "Yes. Intelligent Automation covers AI agents on WhatsApp, Telegram, e-mail and the web, trained on your own knowledge, with human-in-the-loop approvals for anything sensitive (quotes, payments, contracts) and a full audit trail — the same pattern this assistant runs on.",
+    "category": "services",
+    "language": "en",
+    "tags": [
+      "whatsapp",
+      "telegram",
+      "agent",
+      "bot",
+      "automation",
+      "واتساب",
+      "تيليغرام",
+      "وكيل"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "6813a654-8965-5681-ba1a-725f490f472e",
+    "question_ar": "ماذا تشمل خدمة الحوسبة وتقنية المعلومات؟",
+    "question_en": "What does Cloud & ICT include?",
+    "answer_ar": "بنية تحتية آمنة وشبكات وتكامل أنظمة مصمّمة للتوسّع والموثوقية: هندسة السحابة والترحيل، DevOps وCI/CD، الهوية وتعزيز الأمان، المراقبة، النسخ الاحتياطي والاستعادة، والتكامل بين أنظمة أعمالك.",
+    "answer_en": "Secure infrastructure, networks and systems integration engineered for scale and reliability: cloud architecture and migration, DevOps and CI/CD, identity and security hardening, monitoring, backup and recovery, and integration between your business systems.",
+    "category": "services",
+    "language": "en",
+    "tags": [
+      "cloud",
+      "ict",
+      "infrastructure",
+      "network",
+      "devops",
+      "سحابة",
+      "بنية تحتية"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "afac4c76-1dc8-5bc8-864f-8ac27785193e",
+    "question_ar": "هل تبنون مواقع وتطبيقات ثنائية اللغة عربي/إنجليزي؟",
+    "question_en": "Do you build bilingual English/Arabic websites and mobile apps?",
+    "answer_ar": "نعم — مواقع وتطبيقات سريعة وأنيقة، تدعم العربية والإنجليزية مع دعم كامل للكتابة من اليمين إلى اليسار، بحركة وتفاصيل تُحقّق النتائج. مواقع الشركات، صفحات الهبوط، المتاجر، تطبيقات الويب وiOS/Android.",
+    "answer_en": "Yes — fast, beautiful websites and apps, bilingual EN/AR ready with full right-to-left support, motion and detail that convert. Corporate sites, landing pages, e-commerce, web apps and iOS/Android apps.",
+    "category": "services",
+    "language": "en",
+    "tags": [
+      "website",
+      "web",
+      "mobile",
+      "app",
+      "arabic",
+      "bilingual",
+      "موقع",
+      "تطبيق"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "2fe03e0a-3c82-58f6-a495-642446cca242",
+    "question_ar": "ما هي الأتمتة الذكية؟",
+    "question_en": "What is intelligent automation?",
+    "answer_ar": "وكلاء ذكاء اصطناعي وأتمتة لسير العمل تزيل التعقيد ليركّز فريقك على القرار: وكلاء خدمة العملاء والمبيعات، أتمتة المكاتب الخلفية، معالجة المستندات، والتكامل مع CRM وERP ومنصّات المراسلة — مع موافقة بشرية حيث يلزم.",
+    "answer_en": "AI agents and workflow automation that remove friction so your team focuses on judgement: customer-service and sales agents, back-office workflows, document processing and integrations with CRM, ERP and messaging platforms — with human approval where it matters.",
+    "category": "services",
+    "language": "en",
+    "tags": [
+      "automation",
+      "workflow",
+      "agent",
+      "process",
+      "أتمتة",
+      "سير العمل"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "4961795b-f055-5cc5-9c1f-d97aea665d77",
+    "question_ar": "ماذا تقدّمون في البيانات والتحليلات؟",
+    "question_en": "What do you offer in data and analytics?",
+    "answer_ar": "لوحات ومسارات بيانات تحوّل الأرقام إلى قرارات دقيقة وواضحة: مستودعات البيانات وETL، لوحات ذكاء الأعمال، تقارير مؤشرات الأداء، جودة البيانات والتحليلات فوق أنظمتك التشغيلية.",
+    "answer_en": "Dashboards and pipelines that turn raw numbers into decisions — accurate and clear: data warehousing and ETL, BI dashboards, KPI reporting, data quality and analytics on top of your operational systems.",
+    "category": "services",
+    "language": "en",
+    "tags": [
+      "data",
+      "analytics",
+      "dashboard",
+      "bi",
+      "report",
+      "بيانات",
+      "تحليلات",
+      "لوحة"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "b886e6d5-270e-52b9-ab66-ad50040e97ff",
+    "question_ar": "هل تنتجون الرسوم المتحركة والفيديو والمحتوى ثلاثي الأبعاد؟",
+    "question_en": "Do you produce animation, video and 3D?",
+    "answer_ar": "نعم — أفلام العلامة وفيديو الذكاء الاصطناعي ومحتوى ثلاثي الأبعاد تفاعلي يمنح تقنيتك قصة تستحق المشاهدة: رسوم المنتجات والفيديوهات التوضيحية، الموشن غرافيك، الفيديو المولّد بالذكاء الاصطناعي، التصوير ثلاثي الأبعاد للمنتجات والويب ثلاثي الأبعاد التفاعلي.",
+    "answer_en": "Yes — brand films, AI video and interactive 3D that give your technology a story worth watching: product and explainer animation, motion graphics, AI-generated video, 3D product visualisation and interactive web 3D.",
+    "category": "services",
+    "language": "en",
+    "tags": [
+      "animation",
+      "3d",
+      "video",
+      "motion",
+      "film",
+      "رسوم",
+      "فيديو",
+      "ثلاثي الأبعاد"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "b776a7cc-35ce-5346-b33c-06c99cf3f262",
+    "question_ar": "كم تبلغ تكلفة المشروع؟",
+    "question_en": "How much does a project cost?",
+    "answer_ar": "كل مشروع مختلف، لذلك لا نذكر سعرًا في المحادثة أبدًا. أخبرنا بما تريد بناءه ولمن، وما اللغات والتكاملات التي تحتاجها وجدولك الزمني؛ بعد مكالمة استكشاف قصيرة نرسل عرضًا رسميًا بالنطاق والجدول والسعر، مؤكَّدًا من مدير.",
+    "answer_en": "Every project is different, so we never quote a price in chat. Tell us what you want to build, for whom, which languages and integrations you need and your timeline; after a short discovery call we send a formal proposal with scope, timeline and price, confirmed by a manager.",
+    "category": "process",
+    "language": "en",
+    "tags": [
+      "price",
+      "cost",
+      "quote",
+      "how much",
+      "budget",
+      "سعر",
+      "تكلفة",
+      "عرض"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "1f4b0812-5863-58db-bfde-c28a12843baa",
+    "question_ar": "كيف تعملون؟ ما هي منهجيتكم؟",
+    "question_en": "How do you work? What is your process?",
+    "answer_ar": "الاستراتيجية أولاً — نفهم العمل قبل كتابة أي سطر برمجي. ثم التصميم والهندسة بإتقان في التفاصيل: الحركة والأداء والصقل ليست خيارات ثانوية. مبني ليدوم: أنظمة تتوسّع وفريق يبقى معك بعد الإطلاق.",
+    "answer_en": "Strategy first — we understand the business before we write a line of code. Then design and engineering with craft in the details: motion, performance and polish are not optional. Built to last: systems that scale and a team that stays with you after launch.",
+    "category": "process",
+    "language": "en",
+    "tags": [
+      "process",
+      "how do you work",
+      "method",
+      "approach",
+      "منهجية",
+      "طريقة العمل"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "c35339d5-7583-550f-9be9-78e18b8b3201",
+    "question_ar": "كم يستغرق المشروع؟",
+    "question_en": "How long does a project take?",
+    "answer_ar": "تعتمد المدة على النطاق وتُؤكَّد في العرض. صفحة الهبوط ومنصّة الذكاء الاصطناعي المؤسسية مشروعان مختلفان جدًا — شاركنا أهدافك وموعدك النهائي وسنقترح خطة واقعية بمراحل واضحة.",
+    "answer_en": "Timelines depend on scope and are confirmed in the proposal. A landing page and an enterprise AI platform are very different projects — share your goals and deadline and we will propose a realistic plan with milestones.",
+    "category": "process",
+    "language": "en",
+    "tags": [
+      "timeline",
+      "how long",
+      "duration",
+      "deadline",
+      "مدة",
+      "وقت"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "2d472ca3-678a-54f7-b1be-6f1a30b03eb2",
+    "question_ar": "هل تقدّمون الدعم بعد الإطلاق؟",
+    "question_en": "Do you provide support after launch?",
+    "answer_ar": "نعم. «مبني ليدوم» إحدى قيمنا: نقدّم خطط صيانة ومراقبة وتطوير مستمر ليبقى الفريق معك بعد الإطلاق. شروط الدعم جزء من العرض.",
+    "answer_en": "Yes. \"Built to last\" is one of our values: we offer maintenance, monitoring and iteration plans so the team stays with you after go-live. Support terms are part of the proposal.",
+    "category": "process",
+    "language": "en",
+    "tags": [
+      "support",
+      "maintenance",
+      "after launch",
+      "sla",
+      "دعم",
+      "صيانة"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "a98ae104-cc4f-5431-8db7-ae1b0d898c34",
+    "question_ar": "هل يمكنكم التكامل مع أنظمتنا الحالية؟",
+    "question_en": "Can you integrate with our existing systems?",
+    "answer_ar": "نعم — تكامل الأنظمة جزء أساسي من الحوسبة وتقنية المعلومات والأتمتة الذكية: CRM وERP وبوابات الدفع ومنصّات المراسلة وقواعد البيانات وواجهات برمجة التطبيقات الخارجية.",
+    "answer_en": "Yes — systems integration is core to Cloud & ICT and Intelligent Automation: CRM, ERP, payment gateways, messaging platforms, databases and third-party APIs.",
+    "category": "process",
+    "language": "en",
+    "tags": [
+      "integration",
+      "crm",
+      "erp",
+      "api",
+      "existing systems",
+      "تكامل",
+      "أنظمة"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "7ef8c8a4-7006-558d-99eb-3f4c454eb450",
+    "question_ar": "كيف أبدأ مشروعًا معكم؟",
+    "question_en": "How do I start a project with you?",
+    "answer_ar": "صِف هدفك هنا أو اضغط زر عرض السعر؛ يجمع المساعد الأساسيات ويراجعها مدير. يمكنك أيضًا مراسلة studio@zenovix.com أو استخدام النموذج على https://zenovix.ae. نعود إليك بالخطوات التالية، عادةً خلال يوم العمل نفسه.",
+    "answer_en": "Describe your goal here or press Quote; the assistant collects the basics and a manager reviews it. You can also e-mail studio@zenovix.com or use the form at https://zenovix.ae. We come back with next steps, usually the same business day.",
+    "category": "process",
+    "language": "en",
+    "tags": [
+      "start",
+      "begin",
+      "project",
+      "get started",
+      "ابدأ",
+      "مشروع"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "fd36c63c-0c93-547e-b2a0-91419a1404df",
+    "question_ar": "هل تشاركون بيانات استفساري مع أطراف ثالثة؟",
+    "question_en": "Do you share my enquiry details with third parties?",
+    "answer_ar": "لا. تُستخدم بياناتك فقط للرد على استفسارك وإعداد العرض. لا يشارك هذا المساعد أبدًا البيانات الداخلية أو معلومات عملاء آخرين، ويتولّى مدير طلبات حذف البيانات.",
+    "answer_en": "No. Your details are used only to answer your enquiry and prepare a proposal. This assistant never shares internal data or other clients' information, and data deletion requests are handled by a manager.",
+    "category": "compliance",
+    "language": "en",
+    "tags": [
+      "privacy",
+      "data",
+      "third parties",
+      "gdpr",
+      "خصوصية",
+      "بيانات"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "71a66c2e-447c-51b1-a384-c260ae9f4206",
+    "question_ar": "من يملك الكود والبيانات التي تبنونها لنا؟",
+    "question_en": "Who owns the code and data you build for us?",
+    "answer_ar": "تُحدَّد شروط الملكية والملكية الفكرية في العرض والعقد. نهجنا الافتراضي أن العميل يملك الحل المسلَّم وبياناته؛ ويؤكّد مدير الشروط الدقيقة لكل مشروع.",
+    "answer_en": "Ownership and IP terms are defined in the proposal and contract. Our default approach is that the client owns the delivered solution and its data; a manager confirms the exact terms for each project.",
+    "category": "compliance",
+    "language": "en",
+    "tags": [
+      "ownership",
+      "ip",
+      "code",
+      "contract",
+      "ملكية",
+      "عقد"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "c6074c4c-5289-5960-ae20-b697b63b8dca",
+    "question_ar": "هل يمكن لهذا المساعد استلام دفعة أو توقيع عقد؟",
+    "question_en": "Can this assistant take a payment or sign a contract?",
+    "answer_ar": "لا. المدفوعات والعقود وتغييرات الأسعار وحذف البيانات تذهب دائمًا إلى مدير بشري. يسجّل المساعد طلبك ويتابع الفريق معك.",
+    "answer_en": "No. Payments, contracts, price changes and data deletion always go to a human manager. The assistant records your request and the team follows up.",
+    "category": "compliance",
+    "language": "en",
+    "tags": [
+      "payment",
+      "contract",
+      "sign",
+      "pay",
+      "دفع",
+      "عقد"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "ab4c9cfc-6b3c-559e-a992-8eead43deba6",
+    "question_ar": "هل تعملون مع عملاء خارج الإمارات؟",
+    "question_en": "Do you work with clients outside the UAE?",
+    "answer_ar": "نعم — هندسة من دبي ونصل إلى العالم. نبني منصّات ثنائية اللغة للخليج ومنتجات ذكاء اصطناعي للأسواق العالمية، ونعمل عن بُعد مع عملاء في أي منطقة زمنية.",
+    "answer_en": "Yes — engineered in Dubai, delivered worldwide. We build bilingual platforms for the Gulf and AI products for global markets, working remotely with clients in any time zone.",
+    "category": "company",
+    "language": "en",
+    "tags": [
+      "international",
+      "global",
+      "remote",
+      "outside uae",
+      "worldwide",
+      "عالمي",
+      "خارج"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  }
+]

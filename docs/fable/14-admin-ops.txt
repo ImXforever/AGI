@@ -1,0 +1,5 @@
+MODULE 14 — Manager ops
+Exists: admin/ops/* English neon. First page after login: ecosystem.html (3D whole-ecosystem). Then charter, inbox, queue, website, social, sales, support, knowledge/brain, live, insights, market, hub, settings (all env-style variables, no Telegram token required in the chat).
+Gate: unauthenticated HTML → `/`. API 401 except login/TWA.
+Design navigation, HITL inbox, variables page, what a manager sees first. DropAgent-like bot management is UI-only — do not dump another product’s backend.
+All HTML English. Output format from the brief.

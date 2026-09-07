@@ -1,0 +1,183 @@
+[
+  {
+    "id": "6b7bbf0d-2366-5700-a3b8-389776c4c4bf",
+    "title_ar": "لم أتلقَّ ردًا على استفساري",
+    "title_en": "No response received to my enquiry",
+    "description_ar": "أرسل العميل نموذج الموقع أو بريدًا إلكترونيًا ولم يتلقَّ ردًا.",
+    "description_en": "Client submitted the website form or sent an e-mail and has not heard back.",
+    "symptom_ar": "أرسل العميل نموذج الموقع أو بريدًا إلكترونيًا ولم يتلقَّ ردًا.",
+    "symptom_en": "Client submitted the website form or sent an e-mail and has not heard back.",
+    "problem_ar": "أرسل العميل نموذج الموقع أو بريدًا إلكترونيًا ولم يتلقَّ ردًا.",
+    "problem_en": "Client submitted the website form or sent an e-mail and has not heard back.",
+    "solution_ar": "نردّ عادةً خلال يوم العمل نفسه (الاثنين–الجمعة 9:00–18:00 بتوقيت الخليج). يرجى التحقق من مجلد الرسائل غير المرغوب فيها بحثًا عن بريد من studio@zenovix.com. إذا مرّ أكثر من يوم عمل، تواصل معنا مباشرة على +971 4570 1100 أو واتساب https://wa.me/97145701100 مع ذكر تاريخ استفسارك — ويمكن للمساعد أيضًا فتح مهمة متابعة للفريق.",
+    "solution_en": "We normally reply the same business day (Mon–Fri 9:00–18:00 GST (UTC+4)). Please check your spam folder for mail from studio@zenovix.com. If more than one business day has passed, contact us directly on +971 4570 1100 or WhatsApp https://wa.me/97145701100 mentioning the date of your enquiry — the assistant can also open a follow-up task for the team.",
+    "category": "communication",
+    "severity": "low",
+    "tags": [
+      "enquiry",
+      "no reply",
+      "follow up"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "eafa4fed-c8ec-5e5e-9753-66e78e6400be",
+    "title_ar": "عرضي يستغرق وقتًا أطول من المتوقع",
+    "title_en": "My proposal is taking longer than expected",
+    "description_ar": "طلب العميل عرضًا ولم يصل في الوقت المتوقع.",
+    "description_en": "Client requested a proposal and it has not arrived in the expected time.",
+    "symptom_ar": "طلب العميل عرضًا ولم يصل في الوقت المتوقع.",
+    "symptom_en": "Client requested a proposal and it has not arrived in the expected time.",
+    "problem_ar": "طلب العميل عرضًا ولم يصل في الوقت المتوقع.",
+    "problem_en": "Client requested a proposal and it has not arrived in the expected time.",
+    "solution_ar": "يُعدّ الفريق العروض ويؤكّدها مدير؛ النطاقات المعقّدة تحتاج مكالمة استكشاف أولاً. شارك رقمك المرجعي (ZX-…) أو تاريخ طلبك وسيتحقق المساعد من الحالة ويذكّر المسؤول. إذا اقتُرحت مكالمة استكشاف، فحجزها هو أسرع طريق للمضي قدمًا.",
+    "solution_en": "Proposals are prepared by the team and confirmed by a manager; complex scopes need a discovery call first. Share your reference number (ZX-…) or the date of your request and the assistant will check the status and nudge the owner. If a discovery call was proposed, booking it is the fastest way forward.",
+    "category": "sales",
+    "severity": "medium",
+    "tags": [
+      "proposal",
+      "quote",
+      "delay"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "4ed6c1a5-93d7-5eff-a269-fed413a7fb46",
+    "title_ar": "الموقع أو النظام المباشر متوقف",
+    "title_en": "Live website or system is down",
+    "description_ar": "موقع أو تطبيق أو تكامل إنتاجي بناه أو يستضيفه زينوفكس غير متاح أو يُظهر أخطاء.",
+    "description_en": "A production website, app or integration built or hosted by Zenovix is unreachable or erroring.",
+    "symptom_ar": "موقع أو تطبيق أو تكامل إنتاجي بناه أو يستضيفه زينوفكس غير متاح أو يُظهر أخطاء.",
+    "symptom_en": "A production website, app or integration built or hosted by Zenovix is unreachable or erroring.",
+    "problem_ar": "موقع أو تطبيق أو تكامل إنتاجي بناه أو يستضيفه زينوفكس غير متاح أو يُظهر أخطاء.",
+    "problem_en": "A production website, app or integration built or hosted by Zenovix is unreachable or erroring.",
+    "solution_ar": "اكتب كلمة emergency، ثم شارك: الرابط أو اسم النظام، الخطأ الذي تراه، ما الذي تغيّر ومنذ متى. يُنبَّه المهندس المناوب فورًا. اتصل أيضًا على +971 4570 1100. لا تُعد تشغيل الخوادم أو تغيّر DNS بنفسك ما لم يطلب الفريق ذلك.",
+    "solution_en": "Type the word emergency, then share: the URL or system name, the error you see, what changed and since when. The on-call engineer is alerted immediately. Also call +971 4570 1100. Do not restart servers or change DNS yourself unless the team asks you to.",
+    "category": "operations",
+    "severity": "critical",
+    "tags": [
+      "outage",
+      "down",
+      "emergency",
+      "incident"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "3e4d03dc-03c0-51b8-ba06-c11dfff5da5f",
+    "title_ar": "المساعد الذكي يعطي إجابات خاطئة أو قديمة",
+    "title_en": "The AI assistant gives wrong or outdated answers",
+    "description_ar": "وكيل ذكاء اصطناعي أو روبوت محادثة سلّمه زينوفكس يجيب بشكل خاطئ أو يختلق معلومات أو يستخدم بيانات قديمة.",
+    "description_en": "An AI agent or chatbot delivered by Zenovix answers incorrectly, hallucinates or uses stale information.",
+    "symptom_ar": "وكيل ذكاء اصطناعي أو روبوت محادثة سلّمه زينوفكس يجيب بشكل خاطئ أو يختلق معلومات أو يستخدم بيانات قديمة.",
+    "symptom_en": "An AI agent or chatbot delivered by Zenovix answers incorrectly, hallucinates or uses stale information.",
+    "problem_ar": "وكيل ذكاء اصطناعي أو روبوت محادثة سلّمه زينوفكس يجيب بشكل خاطئ أو يختلق معلومات أو يستخدم بيانات قديمة.",
+    "problem_en": "An AI agent or chatbot delivered by Zenovix answers incorrectly, hallucinates or uses stale information.",
+    "solution_ar": "أرسل السؤال بالضبط والإجابة التي تلقيتها وما ينبغي أن تكون الإجابة الصحيحة. تُحلّ معظم الحالات بتحديث قاعدة المعرفة المعتمدة (الأسئلة الشائعة، المستندات، الكتالوج) في لوحة الإدارة — فالمساعد يجيب فقط من البيانات المعتمدة. إذا كانت المشكلة سلوكية (النبرة، رفض أسئلة صحيحة)، يعدّل الفريق شخصية الوكيل وإعدادات الحماية.",
+    "solution_en": "Send the exact question, the answer received and what the correct answer should be. Most cases are fixed by updating the approved knowledge base (FAQ, documents, catalog) in the admin panel — the assistant only answers from approved data. If the issue is behavioural (tone, refusing valid questions), the team adjusts the agent soul and guard settings.",
+    "category": "ai",
+    "severity": "medium",
+    "tags": [
+      "ai",
+      "chatbot",
+      "wrong answer",
+      "hallucination",
+      "knowledge"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "3c41c35d-c5e7-5f6d-a735-9d3c3e1cbb9e",
+    "title_ar": "نموذج التواصل في الموقع لا يُرسَل",
+    "title_en": "Website contact form not submitting",
+    "description_ar": "لا يستطيع الزائر إرسال نموذج التواصل على zenovix.ae.",
+    "description_en": "Visitor cannot send the contact form on zenovix.ae.",
+    "symptom_ar": "لا يستطيع الزائر إرسال نموذج التواصل على zenovix.ae.",
+    "symptom_en": "Visitor cannot send the contact form on zenovix.ae.",
+    "problem_ar": "لا يستطيع الزائر إرسال نموذج التواصل على zenovix.ae.",
+    "problem_en": "Visitor cannot send the contact form on zenovix.ae.",
+    "solution_ar": "حاول مجددًا بعد تحديث الصفحة، أو راسل studio@zenovix.com / واتساب https://wa.me/97145701100 مع اسمك وشركتك ومشروعك. إذا ظهرت رسالة خطأ محددة، شارك لقطة شاشة ليتحقق فريق الويب من النموذج.",
+    "solution_en": "Try again after refreshing the page, or e-mail studio@zenovix.com / WhatsApp https://wa.me/97145701100 with your name, company and project. If you see a specific error message, share a screenshot so the web team can check the form.",
+    "category": "website",
+    "severity": "low",
+    "tags": [
+      "form",
+      "website",
+      "contact"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "d2c9c153-c84f-5bcd-b32b-1b7b8f3f2715",
+    "title_ar": "لا أستطيع تسجيل الدخول إلى المنصّة أو لوحة الإدارة",
+    "title_en": "I cannot log in to the platform or admin panel",
+    "description_ar": "لا يستطيع مستخدم العميل تسجيل الدخول إلى لوحة معلومات أو تطبيق أو لوحة إدارة سلّمها زينوفكس.",
+    "description_en": "A client user cannot sign in to a dashboard, app or admin console delivered by Zenovix.",
+    "symptom_ar": "لا يستطيع مستخدم العميل تسجيل الدخول إلى لوحة معلومات أو تطبيق أو لوحة إدارة سلّمها زينوفكس.",
+    "symptom_en": "A client user cannot sign in to a dashboard, app or admin console delivered by Zenovix.",
+    "problem_ar": "لا يستطيع مستخدم العميل تسجيل الدخول إلى لوحة معلومات أو تطبيق أو لوحة إدارة سلّمها زينوفكس.",
+    "problem_en": "A client user cannot sign in to a dashboard, app or admin console delivered by Zenovix.",
+    "solution_ar": "تحقق من الرابط ومن أن مفتاح الأحرف الكبيرة غير مفعّل، ثم استخدم رابط إعادة تعيين كلمة المرور إن وُجد. إذا كان الحساب مقفلاً أو لم تستلم بيانات الدخول، أخبر المساعد باسمك وشركتك واسم النظام؛ تُؤكَّد تغييرات الوصول من مدير لأسباب أمنية.",
+    "solution_en": "Check the URL and that caps lock is off, then use the password-reset link if available. If the account is locked or you never received credentials, tell the assistant your name, company and the system name; access changes are confirmed by a manager for security reasons.",
+    "category": "access",
+    "severity": "medium",
+    "tags": [
+      "login",
+      "access",
+      "password",
+      "admin"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "d633657d-8e3c-5cff-9999-47c7c7807a28",
+    "title_ar": "أرقام لوحة المعلومات تبدو خاطئة أو البيانات ناقصة",
+    "title_en": "Dashboard numbers look wrong or data is missing",
+    "description_ar": "تُظهر لوحة ذكاء الأعمال أو التقرير قيمًا غير متوقعة أو فجوات أو بيانات قديمة.",
+    "description_en": "A BI dashboard or report shows unexpected values, gaps or stale data.",
+    "symptom_ar": "تُظهر لوحة ذكاء الأعمال أو التقرير قيمًا غير متوقعة أو فجوات أو بيانات قديمة.",
+    "symptom_en": "A BI dashboard or report shows unexpected values, gaps or stale data.",
+    "problem_ar": "تُظهر لوحة ذكاء الأعمال أو التقرير قيمًا غير متوقعة أو فجوات أو بيانات قديمة.",
+    "problem_en": "A BI dashboard or report shows unexpected values, gaps or stale data.",
+    "solution_ar": "دوّن اسم اللوحة والمؤشر والنطاق الزمني وما كنت تتوقعه. تنتج معظم المشكلات عن تأخر تشغيل مسار البيانات أو تغيّر في النظام المصدر؛ يفحص فريق البيانات سجلات المسار واتصال المصدر. لا تتخذ قرارات أعمال على المؤشر المتأثر حتى يتم تأكيده.",
+    "solution_en": "Note the dashboard name, the metric, the date range and what you expected. Most issues come from a delayed pipeline run or a changed source system; the data team checks the pipeline logs and source connection. Do not make business decisions on the affected metric until it is confirmed.",
+    "category": "data",
+    "severity": "high",
+    "tags": [
+      "dashboard",
+      "data",
+      "report",
+      "pipeline"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "1f2fbdce-f50d-583a-964e-037d5157cbb7",
+    "title_ar": "سؤال حول فاتورة أو دفعة",
+    "title_en": "Question about an invoice or payment",
+    "description_ar": "لدى العميل سؤال حول فاتورة أو شروط الدفع أو إيصال.",
+    "description_en": "Client has a question about an invoice, payment terms or a receipt.",
+    "symptom_ar": "لدى العميل سؤال حول فاتورة أو شروط الدفع أو إيصال.",
+    "symptom_en": "Client has a question about an invoice, payment terms or a receipt.",
+    "problem_ar": "لدى العميل سؤال حول فاتورة أو شروط الدفع أو إيصال.",
+    "problem_en": "Client has a question about an invoice, payment terms or a receipt.",
+    "solution_ar": "لا يتعامل المساعد مع المدفوعات أبدًا. شارك رقم الفاتورة وسؤالك؛ يراجعه مدير ويردّ مسؤول المالية من studio@zenovix.com. لا ترسل أبدًا بيانات البطاقة أو كلمات المرور في المحادثة.",
+    "solution_en": "The assistant never handles payments. Share the invoice number and your question; a manager reviews it and the finance contact replies from studio@zenovix.com. Never send card details or credentials in chat.",
+    "category": "billing",
+    "severity": "medium",
+    "tags": [
+      "invoice",
+      "payment",
+      "billing"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  }
+]

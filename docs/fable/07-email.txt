@@ -1,0 +1,5 @@
+MODULE 07 — Email agent (phase 1)
+Charter: read/classify inbound; auto-reply common questions under policy; draft important replies for approval; follow up unanswered; escalate finance/legal/confidential.
+Exists: skills/email, email_workflow.py, email_smart_reply.py, email_followup.py, channels/email.py.
+Design the agent’s state machine and tool names only (classify, draft, send_common, queue_approval, followup). Inbox providers are adapters.
+Missing ideas welcome (SLA clocks, thread identity, bounce handling) if they stay HITL-safe. Output format from the brief.

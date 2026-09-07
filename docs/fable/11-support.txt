@@ -1,0 +1,4 @@
+MODULE 11 — Support agent (phase 4)
+Charter: first-line requests; open tickets; follow up; escalate complex or safety cases.
+Exists: skills/support, tickets API, safety keyword path in orchestrator (emergency template).
+Design ticket schema, SLA, safety vs normal, customer-visible status, when knowledge answers vs ticket. Output format from the brief.

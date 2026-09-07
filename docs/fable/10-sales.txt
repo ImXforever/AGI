@@ -1,0 +1,4 @@
+MODULE 10 — Sales agent (phase 4)
+Charter: first-line product answers; register leads; prepare quotes (send only after approval); track orders; hand off complex deals.
+Exists: skills/sales, commerce.py, quotes admin API.
+Design lead fields, quote draft vs send, catalog as source of truth for price, when to stop and HITL. No payments executed by the agent. Output format from the brief.

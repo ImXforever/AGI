@@ -1,0 +1,50 @@
+[
+  {
+    "key": "services",
+    "name_en": "Services",
+    "names": {
+      "fa": "خدمات",
+      "ar": "الخدمات",
+      "tr": "Hizmetler",
+      "de": "Dienstleistungen",
+      "fr": "Services",
+      "es": "Servicios",
+      "ru": "Услуги"
+    },
+    "icon": "⚓",
+    "sort_order": 10,
+    "is_active": true
+  },
+  {
+    "key": "clean-oils",
+    "name_en": "Clean petroleum products",
+    "names": {
+      "fa": "فرآورده‌های نفتی سبک",
+      "ar": "المنتجات البترولية النظيفة",
+      "tr": "Beyaz petrol ürünleri",
+      "de": "Helle Mineralölprodukte",
+      "fr": "Produits pétroliers clairs",
+      "es": "Productos petrolíferos limpios",
+      "ru": "Светлые нефтепродукты"
+    },
+    "icon": "🛢",
+    "sort_order": 20,
+    "is_active": true
+  },
+  {
+    "key": "dirty-oils",
+    "name_en": "Crude & dirty products",
+    "names": {
+      "fa": "نفت خام و فرآورده‌های سنگین",
+      "ar": "النفط الخام والمنتجات الثقيلة",
+      "tr": "Ham petrol ve siyah ürünler",
+      "de": "Rohöl & schwere Produkte",
+      "fr": "Brut & produits lourds",
+      "es": "Crudo y productos pesados",
+      "ru": "Сырая нефть и тёмные продукты"
+    },
+    "icon": "🏭",
+    "sort_order": 30,
+    "is_active": true
+  }
+]

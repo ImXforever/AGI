@@ -1,0 +1,80 @@
+# Module: 01 Message path
+# Date: 2026-09-06
+# Keep / redesign / add: keep path; wire dead envelope; attachment refs on stream; security 200 + notice
+# Implemented:
+# - normalize_envelope + sanitize_metadata at ingest
+# - attachment_refs on Redis event (no bytes)
+# - webhook 200 on deny; English notice only for security:*
+# Tests: test_message_contract extra cases passed
+
+## Module: 02 Orchestrator
+## Date: 2026-09-06
+## Implemented: security before commands; clamp unknown skill; policy HITL vs auto tools; waiting notice; re-guard after QA/citation; history cap; source label sanitize
+
+## Module: 03 Security stack
+## Date: 2026-09-06
+## Implemented: photo-only skip empty-text deny; voice/mp4 MIME; no SVG; L05 only on inspect_data; check_url(); audit hashes sender
+
+## Module: 04 Policy + HITL
+## Date: 2026-09-06
+## Implemented: approval_id required; consume-once execute; may_auto_ack fail-closed on empty/agent skill; admin decide passes id
+
+## Module: 05 Knowledge / RAG
+## Date: 2026-09-06
+## Implemented: retrieve_for_answer empty flag; pack_for_llm DATA frame; citation without URL; skip http sources at index
+
+## Module: 06 Skills runtime
+## Date: 2026-09-06
+## Implemented: no DropAgent skill seed; inject scan; production ignores yolo/allow-all; env not SAFE; filter tools_called to charter actions
+
+## Module: 07 Email agent
+## Date: 2026-09-06
+## Implemented: state machine classify/draft/send_common/queue_approval/followup; confidential; bounce drop; thread_id; SLA clock; payment_terms HITL; router uses handle_inbound_email
+
+## Module: 08 Website agent
+## Date: 2026-09-06
+## Implemented: ingest_form/draft_cms/apply_cms/report_issue; invalid form no lead; price/legal/delete never live without approval_id; publish_page policy gate; archive is delete_data; router uses handle_website
+
+## Module: 09 Social agent
+## Date: 2026-09-06
+## Implemented: handle_social; ordinary calendar = scheduled + not claims + not ads; ad spend refused; comments/DMs policy; sensitive calendar stays DRAFT; is_ready_to_publish ordinary-only
+
+## Module: 10 Sales agent
+## Date: 2026-09-06
+## Implemented: handle_sales; lead fields; quote draft HITL not sent; catalog unit_price locked (no override); payment refused; complex → contract; create_quote status draft; router uses handle_sales
+
+## Module: 11 Support agent
+## Date: 2026-09-06
+## Implemented: handle_support; safety word-boundary; SLA; customer-visible status; FAQ→knowledge else ticket; followup task; tools.create_ticket uses is_safety_text
+
+## Module: 12 Ops + reports
+## Date: 2026-09-06
+## Implemented: handle_ops; manager_brief (counts, no bodies); lead↔ticket↔quote links; reminders/reports as create_task; future agents stay inactive; ops digest includes brief
+
+## Module: 13 Public web + Mini App
+## Date: 2026-09-06
+## Implemented: English UTF-8 `/` and `/app`; Login hidden until TWA admin probe; no bot username/token; sendData {v,action} whitelist; Mini App views; charset on FileResponse
+
+## Module: 14 Admin ops
+## Date: 2026-09-06
+## Implemented: unauth HTML → `/`; API 401 except login/TWA; login → ecosystem.html; TWA decide path; live HITL queue; variables table + bot UI-only; secrets masked; sign-out logout; WhatsApp optional in 3D sim
+
+## Module: 15 Gateway + storage
+## Date: 2026-09-06
+## Implemented: empty webhook secrets reject; body-read-once; HITL PG ledger + Redis consume-once (orphan claim); unique 10k indexes; customer insert race; workers=1; WA disabled 404; pa_session not HMAC
+
+## Module: 16 Blind spots
+## Date: 2026-09-06
+## Implemented: design only (no code). Ranked 12 week-two gaps. Build order: cron-load-PG, HITL ping on queue, conversation hold, outbound idempotent send, backup restore drill.
+
+## Module: 17 Week-two close
+## Date: 2026-09-06
+## Implemented: cron loads PG; HITL ping on queue_draft; conversation hold; outbound deliver_once; backup list + restore drill (no live pg_restore)
+
+## Module: 18 Delivery close
+## Date: 2026-09-06
+## Implemented: HITL default silent; timeout courtesy; identity merge HITL; channel health; subject-access export; business hours OOO; env.example secrets stripped; employer handoff
+
+
+
+

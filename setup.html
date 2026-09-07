@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>راه‌اندازی اکوسیستم زنوویکس ۱.۰.۰</title>
+<style>
+:root {
+  --bg: #07090f;
+  --panel: #10141e;
+  --line: #1e2a3d;
+  --cyan: #00e5ff;
+  --mint: #7cffc4;
+  --warn: #ffb020;
+  --danger: #ff5d7a;
+  --muted: #8b9bb4;
+  --text: #e8eef8;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--text); font-family: Tahoma, "Segoe UI", Arial, sans-serif; }
+body { display: grid; grid-template-columns: 280px 1fr; min-height: 100vh; }
+a { color: var(--cyan); }
+.nav { border-left: 1px solid var(--line); background: #0b0f16; padding: 20px 14px; position: sticky; top: 0; height: 100vh; overflow: auto; }
+.brand { font-size: 13px; letter-spacing: .12em; color: var(--cyan); margin: 0 0 6px; }
+.brand small { display: block; color: var(--muted); letter-spacing: 0; margin-top: 4px; font-size: 12px; }
+.step-btn { width: 100%; text-align: right; background: transparent; border: 0; color: var(--muted); padding: 10px 12px; border-radius: 10px; cursor: pointer; font: inherit; margin: 2px 0; }
+.step-btn:hover { background: #151b28; color: var(--text); }
+.step-btn.on { background: #12202c; color: var(--cyan); }
+.step-btn b { display: inline-block; width: 22px; color: var(--mint); }
+main { padding: 28px 32px 80px; max-width: 980px; }
+h1 { font-size: 28px; margin: 0 0 8px; }
+.lead { color: var(--muted); line-height: 1.8; margin: 0 0 22px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 18px 18px 8px; margin: 0 0 16px; }
+.card h2 { margin: 0 0 10px; font-size: 18px; }
+.card p, .card li { line-height: 1.85; color: #c5d0e2; }
+.ol { padding-right: 20px; }
+.tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 999px; margin-left: 6px; }
+.need { background: #3a1520; color: var(--danger); }
+.opt { background: #132318; color: var(--mint); }
+.auto { background: #1a2030; color: var(--muted); }
+.var { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin: 0 0 10px; background: #0c1118; }
+.var code { color: var(--cyan); font-size: 13px; direction: ltr; display: inline-block; }
+.where { font-size: 13px; color: var(--warn); margin: 6px 0 0; }
+.ex { font-size: 12px; color: var(--muted); direction: ltr; text-align: left; margin-top: 6px; }
+.search { width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: #0c1118; color: var(--text); font: inherit; margin: 0 0 16px; }
+.row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+button.next, button.prev { background: var(--cyan); color: #041016; border: 0; padding: 10px 16px; border-radius: 10px; font: inherit; font-weight: 700; cursor: pointer; }
+button.prev { background: #1c2533; color: var(--text); }
+.hidden { display: none; }
+.check { list-style: none; padding: 0; }
+.check li { margin: 8px 0; }
+footer { color: var(--muted); font-size: 12px; margin-top: 24px; }
+@media (max-width: 860px) {
+  body { grid-template-columns: 1fr; }
+  .nav { height: auto; position: relative; display: flex; flex-wrap: wrap; gap: 4px; }
+  .step-btn { width: auto; }
+}
+</style>
+</head>
+<body>
+<aside class="nav">
+  <p class="brand">Zenovix 1.6.0<small>راهنمای اولین راه‌اندازی اکوسیستم</small></p>
+  <button class="step-btn on" data-go="0"><b>۰</b> شروع</button>
+  <button class="step-btn" data-go="1"><b>۱</b> Railway و دیتابیس</button>
+  <button class="step-btn" data-go="2"><b>۲</b> هویت شرکت</button>
+  <button class="step-btn" data-go="3"><b>۳</b> تلگرام</button>
+  <button class="step-btn" data-go="4"><b>۴</b> ورود مدیر</button>
+  <button class="step-btn" data-go="5"><b>۵</b> مدل زبانی</button>
+  <button class="step-btn" data-go="6"><b>۶</b> فضای فایل R2</button>
+  <button class="step-btn" data-go="7"><b>۷</b> تأیید انسان (HITL)</button>
+  <button class="step-btn" data-go="8"><b>۸</b> کانال‌های اختیاری</button>
+  <button class="step-btn" data-go="9"><b>۹</b> برند، ساعت، فروش</button>
+  <button class="step-btn" data-go="10"><b>۱۰</b> حافظه و بکاپ</button>
+  <button class="step-btn" data-go="11"><b>۱۱</b> وب‌هوک و چک‌لیست</button>
+  <button class="step-btn" data-go="12"><b>۱۲</b> فرهنگنامه همهٔ متغیرها</button>
+</aside>
+<main>
+<section id="s0">
+  <h1>اولین بار اکوسیستم زنوویکس را روشن می‌کنید</h1>
+  <p class="lead">زنوویکس یک <b>مدیر عملیات دیجیتال</b> برای یک شرکت است (یک استقرار Railway). پیام مشتری را می‌گیرد، از دانش شرکت جواب می‌دهد، پیش‌فاکتور و تیکت می‌سازد، و قبل از کار حساس از مدیر اجازه می‌گیرد. شرکت خودران نیست، تبلیغ نمی‌خرد، پول جابه‌جا نمی‌کند.</p>
+  <div class="card">
+    <h2>سه سطح که بعد از ستاپ می‌بینید</h2>
+    <ol class="ol">
+      <li><b>/</b> سایت عمومی انگلیسی — بدون دکمه Login</li>
+      <li><b>/app</b> مینی‌اپ مشتری در تلگرام</li>
+      <li><b>/admin/ops/ecosystem.html</b> پنل مدیر — اول اکوسیستم سه‌بعدی</li>
+    </ol>
+  </div>
+  <div class="card">
+    <h2>قبل از شروع این‌ها را آماده کنید</h2>
+    <ul>
+      <li>حساب Railway + افزونه Postgres + افزونه Redis</li>
+      <li>ربات تلگرام از BotFather</li>
+      <li>باکت Cloudflare R2 یا S3 سازگار</li>
+      <li>کلید LLM (مثلاً OpenRouter یا 9router خودتان)</li>
+    </ul>
+  </div>
+</section>
+
+<section id="s1" class="hidden">
+  <h1>۱. پروژه Railway و دیتابیس</h1>
+  <p class="lead">بدون این چهار مورد اپ بوت نمی‌شود. Postgres و Redis را از پلاگین Railway بگیرید، خودتان نسازید.</p>
+  <div id="g-rail"></div>
+</section>
+
+<section id="s2" class="hidden">
+  <h1>۲. هویت شرکت (Tenant)</h1>
+  <p class="lead">یک استقرار = یک شرکت. این نام‌ها در گزارش‌ها و تماس پشتیبانی دیده می‌شوند.</p>
+  <div id="g-tenant"></div>
+</section>
+
+<section id="s3" class="hidden">
+  <h1>۳. تلگرام — کانال اصلی</h1>
+  <p class="lead">تلگرام اجباری است. سکرت وب‌هوک را خودتان بسازید و <b>همان</b> را به setWebhook بدهید. زنوویکس این سکرت را اختراع نمی‌کند.</p>
+  <div class="card">
+    <h2>از کجا بیاورید</h2>
+    <ol class="ol">
+      <li>در تلگرام به <b>@BotFather</b> بروید → /newbot → توکن را کپی کنید.</li>
+      <li>آیدی عددی مدیر: به <b>@userinfobot</b> پیام بدهید. چند مدیر را با ویرگول جدا کنید.</li>
+      <li>سکرت وب‌هوک: یک رشته تصادفی حداقل ۱۶ کاراکتر (مثلاً خروجی <code dir="ltr">openssl rand -hex 16</code>).</li>
+    </ol>
+  </div>
+  <div id="g-tg"></div>
+</section>
+
+<section id="s4" class="hidden">
+  <h1>۴. ورود مدیر به پنل</h1>
+  <p class="lead">بعد از لاگین باید مستقیم اکوسیستم سه‌بعدی باز شود. WEB_SECRET کوکی نشست را امضا می‌کند.</p>
+  <div id="g-admin"></div>
+</section>
+
+<section id="s5" class="hidden">
+  <h1>۵. مدل زبانی</h1>
+  <p class="lead">حالت پیشنهادی: <code>LLM_MODE=direct</code> به یک API سازگار با OpenAI. اگر DIRECT خالی باشد و OPENAI پر باشد، همان استفاده می‌شود.</p>
+  <div id="g-llm"></div>
+</section>
+
+<section id="s6" class="hidden">
+  <h1>۶. فضای فایل (R2 / S3)</h1>
+  <p class="lead">پیوست، بکاپ pg_dump، پیش‌فاکتور و گزارش اینجا ذخیره می‌شود. از پنل Cloudflare R2 یا هر S3 سازگار (مثل t3.storageapi.dev) کلید بگیرید.</p>
+  <div id="g-r2"></div>
+</section>
+
+<section id="s7" class="hidden">
+  <h1>۷. تأیید انسان (HITL)</h1>
+  <p class="lead">خودکار: خواندن ایمیل معمولی، لید، تیکت، تسک، تقویم عادی. همیشه تأیید مدیر: ایمیل حساس، انتشار، پیش‌فاکتور، قیمت، پرداخت، قرارداد، حذف داده، تغییر دسترسی. ناشناخته = رد.</p>
+  <div id="g-hitl"></div>
+</section>
+
+<section id="s8" class="hidden">
+  <h1>۸. کانال‌های اختیاری</h1>
+  <p class="lead">تا وقتی ENABLED=false است، آن کانال خاموش است. واتساپ خاموش = پاسخ ۴۰۴ (نه ۲۰۰). اگر روشن کنید، سکرت خالی یعنی رد درخواست.</p>
+  <div id="g-ch"></div>
+</section>
+
+<section id="s9" class="hidden">
+  <h1>۹. برند، ساعت کاری، فروش</h1>
+  <div id="g-biz"></div>
+</section>
+
+<section id="s10" class="hidden">
+  <h1>۱۰. حافظه، ناوگان، بکاپ</h1>
+  <div id="g-ops"></div>
+</section>
+
+<section id="s11" class="hidden">
+  <h1>۱۱. وب‌هوک و چک‌لیست روشن شدن</h1>
+  <div class="card">
+    <h2>بعد از اینکه دامنه Railway آمد</h2>
+    <ol class="ol">
+      <li>متغیرها را در Railway → Variables → RAW Editor بچسبانید.</li>
+      <li>Deploy کنید. سلامت: <code dir="ltr">GET /healthz</code></li>
+      <li>وب‌هوک تلگرام (همان سکرت):</li>
+    </ol>
+    <p class="ex">https://api.telegram.org/bot&lt;TOKEN&gt;/setWebhook?url=https://YOUR_HOST/tg/webhook&amp;secret_token=&lt;TELEGRAM_WEBHOOK_SECRET&gt;</p>
+    <ul class="check">
+      <li>☐ /healthz برابر ok</li>
+      <li>☐ / سایت انگلیسی بدون Login</li>
+      <li>☐ لاگین مدیر → /admin/ops/ecosystem.html</li>
+      <li>☐ پیام تست به ربات → در صف یا پاسخ</li>
+      <li>☐ واتساپ اگر خاموش است روی /wa/webhook باید ۴۰۴ باشد</li>
+    </ul>
+  </div>
+</section>
+
+<section id="s12" class="hidden">
+  <h1>۱۲. فرهنگنامه همهٔ متغیرها</h1>
+  <p class="lead">جستجو کنید. هر متغیر زنوویکس که از Railway ست می‌شود اینجاست.</p>
+  <input class="search" id="q" placeholder="جستجوی نام متغیر یا توضیح…">
+  <div id="g-all"></div>
+</section>
+
+<div class="row">
+  <button class="prev" type="button" id="prev">مرحله قبل</button>
+  <button class="next" type="button" id="next">مرحله بعد</button>
+</div>
+<footer>Zenovix 1.2.0 · مدیر عملیات یک شرکت · سکرت واقعی را در این صفحه ذخیره نکنید؛ فقط در Railway.</footer>
+</main>
+<script>
+const V = [
+  {g:"rail", k:"APP_ENV", need:"need", t:"محیط اجرا", d:"production یعنی قوانین سخت (سکرت تلگرام اجباری، mock ممنوع). development برای تست.", w:"خودتان در Railway می‌نویسید.", e:'APP_ENV="production"'},
+  {g:"rail", k:"BOOTSTRAP_MODE", need:"auto", t:"حالت بوت", d:"full یعنی Postgres/Redis/R2 وصل می‌شوند. lite فقط برای تست بدون سرویس خارجی.", w:"معمولاً full بگذارید.", e:'BOOTSTRAP_MODE="full"'},
+  {g:"rail", k:"PORT", need:"auto", t:"پورت HTTP", d:"Railway خودش PORT را تزریق می‌کند. زنوویکس روی 0.0.0.0 گوش می‌دهد.", w:"Railway خودکار.", e:'PORT="8080"'},
+  {g:"rail", k:"WEB_PORT", need:"auto", t:"پورت داخلی پنل", d:"اگر PORT نباشد از این استفاده می‌شود.", w:"همان ۸۰۸۰.", e:'WEB_PORT="8080"'},
+  {g:"rail", k:"DATABASE_URL", need:"need", t:"آدرس Postgres", d:"همهٔ مشتری، پیام، تأیید HITL، تیکت و کاتالوگ اینجا ماندگار است.", w:"Railway → Add Postgres. مقدار را دستی ننویسید؛ ارجاع پلاگین بگذارید.", e:'DATABASE_URL="${{Postgres.DATABASE_URL}}"'},
+  {g:"rail", k:"REDIS_URL", need:"need", t:"آدرس Redis", d:"استریم پیام، قفل یک‌بارمصرف HITL، محدودیت نرخ، hold مکالمه.", w:"Railway → Add Redis.", e:'REDIS_URL="${{Redis.REDIS_URL}}"'},
+  {g:"rail", k:"LOG_LEVEL", need:"auto", t:"سطح لاگ", d:"INFO برای پروداکشن کافی است. DEBUG شلوغ است.", w:"خودتان.", e:'LOG_LEVEL="INFO"'},
+  {g:"rail", k:"LOG_JSON_ENABLED", need:"auto", t:"لاگ JSON", d:"برای خواندن لاگ Railway بهتر است true باشد.", w:"خودتان.", e:'LOG_JSON_ENABLED="true"'},
+  {g:"rail", k:"LOG_TO_DB", need:"auto", t:"لاگ در دیتابیس", d:"رویدادها علاوه بر stdout در مسیر ممیزی ثبت می‌شوند.", w:"خودتان.", e:'LOG_TO_DB="true"'},
+  {g:"rail", k:"COOKIE_SECURE", need:"auto", t:"کوکی امن", d:"در HTTPS باید true باشد. روی HTTP محلی false.", w:"پروداکشن Railway = true.", e:'COOKIE_SECURE="true"'},
+
+  {g:"tenant", k:"TENANT_ID", need:"need", t:"شناسه مستأجر", d:"اسلاگ یک شرکت. زنوویکس کوچک می‌کند. یک استقرار = یک شرکت.", w:"خودتان انتخاب کنید؛ حروف انگلیسی و خط تیره.", e:'TENANT_ID="zenovix-digital"'},
+  {g:"tenant", k:"TENANT_NAME_EN", need:"need", t:"نام انگلیسی شرکت", d:"در سایت و گزارش مدیر.", w:"نام رسمی انگلیسی کارفرما.", e:'TENANT_NAME_EN="ZENOVIX DIGITAL Company"'},
+  {g:"tenant", k:"TENANT_NAME_AR", need:"need", t:"نام عربی/فارسی شرکت", d:"برای پاسخ‌های عربی. اگر خالی باشد از نام انگلیسی استفاده می‌شود.", w:"نام رسمی در مدارک.", e:'TENANT_NAME_AR="زنوفیکس دیجیتال"'},
+  {g:"tenant", k:"SUPPORT_CONTACT", need:"need", t:"تماس پشتیبانی", d:"وقتی پیام اضطراری یا «تماس با ما» است این نشان داده می‌شود.", w:"ایمیل یا تلفن واقعی ops شرکت.", e:'SUPPORT_CONTACT="ops@company.com"'},
+  {g:"tenant", k:"BRAND_LOGO_URL", need:"opt", t:"آدرس لوگو", d:"اگر خالی باشد از لوگوی پیش‌فرض زنوویکس استفاده می‌شود.", w:"لینک HTTPS فایل لوگو در R2 یا CDN.", e:'BRAND_LOGO_URL=""'},
+  {g:"tenant", k:"BRAND_PRIMARY_COLOR", need:"opt", t:"رنگ برند", d:"رنگ نئون پنل.", w:"کد هگز از هویت بصری.", e:'BRAND_PRIMARY_COLOR="#00f0ff"'},
+  {g:"tenant", k:"TENANT_TIMEZONE", need:"opt", t:"منطقه زمانی", d:"برای ساعت کاری و گزارش روزانه.", w:"نام IANA مثل Europe/Amsterdam یا Asia/Dubai.", e:'TENANT_TIMEZONE="Asia/Dubai"'},
+  {g:"tenant", k:"BUSINESS_HOURS", need:"opt", t:"ساعت اداری", d:"خارج از این ساعت پیام «دفتر بسته است» معنی دارد؛ تأیید حساس خودکار نمی‌شود.", w:"فرمت 09:00-17:00", e:'BUSINESS_HOURS="09:00-17:00"'},
+
+  {g:"tg", k:"TELEGRAM_BOT_TOKEN", need:"need", t:"توکن ربات", d:"زنوویکس بدون این اصلاً بوت نمی‌شود.", w:"@BotFather → توکن. در چت عمومی نفرستید.", e:'TELEGRAM_BOT_TOKEN="123456:AA...."'},
+  {g:"tg", k:"TELEGRAM_ADMIN_IDS", need:"need", t:"آیدی مدیران", d:"فقط این افراد لاگین TWA و پینگ HITL می‌گیرند. ویرگول‌جدا.", w:"@userinfobot یا @getidsbot", e:'TELEGRAM_ADMIN_IDS="111,222"'},
+  {g:"tg", k:"TELEGRAM_WEBHOOK_SECRET", need:"need", t:"سکرت وب‌هوک", d:"تلگرام همین مقدار را در هدر می‌فرستد. خالی در production = بوت شکست. زنوویکس آن را نمی‌سازد.", w:"رشته تصادفی ≥۱۶ کاراکتر؛ همان را در setWebhook بگذارید.", e:'TELEGRAM_WEBHOOK_SECRET="حداقل_۱۶_کاراکتر"'},
+
+  {g:"admin", k:"ADMIN_USERNAME", need:"need", t:"نام کاربری پنل", d:"اولین حساب bootstrap.", w:"خودتان.", e:'ADMIN_USERNAME="zenovix-admin"'},
+  {g:"admin", k:"ADMIN_BOOTSTRAP_PASSWORD", need:"need", t:"رمز اولین مدیر", d:"بعد از ورود عوضش کنید. ساده نگذارید.", w:"رمز قوی خودتان.", e:'ADMIN_BOOTSTRAP_PASSWORD=""'},
+  {g:"admin", k:"WEB_SECRET", need:"need", t:"کلید امضای نشست", d:"اگر خالی باشد زنوویکس یکی می‌سازد (بین ری‌استارت عوض می‌شود و همه لاگین می‌پرند). در Railway صریحاً بگذارید.", w:"python -c \"import secrets; print(secrets.token_urlsafe(32))\"", e:'WEB_SECRET=""'},
+  {g:"admin", k:"TOTP_ENABLED", need:"opt", t:"ورود دو مرحله‌ای", d:"اگر true باشد مدیر باید اپ authenticator داشته باشد.", w:"بعد از پایدار شدن ستاپ true کنید.", e:'TOTP_ENABLED="false"'},
+
+  {g:"llm", k:"LLM_MODE", need:"need", t:"حالت مغز", d:"direct = URL سازگار OpenAI. router = سرویس 9router داخلی. mock در production ممنوع.", w:"معمولاً direct.", e:'LLM_MODE="direct"'},
+  {g:"llm", k:"DIRECT_BASE_URL", need:"need", t:"آدرس API مدل", d:"باید /v1 داشته باشد.", w:"پنل OpenRouter یا 9router خودتان.", e:'DIRECT_BASE_URL="https://openrouter.ai/api/v1"'},
+  {g:"llm", k:"DIRECT_API_KEY", need:"need", t:"کلید API مدل", d:"بدون این در حالت direct بوت نمی‌شود.", w:"همان پنل ارائه‌دهنده.", e:'DIRECT_API_KEY=""'},
+  {g:"llm", k:"DIRECT_MODEL", need:"need", t:"نام مدل اصلی", d:"همان شناسه‌ای که ارائه‌دهنده می‌شناسد.", w:"کاتالوگ مدل ارائه‌دهنده.", e:'DIRECT_MODEL="mimo-v2.5-free"'},
+  {g:"llm", k:"LLM_MODEL_FAST", need:"opt", t:"مدل سریع", d:"طبقه‌بندی پیام و کار ارزان.", w:"مدل کوچک‌تر همان ارائه‌دهنده.", e:'LLM_MODEL_FAST=""'},
+  {g:"llm", k:"LLM_MODEL_STANDARD", need:"opt", t:"مدل استاندارد", d:"پاسخ‌های کامل‌تر.", w:"مدل اصلی.", e:'LLM_MODEL_STANDARD=""'},
+  {g:"llm", k:"LLM_TEMPERATURE", need:"opt", t:"دمای تولید", d:"۰.۲ تا ۰.۳ برای عملیات دقیق.", w:"خودتان.", e:'LLM_TEMPERATURE="0.3"'},
+  {g:"llm", k:"OPENAI_API_KEY", need:"opt", t:"کلید OpenAI سازگار", d:"اگر پر باشد روی DIRECT_API_KEY می‌نشیند.", w:"اختیاری؛ جایگزین DIRECT.", e:'OPENAI_API_KEY=""'},
+  {g:"llm", k:"OPENAI_BASE_URL", need:"opt", t:"آدرس OpenAI سازگار", d:"جایگزین DIRECT_BASE_URL اگر آن خالی باشد.", w:"اختیاری.", e:'OPENAI_BASE_URL=""'},
+  {g:"llm", k:"ROUTER_BASE_URL", need:"opt", t:"آدرس 9router", d:"فقط وقتی LLM_MODE=router.", w:"سرویس داخلی.", e:'ROUTER_BASE_URL="http://9router:20128/v1"'},
+  {g:"llm", k:"ROUTER_ACCESS_KEY", need:"opt", t:"کلید 9router", d:"اگر خالی باشد زنوویکس یکی می‌سازد — برای چند ورکر بد است. صریح بگذارید.", w:"خودتان بسازید.", e:'ROUTER_ACCESS_KEY=""'},
+  {g:"llm", k:"ROUTER_TIMEOUT", need:"opt", t:"مهلت 9router", d:"ثانیه.", w:"معمولاً ۱۲۰.", e:'ROUTER_TIMEOUT="120"'},
+  {g:"llm", k:"ROUTER_FALLBACK_TO_DIRECT", need:"opt", t:"برگشت به direct", d:"اگر router خراب شد به DIRECT می‌رود.", w:"true پیشنهادی.", e:'ROUTER_FALLBACK_TO_DIRECT="true"'},
+  {g:"llm", k:"HERMES_BASE_URL", need:"opt", t:"آدرس Hermes", d:"سایدکار مهارت. اگر خالی/داخلی باشد اینلاین است.", w:"فقط اگر سرویس Hermes جدا دارید.", e:'HERMES_BASE_URL=""'},
+  {g:"llm", k:"HERMES_SERVICE_TOKEN", need:"opt", t:"توکن Hermes", d:"احراز هویت سایدکار.", w:"خودتان.", e:'HERMES_SERVICE_TOKEN=""'},
+  {g:"llm", k:"HERMES_TIMEOUT", need:"opt", t:"مهلت Hermes", d:"ثانیه.", w:"۱۸۰ پیش‌فرض.", e:'HERMES_TIMEOUT="180"'},
+
+  {g:"r2", k:"R2_ENDPOINT", need:"need", t:"آدرس S3/R2", d:"endpoint بدون نام باکت.", w:"Cloudflare R2 → API Tokens یا پنل t3.storageapi.dev", e:'R2_ENDPOINT="https://ACCOUNT.r2.cloudflarestorage.com"'},
+  {g:"r2", k:"R2_ACCESS_KEY_ID", need:"need", t:"کلید دسترسی", d:"Access Key.", w:"همان پنل ذخیره‌سازی.", e:'R2_ACCESS_KEY_ID=""'},
+  {g:"r2", k:"R2_SECRET_ACCESS_KEY", need:"need", t:"سکرت دسترسی", d:"Secret Key. در لاگ زنوویکس ماسک می‌شود.", w:"همان پنل.", e:'R2_SECRET_ACCESS_KEY=""'},
+  {g:"r2", k:"R2_BUCKET", need:"need", t:"نام باکت", d:"باکت از قبل ساخته شود یا زنوویکس سعی می‌کند بسازد.", w:"نام باکت در پنل.", e:'R2_BUCKET="zenovix-agent"'},
+  {g:"r2", k:"R2_PREFIX", need:"opt", t:"پیشوند مسیر", d:"جداسازی فایل‌های این مستأجر.", w:"مثلاً tenants/zenovix-digital", e:'R2_PREFIX="tenants/your-tenant"'},
+  {g:"r2", k:"R2_SIGNED_URL_TTL", need:"opt", t:"عمر لینک امضاشده", d:"ثانیه برای دانلود بکاپ/پیوست.", w:"۳۶۰۰ = یک ساعت.", e:'R2_SIGNED_URL_TTL="3600"'},
+  {g:"r2", k:"ARCHIVE_FINAL_OUTPUTS", need:"opt", t:"آرشیو خروجی نهایی", d:"نقل‌قول و تیکت را در R2 هم می‌نویسد.", w:"true پیشنهادی.", e:'ARCHIVE_FINAL_OUTPUTS="true"'},
+
+  {g:"hitl", k:"HITL_TIMEOUT_SECONDS", need:"need", t:"مهلت تصمیم مدیر", d:"بعد از این، استراتژی fallback اجرا می‌شود.", w:"۶۰۰ = ده دقیقه. برای تیم کوچک بیشتر بگذارید.", e:'HITL_TIMEOUT_SECONDS="600"'},
+  {g:"hitl", k:"HITL_FALLBACK", need:"need", t:"اگر مدیر جواب نداد", d:"silent = پیش‌نویس ارسال نمی‌شود؛ فقط پیام مؤدبانه. auto_ack برای پرداخت/پیش‌فاکتور/انتشار باز هم بسته است.", w:"برای کارفرما silent پیشنهاد می‌شود.", e:'HITL_FALLBACK="silent"'},
+  {g:"hitl", k:"HITL_PING_TELEGRAM", need:"opt", t:"پینگ تلگرام مدیر", d:"هر پیش‌نویس صف‌شده برای TELEGRAM_ADMIN_IDS پیام می‌رود.", w:"true بگذارید وگرنه صف نامرئی است.", e:'HITL_PING_TELEGRAM="true"'},
+  {g:"hitl", k:"RATE_LIMIT_PER_MINUTE", need:"opt", t:"سقف پیام در دقیقه", d:"برای هر فرستنده در پنجره ۶۰ ثانیه.", w:"۳۰ تا ۶۰ معمولی است.", e:'RATE_LIMIT_PER_MINUTE="60"'},
+
+  {g:"ch", k:"WHATSAPP_ENABLED", need:"opt", t:"واتساپ روشن؟", d:"false = مسیر /wa/webhook برابر ۴۰۴.", w:"تا وقتی Meta/Twilio کامل نشده false.", e:'WHATSAPP_ENABLED="false"'},
+  {g:"ch", k:"WHATSAPP_PROVIDER", need:"opt", t:"ارائه‌دهنده واتساپ", d:"meta یا twilio.", w:"معمولاً meta.", e:'WHATSAPP_PROVIDER="meta"'},
+  {g:"ch", k:"WHATSAPP_VERIFY_TOKEN", need:"opt", t:"توکن تأیید Meta", d:"همان مقدار در کنسول Meta برای handshake. زنوویکس اختراعش نمی‌کند.", w:"Meta App → WhatsApp → Configuration.", e:'WHATSAPP_VERIFY_TOKEN=""'},
+  {g:"ch", k:"WHATSAPP_APP_SECRET", need:"opt", t:"App Secret متا", d:"امضای HMAC بدنه. اگر واتساپ meta روشن باشد اجباری است.", w:"Meta App → Settings → Basic.", e:'WHATSAPP_APP_SECRET=""'},
+  {g:"ch", k:"WHATSAPP_PHONE_NUMBER_ID", need:"opt", t:"شناسه شماره واتساپ", d:"ارسال پیام از این شماره.", w:"Meta WhatsApp → API Setup.", e:'WHATSAPP_PHONE_NUMBER_ID=""'},
+  {g:"ch", k:"WHATSAPP_API_TOKEN", need:"opt", t:"توکن Cloud API", d:"ارسال/دریافت.", w:"همان API Setup.", e:'WHATSAPP_API_TOKEN=""'},
+  {g:"ch", k:"WHATSAPP_BASE_URL", need:"opt", t:"آدرس Graph", d:"پیش‌فرض Graph v20.", w:"معمولاً دست نزنید.", e:'WHATSAPP_BASE_URL="https://graph.facebook.com/v20.0"'},
+  {g:"ch", k:"TWILIO_ACCOUNT_SID", need:"opt", t:"Twilio SID", d:"فقط اگر provider=twilio و واتساپ روشن.", w:"کنسول Twilio.", e:'TWILIO_ACCOUNT_SID=""'},
+  {g:"ch", k:"TWILIO_AUTH_TOKEN", need:"opt", t:"Twilio Auth", d:"امضای وب‌هوک Twilio.", w:"کنسول Twilio.", e:'TWILIO_AUTH_TOKEN=""'},
+  {g:"ch", k:"TWILIO_WHATSAPP_FROM", need:"opt", t:"شماره From", d:"مثل whatsapp:+1415…", w:"Twilio WhatsApp sender.", e:'TWILIO_WHATSAPP_FROM=""'},
+  {g:"ch", k:"TWILIO_BASE_URL", need:"opt", t:"آدرس Twilio", d:"API رسمی.", w:"پیش‌فرض کافی است.", e:'TWILIO_BASE_URL="https://api.twilio.com/2010-04-01"'},
+  {g:"ch", k:"EMAIL_ENABLED", need:"opt", t:"ایمیل روشن؟", d:"اگر true باشد EMAIL_FROM و کلید ارسال اجباری است و یکی از کلیدهای وب‌هوک.", w:"تا دامنه ایمیل آماده نشده false.", e:'EMAIL_ENABLED="false"'},
+  {g:"ch", k:"EMAIL_INBOUND_PROVIDER", need:"opt", t:"ورودی ایمیل", d:"sendgrid یا imap.", w:"انتخاب زیرساخت نامه.", e:'EMAIL_INBOUND_PROVIDER="imap"'},
+  {g:"ch", k:"EMAIL_FROM", need:"opt", t:"فرستنده", d:"مثل Zenovix <ops@company.com>", w:"دامنه احرازشده در Resend/SendGrid.", e:'EMAIL_FROM=""'},
+  {g:"ch", k:"EMAIL_REPLY_TO", need:"opt", t:"Reply-To", d:"اگر خالی باشد همان FROM.", w:"صندوق واقعی پشتیبانی.", e:'EMAIL_REPLY_TO=""'},
+  {g:"ch", k:"RESEND_API_KEY", need:"opt", t:"کلید Resend", d:"ارسال نامه. اگر EMAIL_ENABLED و از Resend استفاده می‌کنید اجباری.", w:"resend.com → API Keys.", e:'RESEND_API_KEY=""'},
+  {g:"ch", k:"RESEND_BASE_URL", need:"opt", t:"آدرس Resend", d:"پیش‌فرض رسمی.", w:"دست نزنید مگر پروکسی دارید.", e:'RESEND_BASE_URL="https://api.resend.com"'},
+  {g:"ch", k:"RESEND_WEBHOOK_SECRET", need:"opt", t:"سکرت وب‌هوک Resend/Svix", d:"یکی از این یا کلید عمومی SendGrid برای ورودی اجباری است.", w:"Resend Webhooks.", e:'RESEND_WEBHOOK_SECRET=""'},
+  {g:"ch", k:"SENDGRID_API_KEY", need:"opt", t:"کلید SendGrid", d:"اگر inbound=sendgrid.", w:"SendGrid → API Keys.", e:'SENDGRID_API_KEY=""'},
+  {g:"ch", k:"SENDGRID_WEBHOOK_PUBLIC_KEY", need:"opt", t:"کلید عمومی امضای SendGrid", d:"تأیید Inbound Parse.", w:"SendGrid Event Webhook verification.", e:'SENDGRID_WEBHOOK_PUBLIC_KEY=""'},
+  {g:"ch", k:"IMAP_HOST", need:"opt", t:"هاست IMAP", d:"اگر ورودی imap باشد اجباری.", w:"پنل میل سرور شرکت.", e:'IMAP_HOST=""'},
+  {g:"ch", k:"IMAP_PORT", need:"opt", t:"پورت IMAP", d:"معمولاً ۹۹۳.", w:"مستندات میل.", e:'IMAP_PORT="993"'},
+  {g:"ch", k:"IMAP_USER", need:"opt", t:"کاربر IMAP", d:"صندوق ورودی.", w:"همان پنل میل.", e:'IMAP_USER=""'},
+  {g:"ch", k:"IMAP_PASSWORD", need:"opt", t:"رمز IMAP", d:"ترجیحاً app password.", w:"همان پنل.", e:'IMAP_PASSWORD=""'},
+  {g:"ch", k:"IMAP_POLL_SECONDS", need:"opt", t:"فاصله نظرسنجی IMAP", d:"ثانیه. حداقل ۵.", w:"۶۰ معمولی.", e:'IMAP_POLL_SECONDS="60"'},
+  {g:"ch", k:"INSTAGRAM_ENABLED", need:"opt", t:"اینستاگرام", d:"انتشار تقویم / پاسخ.", w:"Meta Graph برای بیزنس.", e:'INSTAGRAM_ENABLED="false"'},
+  {g:"ch", k:"INSTAGRAM_ACCESS_TOKEN", need:"opt", t:"توکن اینستاگرام", d:"توکن بلندمدت Graph.", w:"Meta for Developers.", e:'INSTAGRAM_ACCESS_TOKEN=""'},
+  {g:"ch", k:"INSTAGRAM_BUSINESS_ACCOUNT_ID", need:"opt", t:"آیدی بیزنس IG", d:"حساب حرفه‌ای.", w:"همان اپ Meta.", e:'INSTAGRAM_BUSINESS_ACCOUNT_ID=""'},
+  {g:"ch", k:"TWITTER_ENABLED", need:"opt", t:"اکس / توییتر", d:"انتشار تقویم.", w:"developer.x.com", e:'TWITTER_ENABLED="false"'},
+  {g:"ch", k:"TWITTER_API_KEY", need:"opt", t:"API Key ایکس", d:"Consumer key.", w:"X Developer Portal.", e:'TWITTER_API_KEY=""'},
+  {g:"ch", k:"TWITTER_API_SECRET", need:"opt", t:"API Secret ایکس", d:"Consumer secret.", w:"همان پورتال.", e:'TWITTER_API_SECRET=""'},
+  {g:"ch", k:"TWITTER_ACCESS_TOKEN", need:"opt", t:"Access Token ایکس", d:"توکن کاربر.", w:"همان پورتال.", e:'TWITTER_ACCESS_TOKEN=""'},
+  {g:"ch", k:"TWITTER_ACCESS_SECRET", need:"opt", t:"Access Secret ایکس", d:"سکرت کاربر.", w:"همان پورتال.", e:'TWITTER_ACCESS_SECRET=""'},
+  {g:"ch", k:"TWITTER_BEARER_TOKEN", need:"opt", t:"Bearer ایکس", d:"برای خواندن عمومی.", w:"همان پورتال.", e:'TWITTER_BEARER_TOKEN=""'},
+  {g:"ch", k:"CALENDAR_ENABLED", need:"opt", t:"تقویم گوگل", d:"یادآور و برنامه روز.", w:"Google Cloud → Calendar API.", e:'CALENDAR_ENABLED="false"'},
+  {g:"ch", k:"GOOGLE_CALENDAR_CREDENTIALS", need:"opt", t:"JSON سرویس‌اکانت", d:"محتوا یا رشته اعتبارنامه.", w:"Google Cloud → Service account key.", e:'GOOGLE_CALENDAR_CREDENTIALS=""'},
+  {g:"ch", k:"GOOGLE_CALENDAR_ID", need:"opt", t:"شناسه تقویم", d:"معمولاً primary.", w:"تنظیمات تقویم.", e:'GOOGLE_CALENDAR_ID="primary"'},
+  {g:"ch", k:"DEFAULT_REMINDER_MINUTES", need:"opt", t:"یادآور پیش‌فرض", d:"دقیقه قبل از رویداد.", w:"۶۰ معمولی.", e:'DEFAULT_REMINDER_MINUTES="60"'},
+
+  {g:"biz", k:"CURRENCY", need:"need", t:"ارز", d:"کد ISO مثل SAR یا EUR. روی پیش‌فاکتور.", w:"ارز قرارداد کارفرما.", e:'CURRENCY="SAR"'},
+  {g:"biz", k:"TAX_RATE", need:"opt", t:"نرخ مالیات", d:"عدد بین ۰ و ۱. مثلاً ۰.۱۵ = ۱۵٪.", w:"قوانین مالی شرکت.", e:'TAX_RATE="0.15"'},
+  {g:"biz", k:"QUOTE_VALID_DAYS", need:"opt", t:"اعتبار پیش‌فاکتور", d:"روز.", w:"سیاست فروش.", e:'QUOTE_VALID_DAYS="7"'},
+  {g:"biz", k:"LEAD_SCORING_ENABLED", need:"opt", t:"امتیاز لید BANT", d:"اگر false باشد امتیاز زده نمی‌شود.", w:"معمولاً true.", e:'LEAD_SCORING_ENABLED="true"'},
+  {g:"biz", k:"NUMERAL_STYLE", need:"opt", t:"شکل اعداد", d:"western یا arabic-indic.", w:"بازار هدف.", e:'NUMERAL_STYLE="western"'},
+  {g:"biz", k:"REPLY_LANGUAGE_POLICY", need:"opt", t:"سیاست زبان پاسخ", d:"راهنمای لحن برای مدل.", w:"مثلاً fusha-formal.", e:'REPLY_LANGUAGE_POLICY="fusha-formal"'},
+
+  {g:"ops", k:"BACKUP_ENABLED", need:"opt", t:"بکاپ شبانه", d:"pg_dump فشرده به R2. 0/false = خاموش.", w:"بعد از پر شدن R2 روشن کنید.", e:'BACKUP_ENABLED="true"'},
+  {g:"ops", k:"BACKUP_HOUR", need:"opt", t:"ساعت بکاپ UTC", d:"۰ تا ۲۳.", w:"۳ یعنی ۰۳:۰۰ UTC.", e:'BACKUP_HOUR="3"'},
+  {g:"ops", k:"PG_DUMP_RETENTION_DAYS", need:"opt", t:"نگهداری بکاپ", d:"حذف فایل‌های قدیمی‌تر در R2.", w:"۳۰ روز معمولی.", e:'PG_DUMP_RETENTION_DAYS="30"'},
+  {g:"ops", k:"HOT_DATA_DAYS", need:"opt", t:"داده داغ", d:"سیاست نگهداری دادهٔ نزدیک.", w:"۹۰.", e:'HOT_DATA_DAYS="90"'},
+  {g:"ops", k:"MEMORY_ENABLED", need:"opt", t:"حافظه بلندمدت مشتری", d:"استخراج نکته بعد از گفتگو.", w:"true.", e:'MEMORY_ENABLED="true"'},
+  {g:"ops", k:"MEMORY_EXTRACT_EVERY", need:"opt", t:"هر چند پیام یک استخراج", d:"حداقل ۲.", w:"۴.", e:'MEMORY_EXTRACT_EVERY="4"'},
+  {g:"ops", k:"MEMORY_BUDGET_CHARS", need:"opt", t:"بودجه کاراکتر حافظه", d:"سقف متن ذخیره‌شده.", w:"۱۲۰۰.", e:'MEMORY_BUDGET_CHARS="1200"'},
+  {g:"ops", k:"MEMORY_PERSONA_THRESHOLD", need:"opt", t:"آستانه پرسونا", d:"بعد از چند فکت، پرسونا ساخته می‌شود.", w:"۳.", e:'MEMORY_PERSONA_THRESHOLD="3"'},
+  {g:"ops", k:"FLEET_ENABLED", need:"opt", t:"حالت تیم چندعاملی", d:"پرسش پیچیده بین نقش‌ها تقسیم می‌شود. هنوز زنوویکس است نه شرکت خودران.", w:"اختیاری.", e:'FLEET_ENABLED="true"'},
+  {g:"ops", k:"FLEET_MAX_TEAM_SIZE", need:"opt", t:"حداکثر نقش ناوگان", d:"۲ تا ۸.", w:"۶.", e:'FLEET_MAX_TEAM_SIZE="6"'},
+  {g:"ops", k:"FLEET_TEAM_TIMEOUT", need:"opt", t:"مهلت ناوگان", d:"ثانیه.", w:"۱۸۰.", e:'FLEET_TEAM_TIMEOUT="180"'}
+];
+
+const label = {need:"اجباری", opt:"اختیاری / کانال", auto:"پیش‌فرض اجرا"};
+
+function card(v){
+  return `<article class="var" data-k="${v.k}"><code>${v.k}</code> <span class="tag ${v.need}">${label[v.need]}</span>
+    <div><b>${v.t}</b> — ${v.d}</div>
+    <div class="where">از کجا: ${v.w}</div>
+    <div class="ex">${v.e}</div></article>`;
+}
+function fill(id, g){ document.getElementById(id).innerHTML = V.filter(v=>v.g===g).map(card).join(""); }
+fill("g-rail","rail"); fill("g-tenant","tenant"); fill("g-tg","tg"); fill("g-admin","admin");
+fill("g-llm","llm"); fill("g-r2","r2"); fill("g-hitl","hitl"); fill("g-ch","ch");
+fill("g-biz","biz"); fill("g-ops","ops");
+document.getElementById("g-all").innerHTML = V.map(card).join("");
+
+let cur = 0;
+function show(n){
+  cur = Math.max(0, Math.min(12, n));
+  for (let i=0;i<=12;i++) document.getElementById("s"+i).classList.toggle("hidden", i!==cur);
+  document.querySelectorAll(".step-btn").forEach((b,i)=>b.classList.toggle("on", i===cur));
+  window.scrollTo(0,0);
+}
+document.querySelectorAll(".step-btn").forEach(b=>b.onclick=()=>show(+b.dataset.go));
+document.getElementById("next").onclick=()=>show(cur+1);
+document.getElementById("prev").onclick=()=>show(cur-1);
+document.getElementById("q").oninput=function(){
+  const q=this.value.trim().toLowerCase();
+  document.querySelectorAll("#g-all .var").forEach(el=>{
+    el.style.display = !q || el.innerText.toLowerCase().includes(q) ? "" : "none";
+  });
+};
+</script>
+</body>
+</html>

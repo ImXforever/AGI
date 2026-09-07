@@ -1,0 +1,4 @@
+MODULE 13 — Public web + customer Mini App
+Exists: web/index.html (landing), web/app.html + js/public.js (Mini App), served at `/` and `/app`. English only. No Login for visitors. Telegram.WebApp.sendData for customer actions. Icon web/icon.svg.
+Landing must not mojibake. Must not look like admin.
+Design IA, mobile, what a 10k-member customer can do without leaking admin variables or bot tokens. Output format from the brief.

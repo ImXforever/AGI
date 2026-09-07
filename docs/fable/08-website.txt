@@ -1,0 +1,5 @@
+MODULE 08 — Website agent (phase 2)
+Charter: ingest contact forms as leads; prepare page/product content; report site issues; hold price, legal, delete for approval.
+Exists: skills/website, website_workflow.py, cms.py, admin website.html.
+Public site is English web/index.html + /app. Admin must not be the public site.
+Design form ingest, draft CMS change vs apply, issue tickets, how price edits never hit production without approval. Output format from the brief.

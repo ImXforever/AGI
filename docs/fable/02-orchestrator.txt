@@ -1,0 +1,10 @@
+MODULE 02 — Orchestrator
+Exists: orchestrator.py (classify JSON, heuristic fallback, Telegram menus, fleet optional, Hermes run_skill, QA, honest admission, output guard).
+Contract:
+- handle_incoming(IncomingMessage, services) → {handled, classification, approval_id, guard_rejected}.
+- Commands /start /help /lang_* bypass LLM.
+- Inbound security_stack then classify then skill.
+- Empty/gibberish draft → honest admission, never hallucinate.
+- Language: saved Redis lang:{sender_id}, default en.
+Design routing, classification schema, when to HITL-escalate vs auto-reply, how skills return text vs tools_called.
+Do not redesign the 15 layers (module 03) or policy matrix (module 04). Output format from the brief.

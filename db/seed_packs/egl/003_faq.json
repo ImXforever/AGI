@@ -1,0 +1,463 @@
+[
+  {
+    "id": "b35324dd-2e8d-5ee3-8fe3-630b0533342d",
+    "question_ar": "من هي إليان جلوبال لوجستيك؟",
+    "question_en": "Who is Elian Global Logistics?",
+    "answer_ar": "إليان جلوبال لوجستيك ذ.م.م شركة إماراتية مسجّلة متخصصة في الخدمات اللوجستية للنفط والغاز، مقرها دبي (الخليج التجاري) وعملياتها الاستراتيجية مرتبطة بالفجيرة — أحد أكثر مراكز التزوّد بالوقود ازدحامًا في العالم. نقدّم تخزين البترول وحلول التجارة والخدمات اللوجستية البحرية والتموين بالوقود وتأجير السفن والتحقق من وثائق TSA/TSR والاستشارات في مجال الامتثال.",
+    "answer_en": "Elian Global Logistics Co. L.L.C (EGL) is a UAE-registered oil and gas logistics company headquartered in Dubai (Business Bay) with strategic operations connected to Fujairah — one of the world's busiest bunkering hubs. We provide petroleum storage, trade solutions, marine logistics and bunkering, ship chartering, TSA/TSR document verification and compliance consulting.",
+    "category": "company",
+    "language": "en",
+    "tags": [
+      "about",
+      "company",
+      "who",
+      "elian",
+      "egl",
+      "من نحن",
+      "شركة"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "63f7f966-871b-52bf-b15d-01b1f75b9b19",
+    "question_ar": "أين يقع مقركم؟",
+    "question_en": "Where are you located?",
+    "answer_ar": "المكتب الرئيسي: مكتب 2703، برج أسبكت، الخليج التجاري، دبي، الإمارات. عملياتنا التخزينية والبحرية مرتبطة بالفجيرة على الساحل الشرقي لدولة الإمارات.",
+    "answer_en": "Head office: Office 2703, Aspect Tower, Business Bay, Dubai, UAE. Our storage and marine operations are connected to Fujairah on the UAE east coast.",
+    "category": "company",
+    "language": "en",
+    "tags": [
+      "location",
+      "office",
+      "address",
+      "dubai",
+      "fujairah",
+      "عنوان",
+      "مكتب",
+      "موقع"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "9e12624b-89c3-500b-8ac6-6888a309015d",
+    "question_ar": "ما هي ساعات العمل؟",
+    "question_en": "What are your working hours?",
+    "answer_ar": "يعمل مكتب التداول لدينا على مدار الساعة طوال أيام الأسبوع. مكتب دبي مفتوح من الأحد إلى الخميس، من 9:00 إلى 18:00 بتوقيت الخليج. عادةً ما نرد على الاستفسارات خلال نفس يوم العمل.",
+    "answer_en": "Our trading desk operates 24/7. The Dubai office is open Sunday to Thursday, 9:00–18:00 Gulf Standard Time (UTC+4). We typically respond to enquiries the same business day.",
+    "category": "company",
+    "language": "en",
+    "tags": [
+      "hours",
+      "working hours",
+      "open",
+      "24/7",
+      "ساعات",
+      "دوام",
+      "مواعيد"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "4fb901ca-7626-5e81-b773-887df2b16369",
+    "question_ar": "كيف يمكنني التواصل معكم؟",
+    "question_en": "How can I contact you?",
+    "answer_ar": "البريد الإلكتروني: info@egl.co.ae · الهاتف: +971 54 456 9977 · واتساب: https://wa.me/97144109977 · المكتب: مكتب 2703، برج أسبكت، الخليج التجاري، دبي. يمكنك أيضًا إرسال نموذج الاستفسار عبر https://egl.co.ae/ar/contact.html. نرد مباشرة — دون مراكز اتصال.",
+    "answer_en": "Email: info@egl.co.ae · Phone: +971 54 456 9977 · WhatsApp: https://wa.me/97144109977 · Office: Office 2703, Aspect Tower, Business Bay, Dubai. You can also submit the enquiry form at https://egl.co.ae/contact.html. We reply directly — no call centres.",
+    "category": "company",
+    "language": "en",
+    "tags": [
+      "contact",
+      "email",
+      "phone",
+      "whatsapp",
+      "تواصل",
+      "اتصال",
+      "هاتف",
+      "بريد"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "323a06c1-7dc6-5627-902c-0a6212d11c81",
+    "question_ar": "ما مدى سرعة الرد على الاستفسارات؟",
+    "question_en": "How quickly do you respond to enquiries?",
+    "answer_ar": "عادةً ما نرد خلال نفس يوم العمل. مكتب التداول متاح على مدار الساعة للأمور التشغيلية العاجلة.",
+    "answer_en": "We typically respond the same business day. The trading desk is reachable 24/7 for time-sensitive operational matters.",
+    "category": "company",
+    "language": "en",
+    "tags": [
+      "response",
+      "reply",
+      "how long",
+      "sla",
+      "رد",
+      "سرعة"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "f72ecb75-785b-5136-a1e6-153fe931b5fa",
+    "question_ar": "هل إليان جلوبال لوجستيك شركة مسجّلة؟ وهل عملياتكم مدعومة من بنوك؟",
+    "question_en": "Is EGL a registered company? Are you bank-backed?",
+    "answer_ar": "نعم. إليان جلوبال لوجستيك ذ.م.م شركة ذات مسؤولية محدودة مسجّلة في دولة الإمارات، ومهيكلة حول عمليات مدعومة من بنوك رائدة لتنفيذ تجاري موثوق. يمكن مشاركة وثائق التسجيل مع الأطراف المقابلة عند الطلب عبر فريقنا.",
+    "answer_en": "Yes. Elian Global Logistics Co. L.L.C is a UAE-registered limited liability company, structured around prime bank-backed operations for dependable trade execution. Registration documents can be shared with counterparties on request through our team.",
+    "category": "company",
+    "language": "en",
+    "tags": [
+      "registered",
+      "license",
+      "llc",
+      "bank",
+      "kyc",
+      "مسجلة",
+      "رخصة",
+      "بنك"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "1a8263a1-06d8-5a08-aa66-1a112b93d5b6",
+    "question_ar": "ما هي الخدمات التي تقدمونها؟",
+    "question_en": "What services do you offer?",
+    "answer_ar": "ست خدمات أساسية: (1) تخزين محطة الفجيرة، (2) الخدمات اللوجستية والتموين بالوقود، (3) تأجير السفن، (4) حلول التجارة، (5) التحقق من وثائق TSA وTSR، (6) الاستشارات والامتثال — منسّقة كعملية واحدة لا كستة موردين منفصلين.",
+    "answer_en": "Six core services: (1) Fujairah Terminal Storage, (2) Logistics & Bunkering, (3) Ship Chartering, (4) Trade Solutions, (5) TSA & TSR Document Verification, (6) Consulting & Compliance Advisory — coordinated as one operation rather than six separate vendors.",
+    "category": "services",
+    "language": "en",
+    "tags": [
+      "services",
+      "what do you do",
+      "offer",
+      "خدمات",
+      "ماذا تقدمون"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "814a9d18-2b33-5ac0-9d14-86b5e54b1824",
+    "question_ar": "هل توفرون تخزينًا في صهاريج بالفجيرة؟ وما المنتجات التي يمكن تخزينها؟",
+    "question_en": "Do you provide tank storage in Fujairah? What products can be stored?",
+    "answer_ar": "نعم. نوفر تخزينًا حديثًا في صهاريج بالفجيرة لمنتجات البترول النظيفة والثقيلة، مع صهاريج منفصلة للنفط الخام وزيت الوقود والديزل والبنزين ووقود الطائرات. يشمل التخزين وصولًا مباشرًا إلى خطوط الأنابيب والموانئ البحرية، ومراقبة متواصلة للجودة والمخزون، وتوافقًا مع أنظمة الموانئ والجمارك الإماراتية. لمعرفة التوفر، أخبرنا بالدرجة والحجم والجدول الزمني.",
+    "answer_en": "Yes. We provide modern tank storage at Fujairah for both clean and dirty petroleum products, with segregated tankage for crude oil, fuel oil, diesel, gasoline and jet fuel. Storage includes direct pipeline and marine access, continuous quality and inventory monitoring, and alignment with UAE port and customs regulations. To get availability, tell us the grade, volume and timeline.",
+    "category": "services",
+    "language": "en",
+    "tags": [
+      "storage",
+      "tank",
+      "terminal",
+      "fujairah",
+      "تخزين",
+      "صهاريج",
+      "الفجيرة"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "10a2e1c1-ecb4-5b6e-8f01-9f453503f790",
+    "question_ar": "كيف أطلب عرض سعر للتخزين وما المعلومات المطلوبة؟",
+    "question_en": "How do I request a storage quote and what information do you need?",
+    "answer_ar": "أرسل لنا: (1) درجة المنتج (مثل النفط الخام، زيت الوقود، ديزل 10 أجزاء بالمليون، البنزين، وقود الطائرات)، (2) الحجم، (3) مدة التخزين / الجدول الزمني، (4) اسم شركتك وبيانات التواصل. يعود إليك فريقنا بتوفر المحطة وعرض السعر. تُعدّ عروض الأسعار وتُعتمد من فريقنا التجاري قبل إرسالها.",
+    "answer_en": "Send us: (1) product grade (e.g. crude, fuel oil, diesel 10 ppm, gasoline, jet fuel), (2) volume, (3) storage period / timeline, (4) your company name and contact. Our team comes back with terminal availability and a quotation. Quotes are prepared and approved by our commercial team before they are sent.",
+    "category": "services",
+    "language": "en",
+    "tags": [
+      "quote",
+      "storage quote",
+      "rfq",
+      "price",
+      "عرض سعر",
+      "تسعير",
+      "طلب"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "2d650ed2-1c81-56a6-97d8-91a351bab7fa",
+    "question_ar": "هل تزوّدون السفن بوقود التموين؟",
+    "question_en": "Do you supply bunker fuel to vessels?",
+    "answer_ar": "نعم. ننسّق تسليم وقود التموين للسفن الراسية أو في المرسى بالفجيرة وعبر خطوط الشحن العالمية، مع تنسيق شامل للشحن والوثائق وتعامل مع الوقود متوافق مع معايير الصحة والسلامة والبيئة في كل نقطة نقل. شاركنا اسم السفينة/رقم IMO والميناء ووقت الوصول المتوقع ودرجة الوقود والكمية للبدء.",
+    "answer_en": "Yes. We coordinate bunker fuel delivery for vessels at anchorage or berth in Fujairah and across global shipping lanes, with end-to-end shipment coordination, documentation and HSE-compliant fuel handling at every transfer point. Share the vessel name/IMO, port, ETA, fuel grade and quantity to get started.",
+    "category": "services",
+    "language": "en",
+    "tags": [
+      "bunker",
+      "bunkering",
+      "vessel",
+      "fuel supply",
+      "تموين",
+      "وقود",
+      "سفينة"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "b0797ce9-87c5-50c0-ab71-9e58817ef9de",
+    "question_ar": "ما فئات السفن التي يمكنكم تأجيرها؟",
+    "question_en": "Which vessel classes can you charter?",
+    "answer_ar": "نوفر إمكانية الوصول إلى سفن أفرا ماكس وسويز ماكس وVLCC لنقل النفط الخام والمنتجات المكررة عالميًا، بما في ذلك توفير السفن وتنسيق المسار وفترة الشحن والأجرة ودعم وثائق مشارطة الإيجار والشحن. أخبرنا بنوع الشحنة والكمية وموانئ التحميل/التفريغ وفترة الشحن.",
+    "answer_en": "We provide access to Aframax, Suezmax and VLCC charters for global crude and refined product transport, including vessel sourcing, route/laycan/freight coordination and charter party and cargo documentation support. Tell us cargo type and quantity, load/discharge ports and laycan window.",
+    "category": "services",
+    "language": "en",
+    "tags": [
+      "charter",
+      "chartering",
+      "aframax",
+      "suezmax",
+      "vlcc",
+      "tanker",
+      "تأجير",
+      "ناقلة"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "f956230a-2b96-59dd-a839-e409c19ad98a",
+    "question_ar": "هل يمكنكم مساعدتي في شراء أو بيع شحنات بترولية؟",
+    "question_en": "Can you help me buy or sell petroleum cargoes?",
+    "answer_ar": "نعم. تشمل حلول التجارة لدينا مطابقة المشترين والبائعين لشحنات النفط النظيف والثقيل، ودعمًا تجاريًا منظمًا مع ضمانات مالية، وتنسيق العقود وخطابات الاعتماد والتسوية — ضمن عمليات مسجّلة في الإمارات ومدعومة من بنوك رائدة. يؤكد فريقنا التجاري أي التزام بعقد أو سعر أو دفع.",
+    "answer_en": "Yes. Our Trade Solutions cover buyer and seller matching for clean and dirty oil cargoes, structured trade support with financial safeguards, and contract, LC and settlement coordination — backed by UAE-registered, bank-backed operations. Any contract, price or payment commitment is confirmed by our commercial team.",
+    "category": "services",
+    "language": "en",
+    "tags": [
+      "trade",
+      "buy",
+      "sell",
+      "cargo",
+      "lc",
+      "letter of credit",
+      "تجارة",
+      "شراء",
+      "بيع"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "77e471b2-eca4-5be4-9586-465426c8a741",
+    "question_ar": "ما هو التحقق من TSA/TSR وكيف أطلبه؟",
+    "question_en": "What is TSA/TSR verification and how do I request it?",
+    "answer_ar": "TSA هي اتفاقية تخزين الصهاريج وTSR هي إيصال تخزين الصهاريج. نوفر تحققًا آمنًا وموثّقًا من هذه الوثائق مقابل سجلات المحطة لمنع الاحتيال ومنح البنوك والمتداولين والأطراف المقابلة مسار تدقيق واضحًا. لطلب التحقق، شاركنا نوع الوثيقة والمحطة المُصدِرة ومرجع/تاريخ الوثيقة.",
+    "answer_en": "TSA is a Tank Storage Agreement and TSR is a Tank Storage Receipt. We provide secure, authenticated verification of these documents against terminal records to prevent fraud and give banks, traders and counterparties a clear audit trail. To request verification, share the document type, issuing terminal and document reference/date with our team.",
+    "category": "services",
+    "language": "en",
+    "tags": [
+      "tsa",
+      "tsr",
+      "verification",
+      "verify",
+      "document",
+      "fraud",
+      "تحقق",
+      "وثائق",
+      "احتيال"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "182048c4-dd67-5f86-9c1d-68761193ad45",
+    "question_ar": "هل تقدمون خدمات استشارية أو استشارات امتثال؟",
+    "question_en": "Do you offer consulting or compliance advisory?",
+    "answer_ar": "نعم. نقدّم إرشادات الامتثال التنظيمي والصحة والسلامة والبيئة، ومعلومات سوقية لقرارات التخزين والتجارة، وتحسينًا تشغيليًا عبر سلاسل التخزين والخدمات اللوجستية للشركاء الذين يتعاملون مع الأنظمة الإماراتية والدولية.",
+    "answer_en": "Yes. We provide regulatory and HSE compliance guidance, market intelligence for storage and trade decisions, and operational optimization across storage and logistics chains for partners navigating UAE and international regulation.",
+    "category": "services",
+    "language": "en",
+    "tags": [
+      "consulting",
+      "advisory",
+      "compliance",
+      "market intelligence",
+      "استشارات",
+      "امتثال"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "4271b01a-4471-59f0-81ac-40a91a1776ee",
+    "question_ar": "ما منتجات البترول التي تتعاملون بها؟",
+    "question_en": "Which petroleum products do you handle?",
+    "answer_ar": "الزيوت الثقيلة: النفط الخام وزيت الوقود (المتبقي / درجة التموين البحري). الزيوت النظيفة: ديزل بنقاوة 10 أجزاء بالمليون (منخفض الكبريت للغاية) والبنزين ووقود الطائرات. تُخزَّن جميعها في صهاريج مخصصة ومنفصلة مع نقل مُتحكَّم به ووثائق موثّقة عبر TSA/TSR.",
+    "answer_en": "Dirty oils: Crude Oil and Fuel Oil (residual / marine bunker grade). Clean oils: Diesel 10 PPM (ultra-low sulphur), Gasoline and Jet Fuel. All are stored in dedicated, segregated tankage with controlled transfer and TSA/TSR-verified documentation.",
+    "category": "products",
+    "language": "en",
+    "tags": [
+      "products",
+      "crude",
+      "fuel oil",
+      "diesel",
+      "gasoline",
+      "jet",
+      "منتجات",
+      "نفط",
+      "ديزل",
+      "بنزين"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "02c26dab-3dae-5334-a474-c8b3671cd074",
+    "question_ar": "ما الفرق بين الزيوت النظيفة والثقيلة؟",
+    "question_en": "What is the difference between clean and dirty oils?",
+    "answer_ar": "الزيوت الثقيلة (السوداء) هي النفط الخام وزيوت الوقود المتبقية؛ والزيوت النظيفة (البيضاء) هي المنتجات المكررة مثل الديزل والبنزين ووقود الطائرات. نخزّنها في صهاريج منفصلة ومخصصة لمنع التلوث المتبادل، مع مراقبة متواصلة للجودة.",
+    "answer_en": "Dirty (black) oils are crude oil and residual fuel oils; clean (white) oils are refined products such as diesel, gasoline and jet fuel. We store them in separate, dedicated tankage to prevent cross-contamination, with continuous quality monitoring.",
+    "category": "products",
+    "language": "en",
+    "tags": [
+      "clean",
+      "dirty",
+      "black oil",
+      "white oil",
+      "نظيف",
+      "ثقيل"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "7eae1506-9693-59f1-bfce-a31cbeb88f65",
+    "question_ar": "هل يمكنكم إعطائي سعر الديزل / زيت الوقود / النفط الخام؟",
+    "question_en": "Can you give me a price for diesel / fuel oil / crude?",
+    "answer_ar": "أسعار المنتجات والتخزين مرتبطة بالسوق وتُقدَّم بعرض سعر رسمي فقط — لا ننشر قوائم أسعار. شاركنا درجة المنتج والكمية وأساس/موقع التسليم والجدول الزمني، وسيُعدّ فريقنا التجاري عرض سعر ويعتمده لك.",
+    "answer_en": "Product and storage prices are market-linked and provided by formal quotation only — we do not publish list prices. Share the product grade, quantity, delivery basis/location and timeline, and our commercial team will prepare and approve a quote for you.",
+    "category": "products",
+    "language": "en",
+    "tags": [
+      "price",
+      "prices",
+      "cost",
+      "rate",
+      "how much",
+      "سعر",
+      "أسعار",
+      "تكلفة",
+      "كم"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "95e8fb13-2857-5c5f-8a9b-96a4ccba5a2b",
+    "question_ar": "ما هو ديزل 10 أجزاء بالمليون؟",
+    "question_en": "What is Diesel 10 PPM?",
+    "answer_ar": "ديزل 10 أجزاء بالمليون هو ديزل منخفض الكبريت للغاية بحد أقصى للكبريت يبلغ 10 أجزاء بالمليون. نخزّنه في ظروف تحكّم صارم بالتلوث مع تتبّع كامل من الصهريج إلى نقطة النقل.",
+    "answer_en": "Diesel 10 PPM is ultra-low sulphur diesel with a maximum sulphur content of 10 parts per million. We store it under contamination-controlled conditions with full traceability from tank to transfer.",
+    "category": "products",
+    "language": "en",
+    "tags": [
+      "diesel",
+      "10 ppm",
+      "ulsd",
+      "sulphur",
+      "ديزل",
+      "كبريت"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "3e856d46-330b-55e1-b337-f90f0696fc8a",
+    "question_ar": "هل هناك حد أدنى للحجم للتخزين أو التجارة؟",
+    "question_en": "Is there a minimum volume for storage or trade?",
+    "answer_ar": "يعتمد الحد الأدنى على المنتج وتوفر الصهاريج وهيكل الصفقة. أخبرنا بالحجم المقصود والجدول الزمني وسيؤكد فريقنا ما هو ممكن.",
+    "answer_en": "Minimums depend on the product, tank availability and the deal structure. Tell us your intended volume and timeline and our team will confirm what is feasible.",
+    "category": "products",
+    "language": "en",
+    "tags": [
+      "minimum",
+      "volume",
+      "moq",
+      "الحد الأدنى",
+      "حجم"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "4732565f-ecc9-5133-b394-124fe824ac05",
+    "question_ar": "ما معايير الصحة والسلامة والامتثال التي تتبعونها؟",
+    "question_en": "What HSE and compliance standards do you follow?",
+    "answer_ar": "تلتزم كل عملية تخزين وتموين وتأجير بإجراءات تشغيل متوافقة مع معايير الصحة والسلامة والبيئة الدولية وأنظمة الموانئ والجمارك الإماراتية، مع وثائق شفافة وقابلة للتحقق في كل عملية نقل. ركائزنا الأربع: السلامة، الامتثال، المسؤولية البيئية (منع الانسكاب والتخطيط للاحتواء)، والعمليات على مدار الساعة.",
+    "answer_en": "Every storage, bunkering and chartering operation follows international HSE-aligned operating procedures and UAE port and customs regulations, with transparent, verifiable documentation on every movement. Our four pillars: Safety, Compliance, Environmental Responsibility (spill prevention, containment planning) and 24/7 Operations.",
+    "category": "compliance",
+    "language": "en",
+    "tags": [
+      "hse",
+      "safety",
+      "compliance",
+      "environment",
+      "standards",
+      "سلامة",
+      "امتثال",
+      "بيئة"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "1b7e135d-ad9e-5172-962d-14e0c0ecedff",
+    "question_ar": "ما الوثائق التي تقدمونها مع التخزين وحركات الشحنات؟",
+    "question_en": "What documentation do you provide with storage and cargo movements?",
+    "answer_ar": "وثائق شفافة وقابلة للتحقق في كل عملية نقل، تشمل وثائق تخزين موثّقة عبر TSA/TSR، ووثائق مشارطة الإيجار والشحن للتأجير، وتنسيق العقود وخطابات الاعتماد والتسوية للصفقات. يمكن لفريقنا شرح الوثائق قبل الالتزام بأي اتفاقية.",
+    "answer_en": "Transparent, verifiable documentation on every movement, including TSA/TSR-verified storage documentation, charter party and cargo documents for chartering, and contract/LC/settlement coordination for trades. Our team can walk you through the documentation before you commit to an agreement.",
+    "category": "compliance",
+    "language": "en",
+    "tags": [
+      "documents",
+      "paperwork",
+      "documentation",
+      "audit",
+      "وثائق",
+      "مستندات"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "dc345d8c-1e11-5359-abde-f04a9c1b3866",
+    "question_ar": "هل تشاركون بيانات استفساري مع أطراف ثالثة؟",
+    "question_en": "Do you share my enquiry details with third parties?",
+    "answer_ar": "لا. تُستخدم البيانات التي ترسلها فقط للرد على استفسارك. لا نشارك معلوماتك مع أطراف ثالثة.",
+    "answer_en": "No. Details you submit are used only to respond to your enquiry. We do not share your information with third parties.",
+    "category": "compliance",
+    "language": "en",
+    "tags": [
+      "privacy",
+      "data",
+      "third party",
+      "خصوصية",
+      "بيانات"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  },
+  {
+    "id": "7a62cc74-7bf6-5989-b3fc-4eb15c5c682f",
+    "question_ar": "ما اللغات التي تدعمونها؟",
+    "question_en": "Which languages do you support?",
+    "answer_ar": "يدعم موقعنا وفريقنا اللغتين الإنجليزية والعربية. عبر هذا المساعد يمكنك أيضًا الكتابة بلغات أخرى وسنبذل قصارى جهدنا لمساعدتك.",
+    "answer_en": "Our website and team support English and Arabic. Through this assistant you can also write in other languages and we will do our best to help.",
+    "category": "company",
+    "language": "en",
+    "tags": [
+      "language",
+      "arabic",
+      "english",
+      "لغة",
+      "عربي"
+    ],
+    "is_active": true,
+    "hit_count": 0
+  }
+]

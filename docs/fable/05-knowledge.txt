@@ -1,0 +1,5 @@
+MODULE 05 — Company knowledge / RAG
+Exists: knowledge_base.py, rag.py, product/knowledge/, FAQ + troubleshooting tables, skills/knowledge.
+Charter: the brain is the employer’s catalog, FAQ, tone, prices — not generated web research presented as fact.
+Design: ingest (docs, URLs with SSRF guard), chunking, citations in replies, stale prices, who may edit, how agents share one brain, what to do on empty retrieval (honest admission).
+Do not add a public crawl that invents a company. Output format from the brief.

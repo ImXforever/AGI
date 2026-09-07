@@ -1,0 +1,11 @@
+MODULE 16 — Blind spots (last)
+You now know Zenovix from the brief and modules 01–15. List ideas that a careful operations-manager product probably still lacks — things a real company would feel in week two.
+
+Rules:
+- Max 12 ideas, ranked by “pain if missing”.
+- Each idea: one sentence problem, one sentence design, HITL or auto, which existing module owns it.
+- Reject anything that turns Zenovix into an autonomous company, ad buyer, or payment robot.
+- Reject new live agents (accounting/HR/studio/project) unless you only add a stub in the charter.
+- Do not write code.
+
+Then give a build order of 5 items we should implement next on the real repo.

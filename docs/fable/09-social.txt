@@ -1,0 +1,4 @@
+MODULE 09 — Social agent (phase 3)
+Charter: plan calendar; write captions; auto-publish ordinary calendar posts; reply to comments/DMs under policy; report engagement. Off-calendar or claims → HITL.
+Exists: skills/social, social_workflow.py, content_calendar.py, twitter/instagram adapters (optional).
+Design calendar item schema, publish vs hold, comment policy, what “ordinary” means. No autonomous ad spend. Output format from the brief.

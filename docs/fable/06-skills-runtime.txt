@@ -1,0 +1,6 @@
+MODULE 06 — Skills runtime
+Exists: hermes_client.py, skills/* SKILL.md + tools, skills_manager.py, skills_guard.py, sandbox.py, mcp_lite.py, tools/, fleet.py optional.
+Contract: run_skill(skill_name, user_text, conversation_id, customer_id, context) → {success, text, tools_called, sources}.
+Tools that mutate must return tools_called so orchestrator queues HITL.
+Design: tool allowlist per skill, timeout, sandbox, SKILL.md injection scan, idempotent tool calls, how email/website/social skills share connectors without copying secrets into prompts.
+Do not design a general computer-use agent that can spend money. Output format from the brief.

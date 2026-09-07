@@ -1,0 +1,6 @@
+MODULE 03 — Security stack
+Exists: security_stack.py (15 named layers), guard.py (injection regex FA/EN/AR), security_validate.py (MIME, 10MB, 4000 chars), skills_guard.py, moderation.py.
+Inbound inspect_inbound on ingest + handle_incoming. Outbound inspect_outbound on drafts. inspect_action for policy. inspect_data frames retrieved docs. audit logs every deny.
+Catalog GET /admin/api/security/layers.
+Design gaps only: layered order, false positives on real customers, how retrieved RAG data is framed, attachment allowlist for oil/business files, SSRF for webtools, what to log without storing user PII.
+Do NOT write jailbreak strings, exploit PoCs, or malware. Name threats, do not demonstrate them. Output format from the brief.

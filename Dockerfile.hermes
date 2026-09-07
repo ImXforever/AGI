@@ -1,0 +1,30 @@
+# =============================================================================
+# Hermes Bridge — Dockerfile
+# Python sidecar that bridges the Zenovix app to a Hermes runtime (optional; not
+# used when LLM_MODE=direct). Source: deploy/hermes_bridge/bridge.py
+# =============================================================================
+
+FROM python:3.12-slim AS base
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1
+
+WORKDIR /app
+
+RUN pip install --no-cache-dir "httpx>=0.27.0"
+
+COPY deploy/hermes_bridge/ ./
+
+RUN addgroup --system hermes && \
+    adduser --system --ingroup hermes hermes && \
+    chown -R hermes:hermes /app
+
+USER hermes
+
+EXPOSE 3000
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
+    CMD python -c "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:3000/health', timeout=4).status == 200 else 1)"
+
+CMD ["python", "bridge.py"]

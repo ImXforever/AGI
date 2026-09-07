@@ -1,0 +1,6 @@
+WRAP
+Using only this chat, produce a one-page handoff for the implementer (no source code):
+1. Top 5 changes to make in the real Zenovix repo, in order.
+2. For each: module number, 5-line spec, tests, charter risk if we skip it.
+3. Ideas you considered and killed, with why.
+4. Open questions for the employer (max 5).

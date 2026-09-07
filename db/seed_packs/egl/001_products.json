@@ -1,0 +1,606 @@
+[
+  {
+    "id": "ea42a23a-baa6-51cd-859e-962eb1fe43d9",
+    "sku": "EGL-SVC-STORAGE",
+    "code": "101",
+    "name_en": "Fujairah Terminal Storage",
+    "title_en": "Segregated tank storage for clean and dirty products in Fujairah",
+    "names": {
+      "fa": "ذخیره‌سازی در ترمینال فجیره",
+      "ar": "تخزين محطة الفجيرة",
+      "tr": "Fujairah Terminal Depolama",
+      "de": "Tanklagerung in Fujairah",
+      "fr": "Stockage au terminal de Fujairah",
+      "es": "Almacenamiento en la terminal de Fuyaira",
+      "ru": "Хранение на терминале Фуджейра"
+    },
+    "titles": {
+      "fa": "مخازن مجزا برای فرآورده‌های تمیز و سنگین در فجیره",
+      "ar": "صهاريج منفصلة للمنتجات النظيفة والثقيلة في الفجيرة",
+      "tr": "Fujairah'da temiz ve kirli ürünler için ayrılmış tank depolama",
+      "de": "Getrennte Tanklager für helle und schwere Produkte in Fujairah",
+      "fr": "Stockage en cuves séparées pour produits clairs et lourds à Fujairah",
+      "es": "Tanques segregados para productos limpios y pesados en Fuyaira",
+      "ru": "Раздельное хранение светлых и тёмных нефтепродуктов в Фуджейре"
+    },
+    "name_ar": "تخزين محطة الفجيرة",
+    "category": "services",
+    "unit": "service",
+    "base_price": 0,
+    "unit_price": 0,
+    "currency": "USD",
+    "description_ar": "حلول تخزين حديثة في صهاريج لمنتجات البترول النظيفة والثقيلة في الفجيرة، أحد أكثر مراكز التزوّد بالوقود ازدحامًا في العالم. صهاريج منفصلة للنفط الخام وزيت الوقود والديزل والبنزين ووقود الطائرات؛ وصول مباشر إلى خطوط الأنابيب والموانئ البحرية لتسريع دوران الشحنات؛ مراقبة متواصلة للجودة والمخزون؛ توافق تنظيمي مع الموانئ والجمارك الإماراتية. التسعير بعرض سعر (الدرجة، الحجم، الجدول الزمني).",
+    "description_en": "Modern tank storage for clean and dirty petroleum products at Fujairah, one of the world's busiest bunkering hubs. Segregated tankage for crude, fuel oil, diesel, gasoline and jet fuel; direct pipeline and marine access for fast turnaround; continuous quality and inventory monitoring; aligned with UAE port and customs regulations. Pricing is by quotation (grade, volume, timeline).",
+    "specs": {
+      "type": "service",
+      "location": "Fujairah, UAE",
+      "products_handled": [
+        "crude oil",
+        "fuel oil",
+        "diesel",
+        "gasoline",
+        "jet fuel"
+      ],
+      "features": [
+        "Segregated clean/dirty tankage",
+        "Direct pipeline and marine access",
+        "Real-time inventory and quality monitoring",
+        "UAE port and customs regulatory alignment"
+      ],
+      "quote_inputs": [
+        "product grade",
+        "volume",
+        "storage period / timeline"
+      ],
+      "pricing": "quotation only",
+      "source": "https://egl.co.ae/services.html#storage"
+    },
+    "image_url": "/web/assets/packs/egl/img/tank-farm-aerial.jpg",
+    "sort_order": 10,
+    "stock_qty": 0,
+    "reorder_point": 0,
+    "discount_tiers": [],
+    "is_active": true
+  },
+  {
+    "id": "74337f8f-3593-56f7-85a4-e4ac0343c1b6",
+    "sku": "EGL-SVC-BUNKER",
+    "code": "102",
+    "name_en": "Logistics & Bunkering",
+    "title_en": "Marine fuel supply and vessel logistics, scheduled to the hour",
+    "names": {
+      "fa": "لجستیک و سوخت‌رسانی به کشتی",
+      "ar": "الخدمات اللوجستية والتموين بالوقود",
+      "tr": "Lojistik ve Yakıt İkmali",
+      "de": "Logistik & Bunkerung",
+      "fr": "Logistique & soutage",
+      "es": "Logística y suministro de combustible",
+      "ru": "Логистика и бункеровка"
+    },
+    "titles": {
+      "fa": "تأمین سوخت دریایی و لجستیک کشتی با زمان‌بندی دقیق",
+      "ar": "تزويد السفن بالوقود وخدمات لوجستية بجدولة دقيقة",
+      "tr": "Saati saatine planlanan deniz yakıtı tedariki ve gemi lojistiği",
+      "de": "Schiffskraftstoff und Logistik, auf die Stunde geplant",
+      "fr": "Fourniture de combustible marin et logistique à l'heure près",
+      "es": "Suministro de combustible marino y logística programada a la hora",
+      "ru": "Поставка судового топлива и логистика с точным графиком"
+    },
+    "name_ar": "الخدمات اللوجستية والتموين بالوقود",
+    "category": "services",
+    "unit": "service",
+    "base_price": 0,
+    "unit_price": 0,
+    "currency": "USD",
+    "description_ar": "خدمات لوجستية بحرية متكاملة وتزويد بالوقود للسفن في الفجيرة وخارجها، بجدولة دقيقة لتفادي تعطّل السفن المكلف. تسليم وقود تموين منسّق للسفن الراسية أو في المرسى؛ تنسيق شامل للشحن والوثائق؛ تعامل مع الوقود متوافق مع معايير الصحة والسلامة والبيئة في كل نقطة نقل.",
+    "description_en": "Integrated marine logistics and fuel supply for vessels in Fujairah and beyond, scheduled with precision to avoid costly vessel downtime. Coordinated bunker fuel delivery at anchorage or berth; end-to-end shipment coordination and documentation; HSE-compliant fuel handling at every transfer point.",
+    "specs": {
+      "type": "service",
+      "location": "Fujairah anchorage / berth and global shipping lanes",
+      "features": [
+        "Bunker delivery at anchorage or berth",
+        "End-to-end shipment coordination and documentation",
+        "HSE-compliant fuel handling"
+      ],
+      "quote_inputs": [
+        "vessel name / IMO",
+        "port and ETA",
+        "fuel grade",
+        "quantity (MT)"
+      ],
+      "pricing": "quotation only",
+      "source": "https://egl.co.ae/services.html#bunkering"
+    },
+    "image_url": "/web/assets/packs/egl/img/tanker-blue-dock.jpg",
+    "sort_order": 20,
+    "stock_qty": 0,
+    "reorder_point": 0,
+    "discount_tiers": [],
+    "is_active": true
+  },
+  {
+    "id": "8c4db1a5-703e-5b9f-998f-5a60979fd351",
+    "sku": "EGL-SVC-CHARTER",
+    "code": "103",
+    "name_en": "Ship Chartering",
+    "title_en": "Aframax, Suezmax and VLCC charters matched to your cargo",
+    "names": {
+      "fa": "اجاره کشتی",
+      "ar": "تأجير السفن",
+      "tr": "Gemi Kiralama",
+      "de": "Schiffscharter",
+      "fr": "Affrètement de navires",
+      "es": "Fletamento de buques",
+      "ru": "Фрахтование судов"
+    },
+    "titles": {
+      "fa": "اجاره نفتکش‌های Aframax، Suezmax و VLCC متناسب با محموله",
+      "ar": "تأجير ناقلات Aframax وSuezmax وVLCC بحسب الشحنة",
+      "tr": "Yükünüze uygun Aframax, Suezmax ve VLCC kiralama",
+      "de": "Aframax-, Suezmax- und VLCC-Charter passend zur Ladung",
+      "fr": "Affrètement Aframax, Suezmax et VLCC adapté à votre cargaison",
+      "es": "Fletamento de Aframax, Suezmax y VLCC según su carga",
+      "ru": "Фрахт Aframax, Suezmax и VLCC под ваш груз"
+    },
+    "name_ar": "تأجير السفن",
+    "category": "services",
+    "unit": "service",
+    "base_price": 0,
+    "unit_price": 0,
+    "currency": "USD",
+    "description_ar": "إمكانية الوصول إلى سفن أفرا ماكس وسويز ماكس وVLCC لنقل النفط الخام والمنتجات المكررة عالميًا بما يتناسب مع المسار وملف الشحنة. توفير سفن عبر فئات الناقلات الرئيسية؛ تنسيق المسار وفترة الشحن والأجرة؛ دعم وثائق مشارطة الإيجار والشحن.",
+    "description_en": "Access to Aframax, Suezmax and VLCC charters for global crude and refined product transport, matched to route and cargo profile. Vessel sourcing across major tanker classes; route, laycan and freight coordination; charter party and cargo documentation support.",
+    "specs": {
+      "type": "service",
+      "vessel_classes": [
+        "Aframax",
+        "Suezmax",
+        "VLCC"
+      ],
+      "features": [
+        "Vessel sourcing across tanker classes",
+        "Route, laycan and freight coordination",
+        "Charter party and cargo documentation support"
+      ],
+      "quote_inputs": [
+        "cargo type and quantity",
+        "load / discharge ports",
+        "laycan window"
+      ],
+      "pricing": "quotation only",
+      "source": "https://egl.co.ae/services.html#chartering"
+    },
+    "image_url": "/web/assets/packs/egl/img/tanker-aerial-red.jpg",
+    "sort_order": 30,
+    "stock_qty": 0,
+    "reorder_point": 0,
+    "discount_tiers": [],
+    "is_active": true
+  },
+  {
+    "id": "095e5223-7bb9-568d-a1b8-9705d6d98ad4",
+    "sku": "EGL-SVC-TRADE",
+    "code": "104",
+    "name_en": "Trade Solutions",
+    "title_en": "Bank-backed petroleum trade facilitation, buyer to seller",
+    "names": {
+      "fa": "راهکارهای تجاری",
+      "ar": "حلول التجارة",
+      "tr": "Ticaret Çözümleri",
+      "de": "Handelslösungen",
+      "fr": "Solutions de négoce",
+      "es": "Soluciones comerciales",
+      "ru": "Торговые решения"
+    },
+    "titles": {
+      "fa": "تسهیل معاملات نفتی با پشتوانه بانکی از خریدار تا فروشنده",
+      "ar": "تسهيل تجارة النفط بضمانات مصرفية من المشتري إلى البائع",
+      "tr": "Alıcıdan satıcıya banka destekli petrol ticareti kolaylaştırma",
+      "de": "Bankgestützte Abwicklung des Mineralölhandels",
+      "fr": "Facilitation du négoce pétrolier adossée à des banques",
+      "es": "Facilitación del comercio de petróleo con respaldo bancario",
+      "ru": "Организация нефтяных сделок с банковским обеспечением"
+    },
+    "name_ar": "حلول التجارة",
+    "category": "services",
+    "unit": "service",
+    "base_price": 0,
+    "unit_price": 0,
+    "currency": "USD",
+    "description_ar": "تسهيل شامل لتجارة البترول مدعوم بضمانات مالية وقانونية ضمن عمليات مسجّلة في الإمارات ومدعومة من بنوك رائدة. مطابقة المشترين والبائعين لشحنات النفط النظيف والثقيل؛ دعم تجاري منظم مع ضمانات مالية؛ تنسيق العقود وخطابات الاعتماد والتسوية.",
+    "description_en": "End-to-end petroleum trade facilitation with financial and legal assurance, structured around UAE-registered, bank-backed operations. Buyer and seller matching for clean and dirty oil cargoes; structured trade support with financial safeguards; contract, LC and settlement coordination.",
+    "specs": {
+      "type": "service",
+      "features": [
+        "Buyer / seller matching (clean and dirty cargoes)",
+        "Structured trade support with financial safeguards",
+        "Contract, LC and settlement coordination"
+      ],
+      "quote_inputs": [
+        "buy or sell",
+        "product and quantity",
+        "delivery basis / location",
+        "timeline"
+      ],
+      "pricing": "quotation only",
+      "note": "Any contract, payment or price commitment requires manager approval (HITL).",
+      "source": "https://egl.co.ae/services.html#trade"
+    },
+    "image_url": "/web/assets/packs/egl/img/port-cranes-aerial.jpg",
+    "sort_order": 40,
+    "stock_qty": 0,
+    "reorder_point": 0,
+    "discount_tiers": [],
+    "is_active": true
+  },
+  {
+    "id": "554b6600-4aa2-5cb0-b8fc-e5608374e59e",
+    "sku": "EGL-SVC-VERIFY",
+    "code": "105",
+    "name_en": "TSA & TSR Document Verification",
+    "title_en": "Authenticated validation of tank storage agreements and receipts",
+    "names": {
+      "fa": "تأیید اسناد TSA و TSR",
+      "ar": "التحقق من وثائق TSA وTSR",
+      "tr": "TSA ve TSR Belge Doğrulama",
+      "de": "TSA- & TSR-Dokumentenprüfung",
+      "fr": "Vérification des documents TSA & TSR",
+      "es": "Verificación de documentos TSA y TSR",
+      "ru": "Проверка документов TSA и TSR"
+    },
+    "titles": {
+      "fa": "اعتبارسنجی رسمی قراردادها و رسیدهای انبارش مخزن",
+      "ar": "تحقق موثّق من اتفاقيات وإيصالات تخزين الصهاريج",
+      "tr": "Tank depolama sözleşme ve makbuzlarının doğrulanması",
+      "de": "Geprüfte Validierung von Tanklagerverträgen und -quittungen",
+      "fr": "Validation authentifiée des contrats et reçus de stockage",
+      "es": "Validación autenticada de contratos y recibos de almacenamiento",
+      "ru": "Проверка подлинности договоров и расписок о хранении"
+    },
+    "name_ar": "التحقق من وثائق TSA وTSR",
+    "category": "services",
+    "unit": "service",
+    "base_price": 0,
+    "unit_price": 0,
+    "currency": "USD",
+    "description_ar": "تحقق آمن وموثّق من اتفاقيات تخزين الصهاريج (TSA) وإيصالات تخزين الصهاريج (TSR) يمنع الاحتيال ويحمي جميع أطراف الصفقة. تحقق موثّق مقابل سجلات المحطة؛ منع الاحتيال في وثائق التخزين وسند الملكية؛ مسار تدقيق واضح للبنوك والمتداولين والأطراف المقابلة.",
+    "description_en": "Secure, authenticated validation of Tank Storage Agreements (TSA) and Tank Storage Receipts (TSR) that prevents fraud and protects every party in a transaction. Authenticated verification against terminal records; fraud prevention for storage and title documentation; clear audit trail for banks, traders and counterparties.",
+    "specs": {
+      "type": "service",
+      "documents": [
+        "TSA — Tank Storage Agreement",
+        "TSR — Tank Storage Receipt"
+      ],
+      "features": [
+        "Verification against terminal records",
+        "Fraud prevention for storage and title documents",
+        "Audit trail for banks, traders and counterparties"
+      ],
+      "request_inputs": [
+        "document type",
+        "issuing terminal",
+        "document reference / date"
+      ],
+      "pricing": "quotation only",
+      "source": "https://egl.co.ae/services.html#verification"
+    },
+    "image_url": "/web/assets/packs/egl/img/control-room.jpg",
+    "sort_order": 50,
+    "stock_qty": 0,
+    "reorder_point": 0,
+    "discount_tiers": [],
+    "is_active": true
+  },
+  {
+    "id": "769f48a8-aa25-50a5-b23d-668ea06fc5ad",
+    "sku": "EGL-SVC-CONSULT",
+    "code": "106",
+    "name_en": "Consulting & Compliance Advisory",
+    "title_en": "Market intelligence, HSE and regulatory advisory for trading partners",
+    "names": {
+      "fa": "مشاوره و انطباق با مقررات",
+      "ar": "الاستشارات والامتثال",
+      "tr": "Danışmanlık ve Uyum",
+      "de": "Beratung & Compliance",
+      "fr": "Conseil & conformité",
+      "es": "Consultoría y cumplimiento",
+      "ru": "Консалтинг и комплаенс"
+    },
+    "titles": {
+      "fa": "هوش بازار، HSE و مشاوره مقرراتی برای شرکای تجاری",
+      "ar": "معلومات السوق واستشارات HSE والامتثال للشركاء التجاريين",
+      "tr": "Ticaret ortakları için pazar bilgisi, HSE ve mevzuat danışmanlığı",
+      "de": "Marktanalyse, HSE- und Regulierungsberatung für Handelspartner",
+      "fr": "Veille marché, HSE et conseil réglementaire",
+      "es": "Inteligencia de mercado, HSE y asesoría regulatoria",
+      "ru": "Аналитика рынка, HSE и регуляторный консалтинг"
+    },
+    "name_ar": "الاستشارات والامتثال",
+    "category": "services",
+    "unit": "service",
+    "base_price": 0,
+    "unit_price": 0,
+    "currency": "USD",
+    "description_ar": "معلومات السوق والاستشارات في مجال الامتثال وتحسين العمليات لشركاء التجارة الذين يتعاملون مع الأنظمة الإماراتية والدولية. إرشادات الامتثال التنظيمي والصحة والسلامة والبيئة؛ معلومات سوقية لقرارات التخزين والتجارة؛ تحسين تشغيلي عبر سلاسل التخزين والخدمات اللوجستية.",
+    "description_en": "Market intelligence, compliance advisory and operational optimization for trading partners navigating UAE and international regulation. Regulatory and HSE compliance guidance; market intelligence for storage and trade decisions; operational optimization across storage and logistics chains.",
+    "specs": {
+      "type": "service",
+      "features": [
+        "Regulatory and HSE compliance guidance",
+        "Market intelligence for storage and trade decisions",
+        "Operational optimization"
+      ],
+      "pricing": "quotation only",
+      "source": "https://egl.co.ae/services.html#consulting"
+    },
+    "image_url": "/web/assets/packs/egl/img/aspect-tower.jpg",
+    "sort_order": 60,
+    "stock_qty": 0,
+    "reorder_point": 0,
+    "discount_tiers": [],
+    "is_active": true
+  },
+  {
+    "id": "6c6d0e16-0e78-5291-9887-48d17c49de7e",
+    "sku": "EGL-PRD-CRUDE",
+    "code": "201",
+    "name_en": "Crude Oil",
+    "title_en": "Bulk crude storage and trade support under strict containment",
+    "names": {
+      "fa": "نفت خام",
+      "ar": "النفط الخام",
+      "tr": "Ham Petrol",
+      "de": "Rohöl",
+      "fr": "Pétrole brut",
+      "es": "Petróleo crudo",
+      "ru": "Сырая нефть"
+    },
+    "titles": {
+      "fa": "ذخیره‌سازی و پشتیبانی تجاری نفت خام با ایمنی کامل",
+      "ar": "تخزين النفط الخام ودعم تجارته بضوابط احتواء صارمة",
+      "tr": "Sıkı muhafaza altında dökme ham petrol depolama ve ticaret desteği",
+      "de": "Rohöl-Massenlagerung und Handelsunterstützung",
+      "fr": "Stockage en vrac du brut et appui au négoce",
+      "es": "Almacenamiento a granel de crudo y apoyo comercial",
+      "ru": "Хранение сырой нефти и торговая поддержка"
+    },
+    "name_ar": "النفط الخام",
+    "category": "dirty-oils",
+    "unit": "barrel",
+    "base_price": 0,
+    "unit_price": 0,
+    "currency": "USD",
+    "description_ar": "دعم تخزين وتجارة النفط الخام بالجملة، يُدار بضوابط احتواء وسلامة صارمة من الاستلام حتى التفريغ. تخزين بالجملة · استلام بحري · جودة مراقَبة.",
+    "description_en": "Bulk crude storage and trade support, handled under strict containment and safety protocol from receipt through discharge. Bulk storage · marine receipt · quality monitored.",
+    "specs": {
+      "class": "dirty oil",
+      "tags": [
+        "Bulk Storage",
+        "Marine Receipt",
+        "Quality Monitored"
+      ],
+      "handling": "segregated tankage, spill-contained transfer points, continuous quality monitoring",
+      "typical_units": [
+        "barrel (bbl)",
+        "metric ton (MT)"
+      ],
+      "pricing": "quotation only — market-linked",
+      "source": "https://egl.co.ae/products.html"
+    },
+    "image_url": "/web/assets/packs/egl/img/refinery-dusk.jpg",
+    "sort_order": 70,
+    "stock_qty": 0,
+    "reorder_point": 0,
+    "discount_tiers": [],
+    "is_active": true
+  },
+  {
+    "id": "f1e3cb6c-d76d-5621-83ec-e71bc5788e9c",
+    "sku": "EGL-PRD-FUELOIL",
+    "code": "202",
+    "name_en": "Fuel Oil",
+    "title_en": "Residual and marine fuel oil for Fujairah bunkering demand",
+    "names": {
+      "fa": "نفت کوره",
+      "ar": "زيت الوقود",
+      "tr": "Fuel Oil",
+      "de": "Schweröl",
+      "fr": "Fioul lourd",
+      "es": "Fuelóleo",
+      "ru": "Мазут"
+    },
+    "titles": {
+      "fa": "نفت کوره و سوخت دریایی برای بازار سوخت‌رسانی فجیره",
+      "ar": "زيت الوقود المتبقي والبحري لطلب التموين في الفجيرة",
+      "tr": "Fujairah yakıt ikmali için kalıntı ve deniz fuel oil",
+      "de": "Rückstands- und Schiffsheizöl für Bunkerbedarf in Fujairah",
+      "fr": "Fioul résiduel et marin pour le soutage à Fujairah",
+      "es": "Fuelóleo residual y marino para el suministro en Fuyaira",
+      "ru": "Остаточный и судовой мазут для бункеровки в Фуджейре"
+    },
+    "name_ar": "زيت الوقود",
+    "category": "dirty-oils",
+    "unit": "metric ton",
+    "base_price": 0,
+    "unit_price": 0,
+    "currency": "USD",
+    "description_ar": "تخزين زيت الوقود المتبقي والبحري يدعم طلب التموين عبر خطوط الشحن في الفجيرة. درجة تموين · صهاريج منفصلة · مناولة متوافقة مع الصحة والسلامة.",
+    "description_en": "Residual and marine fuel oil storage supporting bunkering demand across Fujairah's shipping lanes. Bunker grade · segregated tankage · HSE handling.",
+    "specs": {
+      "class": "dirty oil",
+      "tags": [
+        "Bunker Grade",
+        "Segregated Tankage",
+        "HSE Handling"
+      ],
+      "typical_units": [
+        "metric ton (MT)"
+      ],
+      "pricing": "quotation only — market-linked",
+      "source": "https://egl.co.ae/products.html"
+    },
+    "image_url": "/web/assets/packs/egl/img/refinery-golden.jpg",
+    "sort_order": 80,
+    "stock_qty": 0,
+    "reorder_point": 0,
+    "discount_tiers": [],
+    "is_active": true
+  },
+  {
+    "id": "61baffab-604e-5edf-b48b-abd736609c66",
+    "sku": "EGL-PRD-DIESEL10",
+    "code": "203",
+    "name_en": "Diesel 10 PPM",
+    "title_en": "Ultra-low sulphur diesel stored under contamination control",
+    "names": {
+      "fa": "دیزل ۱۰ پی‌پی‌ام",
+      "ar": "ديزل 10 جزء في المليون",
+      "tr": "Dizel 10 PPM",
+      "de": "Diesel 10 ppm",
+      "fr": "Diesel 10 ppm",
+      "es": "Diésel 10 ppm",
+      "ru": "Дизель 10 ppm"
+    },
+    "titles": {
+      "fa": "دیزل با گوگرد بسیار کم، نگهداری با کنترل آلودگی",
+      "ar": "ديزل منخفض الكبريت جداً مخزّن تحت ضبط التلوث",
+      "tr": "Kontaminasyon kontrolü altında depolanan ultra düşük kükürtlü dizel",
+      "de": "Schwefelarmer Diesel unter Kontaminationskontrolle",
+      "fr": "Diesel à très basse teneur en soufre, stockage contrôlé",
+      "es": "Diésel de ultra bajo azufre con control de contaminación",
+      "ru": "Дизель с ультранизким содержанием серы"
+    },
+    "name_ar": "ديزل بنقاوة 10 أجزاء بالمليون",
+    "category": "clean-oils",
+    "unit": "metric ton",
+    "base_price": 0,
+    "unit_price": 0,
+    "currency": "USD",
+    "description_ar": "ديزل منخفض الكبريت للغاية (10 أجزاء بالمليون) يُخزَّن في ظروف تحكّم صارم بالتلوث. منخفض الكبريت للغاية · تحكم بالتلوث.",
+    "description_en": "Ultra-low sulphur diesel (10 ppm) stored under contamination-controlled conditions. Ultra-low sulphur · contamination control.",
+    "specs": {
+      "class": "clean oil",
+      "sulphur_max_ppm": 10,
+      "tags": [
+        "Ultra-Low Sulphur",
+        "Contamination Control"
+      ],
+      "typical_units": [
+        "metric ton (MT)",
+        "cubic metre (m³)"
+      ],
+      "pricing": "quotation only — market-linked",
+      "source": "https://egl.co.ae/products.html"
+    },
+    "image_url": "/web/assets/packs/egl/img/pipeline-desert.jpg",
+    "sort_order": 90,
+    "stock_qty": 0,
+    "reorder_point": 0,
+    "discount_tiers": [],
+    "is_active": true
+  },
+  {
+    "id": "9e21d15b-4941-5926-9b6a-373efb2a7750",
+    "sku": "EGL-PRD-GASOLINE",
+    "code": "204",
+    "name_en": "Gasoline",
+    "title_en": "Motor gasoline grades with vapour control and blend integrity",
+    "names": {
+      "fa": "بنزین",
+      "ar": "البنزين",
+      "tr": "Benzin",
+      "de": "Benzin",
+      "fr": "Essence",
+      "es": "Gasolina",
+      "ru": "Бензин"
+    },
+    "titles": {
+      "fa": "گریدهای بنزین با کنترل بخار و حفظ یکپارچگی ترکیب",
+      "ar": "درجات البنزين مع ضبط الأبخرة وسلامة الخلط",
+      "tr": "Buhar kontrolü ve karışım bütünlüğü ile benzin sınıfları",
+      "de": "Ottokraftstoffe mit Dampfkontrolle und Mischintegrität",
+      "fr": "Essences avec contrôle des vapeurs et intégrité des mélanges",
+      "es": "Gasolinas con control de vapores e integridad de mezcla",
+      "ru": "Бензины с контролем паров и целостностью смеси"
+    },
+    "name_ar": "البنزين",
+    "category": "clean-oils",
+    "unit": "metric ton",
+    "base_price": 0,
+    "unit_price": 0,
+    "currency": "USD",
+    "description_ar": "درجات بنزين للمحركات تُدار بضبط للأبخرة وسلامة صارمة في المزج. ضبط الأبخرة · سلامة المزج.",
+    "description_en": "Motor gasoline grades handled with vapour control and strict blending integrity. Vapour control · blend integrity.",
+    "specs": {
+      "class": "clean oil",
+      "tags": [
+        "Vapour Control",
+        "Blend Integrity"
+      ],
+      "typical_units": [
+        "metric ton (MT)",
+        "cubic metre (m³)"
+      ],
+      "pricing": "quotation only — market-linked",
+      "source": "https://egl.co.ae/products.html"
+    },
+    "image_url": "/web/assets/packs/egl/img/pipeline-workers.jpg",
+    "sort_order": 100,
+    "stock_qty": 0,
+    "reorder_point": 0,
+    "discount_tiers": [],
+    "is_active": true
+  },
+  {
+    "id": "168fce84-ff77-57f2-a52b-959e670d9062",
+    "sku": "EGL-PRD-JET",
+    "code": "205",
+    "name_en": "Jet Fuel",
+    "title_en": "Aviation-grade fuel held to elevated purity and traceability",
+    "names": {
+      "fa": "سوخت جت",
+      "ar": "وقود الطائرات",
+      "tr": "Jet Yakıtı",
+      "de": "Kerosin",
+      "fr": "Carburéacteur",
+      "es": "Combustible de aviación",
+      "ru": "Авиакеросин"
+    },
+    "titles": {
+      "fa": "سوخت هوانوردی با خلوص و قابلیت ردیابی بالا",
+      "ar": "وقود طيران بمعايير نقاء وتتبع مرتفعة",
+      "tr": "Yüksek saflık ve izlenebilirlik standartlarında havacılık yakıtı",
+      "de": "Flugkraftstoff mit erhöhter Reinheit und Rückverfolgbarkeit",
+      "fr": "Carburant aviation à pureté et traçabilité renforcées",
+      "es": "Combustible de aviación con pureza y trazabilidad elevadas",
+      "ru": "Авиатопливо с повышенной чистотой и прослеживаемостью"
+    },
+    "name_ar": "وقود الطائرات",
+    "category": "clean-oils",
+    "unit": "metric ton",
+    "base_price": 0,
+    "unit_price": 0,
+    "currency": "USD",
+    "description_ar": "تخزين وقود بدرجة طيران يخضع لمعايير نقاء وتوثيق مرتفعة. درجة طيران · تتبّع صارم.",
+    "description_en": "Aviation-grade fuel storage held to elevated purity and documentation standards. Aviation grade · strict traceability.",
+    "specs": {
+      "class": "clean oil",
+      "tags": [
+        "Aviation Grade",
+        "Strict Traceability"
+      ],
+      "typical_units": [
+        "metric ton (MT)",
+        "cubic metre (m³)"
+      ],
+      "pricing": "quotation only — market-linked",
+      "source": "https://egl.co.ae/products.html"
+    },
+    "image_url": "/web/assets/packs/egl/img/port-panorama.jpg",
+    "sort_order": 110,
+    "stock_qty": 0,
+    "reorder_point": 0,
+    "discount_tiers": [],
+    "is_active": true
+  }
+]

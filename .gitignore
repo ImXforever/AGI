@@ -1,0 +1,68 @@
+# =============================================================================
+# PetroAgent Platform — .gitignore
+# =============================================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+.env.production
+.env.*
+
+# Testing
+htmlcov/
+.coverage
+.coverage.*
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Docker
+docker-compose.override.yml
+
+# Logs
+*.log
+logs/
+
+# Data / backups
+data/
+*.sql.dump
+*.pgdump
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node (hermes bridge)
+deploy/hermes_bridge/node_modules/
+deploy/hermes_bridge/package-lock.json
+
+# Build artifacts
+dist/
+*.tar.gz
+*.zip
+
+# Railway
+.railway/

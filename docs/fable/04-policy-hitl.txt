@@ -1,0 +1,7 @@
+MODULE 04 — Policy and HITL
+Exists: policy.py evaluate_action fail-closed; company_charter.py ACCESS_MATRIX; HITL Redis meta + Postgres approvals + Lua claim; Telegram ping; HITL_FALLBACK silent|auto_ack.
+Always approval: payment, contract, change_price, delete_data, change_access, create_quote.
+send_email + routine=True may become reply_common unless financial/legal/confidential.
+Unknown action = deny.
+Design: approval record shape, who can approve, timeout, replay attacks, split-brain Redis vs PG, how the agent tells the customer “waiting for manager”, audit ledger.
+Do not add autonomous money movement. Output format from the brief.
